@@ -7,208 +7,212 @@
 // 공통
 body {
   background-color: $b;
+  color: $w;
+  overflow-x: hidden;
 }
 .hidden {
   display: none;
 }
+.wrap {
+  // max-width: 1440px;
+  margin: 0 auto;
+}
+main {
+  // margin: 0 auto;
+  // max-width: 1440px;
+  margin: 0 auto;
+}
+section {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  height: 100vh;
+}
 .container {
-  margin-left: 32px;
-  margin-right: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 793px;
+  // background-color: #121212;
+}
+.btn {
+  border-radius: 8px;
+  color: $w;
+  font-family: $pretendard-font;
+  background: rgba(255, 255, 255, 0);
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  &:active {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+.btn-nofilled {
+  padding: 16px 24px;
+}
+.btn-outline {
+  padding: 16px 18px 16px 24px;
+  border: solid $w 1px;
 }
 
 // header
 #header {
-  position: relative;
+  position: absolute;
   z-index: 1000;
-  // border-bottom: 1px solid $b;
-  .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header__right {
-    display: flex;
-  }
-}
-#logo {
-  position: relative;
-  z-index: 1100;
-}
-.util__list {
+  width: 100%;
+  height: fit-content;
+  padding: 40px 32px 20px;
   display: flex;
-  li {
+  justify-content: space-between;
+  align-items: center;
+  .left-side {
     display: flex;
-  }
-  .btn-g,
-  a {
-    display: flex;
-    justify-content: center;
+    gap: 30px;
     align-items: center;
-    width: 40px;
-    // height: $headerHeight;
-    .material-icons-outlined {
-      font-size: 26px;
-    }
-    &::before {
-      font-size: 20px;
-      font-family: "Font Awesome 6 Free";
-    }
+    width: fit-content;
   }
-  // .btn-search::before {
-  //   content: "\f002";
-  //   font-weight: 900;
-  // }
-  // .btn-my::before {
-  //   content: "\f007";
-  //   font-weight: 400;
-  // }
-}
-
-.gnb-wrap {
-  .input-burger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    &:checked {
-      // input이 선택 됐을 때
-      & + label {
-        .bar {
-          // background: $b;
-          &:nth-child(2) {
-            transform: rotate(45deg) translate(5px, 5px);
-          }
-          &:nth-child(3) {
-            opacity: 0;
-          }
-          &:nth-child(4) {
-            transform: rotate(-45deg) translate(5px, -5px);
-          }
-        }
-      }
-      & ~ #gnb {
-        right: 0;
-      }
-    }
+  .logo-img-1 {
+    width: 129px;
   }
-  .label-burger {
-    position: relative;
-    z-index: 1100;
+  .logo-img-2 {
+    width: 60px;
+  }
+  #logo,
+  .logo,
+  #anniversary-logo {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 40px;
-    // height: $headerHeight;
-    .bar {
-      display: block;
-      width: 26px;
-      height: 2px;
-      // background: $b;
-      transition: all 0.3s;
-    }
-    span {
-      &:nth-child(3) {
-        margin: 5px 0;
-      }
-    }
   }
-  #gnb {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    bottom: 0;
-    width: 100%;
-    padding: 50px;
-    // background: $prim1;
+  .right-side {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
+    height: fit-content;
+  }
+  .cta-btn-group {
+    display: flex;
+    gap: 12px;
+    height: fit-content;
   }
 }
 
 // main
-.section-g {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  .section-tit {
-    font-size: 20px;
-    // color: $b;
-  }
-  .section-contents {
-    margin-top: 20px;
-  }
-}
-
-.section-shopping {
-  .lst-shopping {
+// 히어로 섹션
+.hero-sect {
+  display: flex;
+  align-items: flex-end;
+  .container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    li {
-      // width: calc(50% - $spacingList / 2);
-      // margin-bottom: $spacingList;
-      .thumb-shopping {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        border-radius: 4px;
-        &::before {
-          content: "";
-          display: block;
-          height: 0;
-          padding-top: 100%;
-        }
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 0 50%;
-          transition: transform 0.3s;
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border-radius: inherit;
-          // border: 1px solid rgba($b, 0.06);
-          // background: rgba($b, 0.03);
-        }
-      }
-    }
-    a {
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-      }
-    }
-    .txt-shopping {
-      margin-top: 10px;
-      .txt-shopping__tit {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 14px;
-        // color: $titDefult;
-      }
-      .txt-shopping__desc {
-        font-size: 12px;
-      }
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 70px;
+  }
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    height: fit-content;
+  }
+  .sub-title {
+    font-family: $crimson-font;
+    letter-spacing: 16px;
+    font-size: 24px;
+    background: $color-gradient-silver;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .title-box {
+    width: 100%;
+    height: 222px;
+  }
+  .title {
+    // height: 222px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    // background: url("../img/hero/title-hero-section.png") no-repeat 0 0 / cover;
+  }
+  .img-box {
+    // position: absolute;
+    // z-index: -1;
+    // width: 1440px;
+    width: 670px;
+    transform: translateY(140px);
+    z-index: -1;
+  }
+  .img {
+    // bottom: 180px;
+    // right: 64px;
+    // position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    // background: url("../img/hero/hero-section-img.gif") no-repeat 0 0 / cover;
+  }
+}
+//슬로건 섹션
+.slogan-sect {
+  height: auto;
+  margin: 200px auto;
+  .container {
+    height: auto;
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .text {
+    font-family: $crimson-font;
+    font-size: 32px;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background: $w;
+  }
+  .arrow-box {
+    text-align: right;
+    height: 83px;
+    width: 100%;
+  }
+  .arrow {
+    width: auto;
+    height: 100%;
+  }
+  .slogan {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    font-family: $crimson-font;
+    line-height: 1400%;
+    .text {
+      font-size: 220px;
+      font-weight: bold;
+      // height: 200px;
     }
   }
 }
-
+// 수상자 섹션
+.laureate1-sect-1,
+.laureate2-sect-1,
+.laureate3-sect-1,
+.laureate4-sect-1 {
+  max-width: none !important;
+  .video {
+    width: 100%;
+  }
+}
+// 수상자 1 섹션
+// .laureate1-sect {
+//   // .video-box {
+//   //   // position: absolute;
+//   //   // width: 100%;
+//   //   // z-index: -1;
+//   // }
+// }
 // footer
 #footer {
   margin-bottom: 200px;
