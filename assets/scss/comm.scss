@@ -6,17 +6,17 @@
 
 // 공통
 .container {
-  padding: 0 $bothMargin;
+  // padding: 0 $bothMargin;
 }
 .bg-gray {
-  background: $gray-e;
+  // background: $gray-e;
 }
 
 // header
 #header {
   position: relative;
   z-index: 1000;
-  border-bottom: 1px solid $b;
+  // border-bottom: 1px solid $b;
   .inner {
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@
     justify-content: center;
     align-items: center;
     width: 40px;
-    height: $headerHeight;
+    // height: $headerHeight;
     .material-icons-outlined {
       font-size: 26px;
     }
@@ -72,7 +72,7 @@
       // input이 선택 됐을 때
       & + label {
         .bar {
-          background: $b;
+          // background: $b;
           &:nth-child(2) {
             transform: rotate(45deg) translate(5px, 5px);
           }
@@ -97,12 +97,12 @@
     align-items: center;
     flex-direction: column;
     width: 40px;
-    height: $headerHeight;
+    // height: $headerHeight;
     .bar {
       display: block;
       width: 26px;
       height: 2px;
-      background: $b;
+      // background: $b;
       transition: all 0.3s;
     }
     span {
@@ -118,7 +118,7 @@
     bottom: 0;
     width: 100%;
     padding: 50px;
-    background: $prim1;
+    // background: $prim1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,26 +132,21 @@
   padding-bottom: 50px;
   .section-tit {
     font-size: 20px;
-    color: $b;
+    // color: $b;
   }
   .section-contents {
     margin-top: 20px;
   }
 }
-.section-news {
-  .a {
-  }
-  .b {
-  }
-}
+
 .section-shopping {
   .lst-shopping {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     li {
-      width: calc(50% - $spacingList / 2);
-      margin-bottom: $spacingList;
+      // width: calc(50% - $spacingList / 2);
+      // margin-bottom: $spacingList;
       .thumb-shopping {
         position: relative;
         overflow: hidden;
@@ -183,8 +178,8 @@
           right: 0;
           bottom: 0;
           border-radius: inherit;
-          border: 1px solid rgba($b, 0.06);
-          background: rgba($b, 0.03);
+          // border: 1px solid rgba($b, 0.06);
+          // background: rgba($b, 0.03);
         }
       }
     }
@@ -201,7 +196,7 @@
         display: block;
         margin-bottom: 5px;
         font-size: 14px;
-        color: $titDefult;
+        // color: $titDefult;
       }
       .txt-shopping__desc {
         font-size: 12px;
@@ -209,15 +204,9 @@
     }
   }
 }
-.section-feed {
-  .a {
-  }
-  .b {
-  }
-}
 
 // footer
 #footer {
   margin-bottom: 200px;
-  border-top: 10px solid $b;
+  // border-top: 10px solid $b;
 }
