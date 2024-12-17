@@ -487,14 +487,20 @@ section {
   max-width: none !important;
 }
 
-.laureate1-container {
+.laureate1-container,
+.laureate2-container,
+.laureate3-container,
+.laureate4-container {
   width: 500%;
   max-width: 500%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
 }
-.laureate1-container .container {
+.laureate1-container .container,
+.laureate2-container .container,
+.laureate3-container .container,
+.laureate4-container .container {
   height: 100vh;
 }
 
@@ -613,6 +619,13 @@ section {
   height: fit-content;
   margin: 10% 0;
 }
+.laureate1-sect-2 .img-box,
+.laureate2-sect-2 .img-box,
+.laureate3-sect-2 .img-box,
+.laureate4-sect-2 .img-box {
+  width: 100%;
+  height: 100%;
+}
 .laureate1-sect-2 .img-box img,
 .laureate2-sect-2 .img-box img,
 .laureate3-sect-2 .img-box img,
@@ -680,11 +693,6 @@ section {
 .laureate3-sect-4,
 .laureate4-sect-4 {
   padding: 80px 64px;
-}
-
-.laureate1-sect-2 .img-box {
-  width: 100%;
-  height: 100%;
 }
 
 .laureate1-sect-3 {
@@ -793,6 +801,31 @@ section {
   height: 100px;
   transform: rotate(45deg);
   background: #fff;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-contents {
+  flex: 1;
+}
+
+.middle-contents {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+.middle-contents img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bottom-contents {
+  flex: 1;
 }
 
 #footer {

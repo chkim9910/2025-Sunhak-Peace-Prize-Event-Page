@@ -202,7 +202,10 @@ section {
 .laureate-sect {
   max-width: none !important;
 }
-.laureate1-container {
+.laureate1-container,
+.laureate2-container,
+.laureate3-container,
+.laureate4-container {
   width: 500%;
   max-width: 500%;
   height: 100%;
@@ -296,6 +299,8 @@ section {
     margin: 10% 0;
   }
   .img-box {
+    width: 100%;
+    height: 100%;
     img {
       height: 100%;
       width: 100%;
@@ -349,13 +354,6 @@ section {
 }
 
 //************* 수상자 1 *************
-.laureate1-sect-2 {
-  .img-box {
-    width: 100%;
-    height: 100%;
-    // background: url("../img/laureate1-patrick/1.jpg") no-repeat 50% 50% / cover;
-  }
-}
 .laureate1-sect-3 {
   display: flex;
   flex-direction: column;
@@ -465,6 +463,28 @@ section {
     transform: rotate(45deg);
     background: $w;
   }
+}
+
+//************* 수상자 2 *************
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+.top-contents {
+  flex: 1;
+}
+.middle-contents {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  img {
+    object-fit: cover;
+  }
+}
+.bottom-contents {
+  flex: 1;
 }
 
 // footer
