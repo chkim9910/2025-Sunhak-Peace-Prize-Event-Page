@@ -183,28 +183,35 @@ $(function () {
 
   // ***************************laureate 4 - 보얀 슬랫***************************
   let sections4 = gsap.utils.toArray("main .laureate4-sect");
-  let scrollTween4 = gsap.to(sections4, {
-    xPercent: -100 * (sections4.length - 1),
-    ease: "none", // <-- IMPORTANT!
+  let scrollTimeline4 = gsap.timeline({
     scrollTrigger: {
       trigger: ".laureate4-container",
       pin: true,
-      scrub: 0.1,
-      //snap: directionalSnap(1 / (sections.length - 1)),
-      end: "+=3000",
+      scrub: 1,
+      //   start: "top top",
+      end: "+=4500",
+      markers: true,
     },
   });
-});
+  // 타임라인
+  scrollTimeline4
+    .set(sections4, {
+      opacity: 0,
+    })
+    .to(sections4, { opacity: 1, duration: 0.05 })
+    .to(sections4, {
+      xPercent: -100 * (sections4.length - 1),
+    });
 
-//   let scrollTween1 = gsap.to(sections1, {
-//     xPercent: -100 * (sections1.length - 1),
-//     ease: "none", // <-- IMPORTANT!
-//     scrollTrigger: {
-//       trigger: ".laureate1-container",
-//       pin: true,
-//       scrub: 0.1,
-//       start: "top top",
-//       //   snap: directionalSnap(1 / (sections.length - 1)),
-//       end: "+=3000",
-//     },
-//   });
+  //   let scrollTween1 = gsap.to(sections1, {
+  //     xPercent: -100 * (sections1.length - 1),
+  //     ease: "none", // <-- IMPORTANT!
+  //     scrollTrigger: {
+  //       trigger: ".laureate1-container",
+  //       pin: true,
+  //       scrub: 0.1,
+  //       start: "top top",
+  //       //   snap: directionalSnap(1 / (sections.length - 1)),
+  //       end: "+=3000",
+  //     },
+});
