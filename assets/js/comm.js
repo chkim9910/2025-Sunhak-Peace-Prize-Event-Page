@@ -1,5 +1,6 @@
 $(function () {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  // ***************************laureate 1 - 패트릭 아우어***************************
   let sections1 = gsap.utils.toArray("main .laureate1-sect");
   let section1_1 = document.querySelector(".laureate1-sect-1");
   let section1_2 = document.querySelector(".laureate1-sect-2");
@@ -78,6 +79,7 @@ $(function () {
     }
   );
 
+  // ***************************laureate 2 - 완지라 마타이***************************
   let sections2 = gsap.utils.toArray("main .laureate2-sect");
   let scrollTimeline2 = gsap.timeline({
     scrollTrigger: {
@@ -98,18 +100,6 @@ $(function () {
     .to(sections2, {
       xPercent: -100 * (sections2.length - 1),
     });
-
-  //   let scrollTween2 = gsap.to(sections2, {
-  //     xPercent: -100 * (sections2.length - 1),
-  //     ease: "none", // <-- IMPORTANT!
-  //     scrollTrigger: {
-  //       trigger: ".laureate2-container",
-  //       pin: true,
-  //       scrub: 0.1,
-  //       //snap: directionalSnap(1 / (sections.length - 1)),
-  //       end: "+=3000",
-  //     },
-  //   });
 
   let sections3 = gsap.utils.toArray("main .laureate3-sect");
   let scrollTween3 = gsap.to(sections3, {
