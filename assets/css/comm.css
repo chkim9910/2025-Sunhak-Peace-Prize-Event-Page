@@ -308,14 +308,10 @@ body {
   margin: 0 auto;
 }
 
-main {
-  margin: 0 auto;
-}
-
 section {
   margin: 0 auto;
   max-width: 1440px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -485,6 +481,7 @@ section {
 
 .laureate-sect {
   max-width: none !important;
+  width: 100vw;
 }
 
 .laureate1-container,
@@ -695,6 +692,48 @@ section {
   padding: 80px 64px;
 }
 
+.laureate1-sect-5 .container,
+.laureate2-sect-5 .container,
+.laureate3-sect-5 .container,
+.laureate4-sect-5 .container {
+  display: flex;
+}
+.laureate1-sect-5 .img-box,
+.laureate2-sect-5 .img-box,
+.laureate3-sect-5 .img-box,
+.laureate4-sect-5 .img-box {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+.laureate1-sect-5 .text-box,
+.laureate2-sect-5 .text-box,
+.laureate3-sect-5 .text-box,
+.laureate4-sect-5 .text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  flex: 1;
+  text-align: center;
+}
+.laureate1-sect-5 .contents,
+.laureate2-sect-5 .contents,
+.laureate3-sect-5 .contents,
+.laureate4-sect-5 .contents {
+  font-size: 24px;
+}
+.laureate1-sect-5 .line,
+.laureate2-sect-5 .line,
+.laureate3-sect-5 .line,
+.laureate4-sect-5 .line {
+  width: 1px;
+  height: 100px;
+  transform: rotate(45deg);
+  background: #fff;
+}
+
 .laureate1-sect-3 {
   display: flex;
   flex-direction: column;
@@ -775,57 +814,87 @@ section {
   transform: rotate(45deg);
 }
 
-.laureate1-sect-5 .container {
-  display: flex;
-}
 .laureate1-sect-5 .img-box {
   background: url(../img/laureate1-patrick/7.webp) no-repeat 50% 50%/cover;
-  flex: 1;
-  width: 100%;
-  height: 100%;
 }
-.laureate1-sect-5 .text-box {
+
+.laureate2-sect-3 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 45px;
-  flex: 1;
-  text-align: center;
+  justify-content: space-between;
 }
-.laureate1-sect-5 .contents {
-  font-size: 24px;
-}
-.laureate1-sect-5 .line {
-  width: 1px;
-  height: 100px;
-  transform: rotate(45deg);
-  background: #fff;
-}
-
-.wrap {
+.laureate2-sect-3 .wrap {
   display: flex;
   flex-direction: column;
+  gap: 48px;
+  margin: 0;
 }
-
-.top-contents {
+.laureate2-sect-3 .top-contents {
   flex: 1;
+  width: 60%;
 }
-
-.middle-contents {
-  flex: 1;
+.laureate2-sect-3 .middle-contents {
   display: flex;
   gap: 16px;
   width: 100%;
-  height: 100%;
+  height: 300px;
 }
-.middle-contents img {
+.laureate2-sect-3 .middle-contents img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.bottom-contents {
+.laureate2-sect-3 .middle-contents li:nth-child(2) img {
+  filter: none;
+}
+.laureate2-sect-3 .middle-contents li:nth-child(2) {
+  width: 50%;
+}
+.laureate2-sect-3 .bottom-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.laureate2-sect-3 .bottom-contents {
   flex: 1;
+  width: 60%;
+}
+
+.laureate2-sect-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.laureate2-sect-4 .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+}
+.laureate2-sect-4 .img-box {
+  height: 75%;
+}
+.laureate2-sect-4 .img-box img {
+  height: 100%;
+}
+.laureate2-sect-4 .contents-box {
+  width: 57%;
+}
+.laureate2-sect-4 .contents {
+  width: 100%;
+}
+.laureate2-sect-4 .line {
+  margin: 3% 90%;
+  width: 100px;
+  height: 1px;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+
+.laureate2-sect-5 .img-box {
+  background: url(../img/laureate2-wanjira/6.jpg) no-repeat 50% 50%/cover;
 }
 
 #footer {
