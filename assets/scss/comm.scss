@@ -154,7 +154,7 @@ section {
   .container {
     height: auto;
   }
-  .text-box {
+  .text-wrap {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -314,10 +314,12 @@ section {
 .contents-title {
   font-size: 30px;
 }
+.text-box {
+  width: 70%;
+}
 .contents {
   font-size: 16px;
   height: fit-content;
-  width: 70%;
 }
 .top span {
   font-size: 24px;
@@ -328,7 +330,7 @@ section {
 .laureate2-sect-3,
 .laureate3-sect-3,
 .laureate4-sect-3 {
-  padding: 80px 64px;
+  padding: 50px 64px;
 
   .text {
     width: 1000px;
@@ -347,7 +349,7 @@ section {
 .laureate2-sect-4,
 .laureate3-sect-4,
 .laureate4-sect-4 {
-  padding: 80px 64px;
+  padding: 50px 64px;
 }
 // 섹션 5
 .laureate1-sect-5,
@@ -551,6 +553,123 @@ section {
   }
 }
 //************* 수상자 3 *************
+.laureate3-sect-3 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  .wrap {
+    display: flex;
+    // gap: 48px;
+  }
+  .left-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    flex: 1;
+    flex-basis: 0;
+    .top-contents {
+      display: flex;
+      gap: 48px;
+      flex: 1;
+      flex-basis: 0;
+      align-items: center;
+
+      .img-box {
+        // flex: 1;
+        // flex-basis: 0;
+        height: 327px;
+        width: 327px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: none;
+        }
+      }
+      .text-box {
+        flex: 1;
+        flex-basis: 0;
+      }
+    }
+    .bottom-contents {
+      display: flex;
+      gap: 24px;
+      flex: 1;
+      flex-basis: 0;
+      li {
+        // flex: 1;
+        // flex-basis: 0;
+        height: 327px;
+        width: 327px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: none;
+        }
+      }
+    }
+  }
+  .right-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+    flex-basis: 0;
+    width: fit-content;
+    .img-box {
+      // flex: 1;
+      // flex-basis: 0;
+      height: 327px;
+      width: 327px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .text-box {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 0 50px;
+      width: 85%;
+    }
+  }
+}
+.laureate3-sect-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  .wrap {
+    display: flex;
+    align-items: center;
+  }
+  .img-box {
+    flex: 1;
+    flex-basis: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .content-box {
+    transform: translateX(-50px);
+    flex: 0.6;
+    flex-basis: 0;
+  }
+  .text-box {
+    width: 100%;
+  }
+}
+.laureate3-sect-5 {
+  .img-box {
+    background: url(../img/laureate3-hugh/5.jpg) no-repeat 50% 50% / cover;
+  }
+}
 // footer
 #footer {
   margin-bottom: 200px;
