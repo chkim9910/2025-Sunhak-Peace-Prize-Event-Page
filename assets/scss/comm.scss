@@ -9,6 +9,7 @@ body {
   background-color: $b;
   color: $w;
   overflow-x: hidden;
+  font-family: $crimson-font;
 }
 .hidden {
   display: none;
@@ -35,7 +36,8 @@ section {
   // background-color: #121212;
 }
 .btn {
-  border-radius: 8px;
+  border-radius: 100px;
+  // border-radius: 8px;
   color: $w;
   font-family: $pretendard-font;
   background: rgba(255, 255, 255, 0);
@@ -196,23 +198,256 @@ section {
   }
 }
 // 수상자 섹션
+// ************* 공통 *************
+.laureate-sect {
+  max-width: none !important;
+}
+.laureate1-container {
+  width: 500%;
+  max-width: 500%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  .container {
+    height: 100vh;
+  }
+}
+// 섹션 1
 .laureate1-sect-1,
 .laureate2-sect-1,
 .laureate3-sect-1,
 .laureate4-sect-1 {
   max-width: none !important;
+  // 비디오
+  .video-box {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+  }
   .video {
     width: 100%;
   }
+  .container {
+    position: absolute;
+    z-index: 10;
+    bottom: 45%;
+    left: 50%;
+    height: fit-content;
+    transform: translateX(-50%);
+  }
+  .contents-title {
+    font-size: 30px;
+  }
+  .contents {
+    font-size: 16px;
+  }
+  // - 섹션 1 타이틀
+  .title-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .sub-title {
+    font-family: $crimson-font;
+    font-size: 22px;
+    letter-spacing: 7px;
+  }
+  .name {
+    font-family: $crimson-font;
+    font-size: 74px;
+  }
+  .side-text-box {
+    font-family: $crimson-font;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+  }
 }
-// 수상자 1 섹션
-.laureate1-sect {
-  // .video-box {
-  //   // position: absolute;
-  //   // width: 100%;
-  //   // z-index: -1;
-  // }
+// 섹션 2
+.laureate1-sect-2,
+.laureate2-sect-2,
+.laureate3-sect-2,
+.laureate4-sect-2 {
+  .container {
+    display: flex;
+    align-items: flex-end;
+    gap: 80px;
+  }
+  .img-box,
+  .text-box {
+    flex: 1;
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: fit-content;
+    margin: 10% 0;
+  }
 }
+// 텍스트 - 섹션 2, 3, 4
+.contents-title {
+  font-size: 30px;
+}
+.contents {
+  font-size: 16px;
+  height: fit-content;
+  width: 70%;
+}
+.top span {
+  font-size: 24px;
+  font-style: italic;
+}
+// 섹션 3
+.laureate1-sect-3,
+.laureate2-sect-3,
+.laureate3-sect-3,
+.laureate4-sect-3 {
+  padding: 80px 64px;
+
+  .text {
+    width: 1000px;
+    height: fit-content;
+  }
+}
+// 섹션 4
+.laureate1-sect-4,
+.laureate2-sect-4,
+.laureate3-sect-4,
+.laureate4-sect-4 {
+  padding: 80px 64px;
+}
+
+//************* 수상자 1 *************
+.laureate1-sect-2 {
+  .img-box {
+    width: 100%;
+    height: 100%;
+    background: url("../img/laureate1-patrick/1.jpg") no-repeat 50% 50% / cover;
+  }
+}
+.laureate1-sect-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    max-height: 678px;
+    width: 100%;
+  }
+  .big-screen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    // gap: 50px;
+    .text {
+      width: 800px;
+    }
+  }
+  .small-screen {
+    display: none;
+  }
+
+  .top-contents,
+  .bottom-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+  .img-box {
+    flex: 1;
+    display: flex;
+    gap: 24px;
+  }
+  img {
+    width: 327px;
+    height: 327px;
+    // flex: 1;
+    object-fit: cover;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .text {
+    .contents-title {
+      width: fit-content;
+    }
+  }
+}
+.laureate1-sect-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .img-box img {
+    width: 50%;
+  }
+  .text-box {
+    width: 50%;
+    transform: translate(-30%, 0%);
+  }
+  .line {
+    margin: -3% 70%;
+    width: 1px;
+    height: 100px;
+    background-color: $w;
+    transform: rotate(45deg);
+  }
+}
+.laureate1-sect-5 {
+  .container {
+    display: flex;
+  }
+  .img-box {
+    background: url(../img/laureate1-patrick/7.webp) no-repeat 50% 50% / cover;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex: 1;
+    text-align: center;
+  }
+  .contents {
+    font-size: 24px;
+  }
+  .line {
+    width: 1px;
+    height: 100px;
+    transform: rotate(45deg);
+    background: $w;
+  }
+}
+
 // footer
 #footer {
   margin-bottom: 200px;

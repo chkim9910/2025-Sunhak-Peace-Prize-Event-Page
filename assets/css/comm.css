@@ -297,6 +297,7 @@ body {
   background-color: #000;
   color: #fff;
   overflow-x: hidden;
+  font-family: "Crimson Text", serif;
 }
 
 .hidden {
@@ -325,7 +326,7 @@ section {
 }
 
 .btn {
-  border-radius: 8px;
+  border-radius: 100px;
   color: #fff;
   font-family: "Pretendard-Regular", sans-serif;
   background: rgba(255, 255, 255, 0);
@@ -482,17 +483,287 @@ section {
   font-weight: bold;
 }
 
+.laureate-sect {
+  max-width: none !important;
+}
+
+.laureate1-container {
+  width: 500%;
+  max-width: 500%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.laureate1-container .container {
+  height: 100vh;
+}
+
 .laureate1-sect-1,
 .laureate2-sect-1,
 .laureate3-sect-1,
 .laureate4-sect-1 {
   max-width: none !important;
 }
+.laureate1-sect-1 .video-box::before,
+.laureate2-sect-1 .video-box::before,
+.laureate3-sect-1 .video-box::before,
+.laureate4-sect-1 .video-box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
 .laureate1-sect-1 .video,
 .laureate2-sect-1 .video,
 .laureate3-sect-1 .video,
 .laureate4-sect-1 .video {
   width: 100%;
+}
+.laureate1-sect-1 .container,
+.laureate2-sect-1 .container,
+.laureate3-sect-1 .container,
+.laureate4-sect-1 .container {
+  position: absolute;
+  z-index: 10;
+  bottom: 45%;
+  left: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: translateX(-50%);
+}
+.laureate1-sect-1 .contents-title,
+.laureate2-sect-1 .contents-title,
+.laureate3-sect-1 .contents-title,
+.laureate4-sect-1 .contents-title {
+  font-size: 30px;
+}
+.laureate1-sect-1 .contents,
+.laureate2-sect-1 .contents,
+.laureate3-sect-1 .contents,
+.laureate4-sect-1 .contents {
+  font-size: 16px;
+}
+.laureate1-sect-1 .title-box,
+.laureate2-sect-1 .title-box,
+.laureate3-sect-1 .title-box,
+.laureate4-sect-1 .title-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.laureate1-sect-1 .sub-title,
+.laureate2-sect-1 .sub-title,
+.laureate3-sect-1 .sub-title,
+.laureate4-sect-1 .sub-title {
+  font-family: "Crimson Text", serif;
+  font-size: 22px;
+  letter-spacing: 7px;
+}
+.laureate1-sect-1 .name,
+.laureate2-sect-1 .name,
+.laureate3-sect-1 .name,
+.laureate4-sect-1 .name {
+  font-family: "Crimson Text", serif;
+  font-size: 74px;
+}
+.laureate1-sect-1 .side-text-box,
+.laureate2-sect-1 .side-text-box,
+.laureate3-sect-1 .side-text-box,
+.laureate4-sect-1 .side-text-box {
+  font-family: "Crimson Text", serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.laureate1-sect-2 .container,
+.laureate2-sect-2 .container,
+.laureate3-sect-2 .container,
+.laureate4-sect-2 .container {
+  display: flex;
+  align-items: flex-end;
+  gap: 80px;
+}
+.laureate1-sect-2 .img-box,
+.laureate1-sect-2 .text-box,
+.laureate2-sect-2 .img-box,
+.laureate2-sect-2 .text-box,
+.laureate3-sect-2 .img-box,
+.laureate3-sect-2 .text-box,
+.laureate4-sect-2 .img-box,
+.laureate4-sect-2 .text-box {
+  flex: 1;
+}
+.laureate1-sect-2 .text-box,
+.laureate2-sect-2 .text-box,
+.laureate3-sect-2 .text-box,
+.laureate4-sect-2 .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 10% 0;
+}
+
+.contents-title {
+  font-size: 30px;
+}
+
+.contents {
+  font-size: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 70%;
+}
+
+.top span {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.laureate1-sect-3,
+.laureate2-sect-3,
+.laureate3-sect-3,
+.laureate4-sect-3 {
+  padding: 80px 64px;
+}
+.laureate1-sect-3 .text,
+.laureate2-sect-3 .text,
+.laureate3-sect-3 .text,
+.laureate4-sect-3 .text {
+  width: 1000px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.laureate1-sect-4,
+.laureate2-sect-4,
+.laureate3-sect-4,
+.laureate4-sect-4 {
+  padding: 80px 64px;
+}
+
+.laureate1-sect-2 .img-box {
+  width: 100%;
+  height: 100%;
+  background: url("../img/laureate1-patrick/1.jpg") no-repeat 50% 50%/cover;
+}
+
+.laureate1-sect-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.laureate1-sect-3 .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  max-height: 678px;
+  width: 100%;
+}
+.laureate1-sect-3 .big-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.laureate1-sect-3 .big-screen .text {
+  width: 800px;
+}
+.laureate1-sect-3 .small-screen {
+  display: none;
+}
+.laureate1-sect-3 .top-contents,
+.laureate1-sect-3 .bottom-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.laureate1-sect-3 .img-box {
+  flex: 1;
+  display: flex;
+  gap: 24px;
+}
+.laureate1-sect-3 img {
+  width: 327px;
+  height: 327px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.laureate1-sect-3 .text .contents-title {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.laureate1-sect-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.laureate1-sect-4 .wrap {
+  display: flex;
+  flex-direction: column;
+}
+.laureate1-sect-4 .content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.laureate1-sect-4 .img-box img {
+  width: 50%;
+}
+.laureate1-sect-4 .text-box {
+  width: 50%;
+  transform: translate(-30%, 0%);
+}
+.laureate1-sect-4 .line {
+  margin: -3% 70%;
+  width: 1px;
+  height: 100px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.laureate1-sect-5 .container {
+  display: flex;
+}
+.laureate1-sect-5 .img-box {
+  background: url(../img/laureate1-patrick/7.webp) no-repeat 50% 50%/cover;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+.laureate1-sect-5 .text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  flex: 1;
+  text-align: center;
+}
+.laureate1-sect-5 .contents {
+  font-size: 24px;
+}
+.laureate1-sect-5 .line {
+  width: 1px;
+  height: 100px;
+  transform: rotate(45deg);
+  background: #fff;
 }
 
 #footer {
