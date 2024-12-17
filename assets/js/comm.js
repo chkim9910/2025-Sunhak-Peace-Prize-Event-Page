@@ -116,7 +116,7 @@ $(function () {
       duration: 2,
       scrollTrigger: {
         trigger: section2_2, // section2_2를 트리거로 설정
-        containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+        containerAnimation: scrollTimeline2, // 수평 스크롤 타임라인과 동기화
         start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=100", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
@@ -133,7 +133,7 @@ $(function () {
       duration: 2,
       scrollTrigger: {
         trigger: section2_3, // section1_2를 트리거로 설정
-        containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+        containerAnimation: scrollTimeline2, // 수평 스크롤 타임라인과 동기화
         start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=200", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
@@ -150,7 +150,7 @@ $(function () {
       duration: 2,
       scrollTrigger: {
         trigger: section2_5, // section1_2를 트리거로 설정
-        containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+        containerAnimation: scrollTimeline2, // 수평 스크롤 타임라인과 동기화
         start: "start-=1000 center+=500", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=200", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
