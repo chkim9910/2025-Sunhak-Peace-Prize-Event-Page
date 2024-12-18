@@ -644,25 +644,39 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: space-between;
   .wrap {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    // height: 100%;
+    flex: 1;
   }
   .img-box {
+    background: url(../img/laureate3-hugh/4.webp) no-repeat 50% 0% / cover;
+    width: 100%;
     flex: 1;
-    flex-basis: 0;
     img {
       width: 100%;
     }
   }
-  .content-box {
-    transform: translateX(-50px);
-    flex: 0.6;
-    flex-basis: 0;
+  .contents-box {
+    display: flex;
+    justify-content: flex-end;
+    .text-box {
+      width: 70%;
+    }
   }
-  .text-box {
+  .contents {
     width: 100%;
+  }
+  .line {
+    margin: 3% 90%;
+    width: 100px;
+    height: 1px;
+    background: $w;
+    transform: rotate(-45deg);
   }
 }
 .laureate3-sect-5 {
@@ -670,6 +684,104 @@ section {
     background: url(../img/laureate3-hugh/5.jpg) no-repeat 50% 50% / cover;
   }
 }
+//************* 수상자 4 *************
+.laureate4-sect-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .wrap {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  .top-box {
+    .text-box {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .left-box,
+    .right-box {
+      flex: 1;
+      flex-basis: 0;
+    }
+  }
+  .bottom-box {
+    ul {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      height: 327px;
+      .right,
+      .left {
+        width: 327px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: none;
+        }
+      }
+      .middle {
+        flex: 1;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          filter: none;
+        }
+      }
+    }
+  }
+}
+.laureate4-sect-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    // gap: 48px;
+    // height: 100%;
+    flex: 1;
+  }
+  .img-box {
+    background: url(../img/laureate4-boyan/5.jpg) no-repeat 50% 50% / cover;
+    // height: 80%;
+    width: 100%;
+    flex: 1;
+    img {
+      width: 100%;
+      // filter: grayscale(100%);
+      // transition: all 0.3s;
+      // &:hover {
+      //   filter: none;
+      // }
+    }
+  }
+  .contents-box {
+    width: 57%;
+  }
+  .contents {
+    width: 100%;
+  }
+  .line {
+    margin: 3% 90%;
+    width: 100px;
+    height: 1px;
+    background: $w;
+    transform: rotate(-45deg);
+  }
+}
+.laureate4-sect-5 {
+  .img-box {
+    background: url(../img/laureate4-boyan/6.png) no-repeat 50% 50% / cover;
+  }
+}
+
 // footer
 #footer {
   margin-bottom: 200px;
