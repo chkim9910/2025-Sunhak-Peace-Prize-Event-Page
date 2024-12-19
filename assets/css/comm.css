@@ -526,7 +526,7 @@ section {
   left: -32px;
   right: -32px;
   top: 63%;
-  bottom: 0;
+  bottom: 6%;
   z-index: -1;
   opacity: var(--before-opacity, 0);
 }
