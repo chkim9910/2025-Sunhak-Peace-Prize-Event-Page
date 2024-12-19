@@ -60,7 +60,7 @@ $(function () {
       trigger: ".slogan-sect .slogan",
       pin: true,
       scrub: 1,
-      start: "top top+=100",
+      start: "top top",
       end: "+=1000",
       // markers: true,
     },
@@ -83,6 +83,10 @@ $(function () {
       },
       { opacity: 1 }
     )
+    .to(slogan_container, {
+      "--before-opacity": 1, // CSS 변수로 ::before의 opacity 변경
+      duration: 0.5,
+    })
     .fromTo(
       slogan_3,
       {
@@ -90,7 +94,11 @@ $(function () {
         duration: 0.03,
       },
       { opacity: 1 }
-    );
+    )
+    .to(slogan_container, {
+      opacity: 0,
+      duration: 0.5,
+    });
 
   // ***************************laureate 1 - 패트릭 아우어***************************
   let sections1 = gsap.utils.toArray("main .laureate1-sect");

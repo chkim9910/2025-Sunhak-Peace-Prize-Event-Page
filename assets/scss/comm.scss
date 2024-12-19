@@ -184,6 +184,7 @@ section {
     flex-direction: column;
     gap: 60px;
     text-transform: uppercase;
+    padding-bottom: 120px;
     .text {
       font-family: $crimson-font;
       font-size: 32px;
@@ -216,15 +217,34 @@ section {
     }
   }
   .slogan {
-    margin-top: 140px;
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
     font-family: $crimson-font;
     line-height: 1400%;
+    &::before {
+      content: "";
+      // background: $w;
+      background: $point-color-1;
+      position: absolute;
+      left: -32px;
+      right: -32px;
+      top: 63%;
+      bottom: 0;
+      z-index: -1;
+      opacity: var(--before-opacity, 0);
+    }
     .text {
       font-size: 220px;
       font-weight: bold;
+      // color: $point-color-5;
+      color: $b;
+      letter-spacing: -3px;
       // height: 200px;
+    }
+    .text_1,
+    .text_2 {
+      color: $point-color-1;
     }
   }
 }
