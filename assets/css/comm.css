@@ -1142,11 +1142,34 @@ section {
   background: url(../img/laureate4-boyan/6.png) no-repeat 50% 50%/cover;
 }
 
+.deco-sect {
+  height: 100vh;
+  max-width: none;
+  display: flex;
+  align-items: center;
+}
+.deco-sect .text-container {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.deco-sect .text-container .text-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deco-sect .text-container .text {
+  font-size: 220px;
+  white-space: pre;
+  height: 240px;
+  display: flex;
+  align-items: center;
+}
+
 .banner {
   max-width: none !important;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 300px 0 100px;
+  margin: 200px 0 100px;
 }
 .banner .wrap {
   background: url(../img/banner/bg.jpg) no-repeat 0 0/cover;

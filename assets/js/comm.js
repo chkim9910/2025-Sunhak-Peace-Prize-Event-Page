@@ -405,22 +405,43 @@ $(function () {
       },
     }
   );
-  // gsap.fromTo(
-  //   section4_5,
-  //   { opacity: 1 }, // 초기 상태{
-  //   {
-  //     opacity: 0, // 뷰포트 진입 시
-  //     duration: 2,
-  //     scrollTrigger: {
-  //       trigger: section4_5, // section4_5를 트리거로 설정
-  //       containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
-  //       start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
-  //       end: "top center", // 약간의 여유를 둔 후 종료
-  //       scrub: true, // 스크롤에 따라 부드럽게 전환
-  //       // markers: true, // 디버깅용
-  //     },
-  //   }
-  // );
+  // section4_5 opacity 다시 0으로
+  gsap.fromTo(
+    section4_5,
+    { opacity: 1 }, // 초기 상태 (이전 상태 유지)
+    {
+      opacity: 0, // 스크롤 후 다시 0으로 전환
+      duration: 1,
+      // ease: "power2.out", // 점진적으로 부드럽게 사라짐
+      scrollTrigger: {
+        trigger: section4_5, // section4_5를 다시 트리거로 설정
+        containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+        start: "center+=200 center+=800", // 새로운 트리거 위치
+        end: "center+=800 bottom-=500", // 종료 지점
+        scrub: true, // 스크롤에 따라 부드럽게 전환
+        markers: true, // 디버깅용
+      },
+    }
+  );
+  // ***************************데코섹션***************************
+  let deco_text_1 = document.querySelector(".deco-sect .text-box-1");
+  let deco_text_2 = document.querySelector(".deco-sect .text-box-2");
+  let deco_text_3 = document.querySelector(".deco-sect .text-box-3");
+  let scrollTimeline_deco = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".deco-sect",
+      // pin: true,
+      scrub: 1,
+      start: "top bottom",
+      end: "+=1000",
+      markers: true,
+    },
+  });
+  // 타임라인
+  scrollTimeline_deco
+    // .fromTo(deco_text_1, { xPercent: -5000 }, { xPercent: 0 })
+    .fromTo(deco_text_2, { xPercent: 200 }, { xPercent: 0 })
+    .fromTo(deco_text_3, { xPercent: -1000 }, { xPercent: 0 });
 
   // ***************************갤러리 슬라이드***************************
   var swiper = new Swiper(".img-slide", {
