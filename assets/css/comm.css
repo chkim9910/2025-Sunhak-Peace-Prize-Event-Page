@@ -481,7 +481,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  text-transform: uppercase;
   padding-bottom: 120px;
 }
 .slogan-sect .text-wrap .text {
@@ -507,10 +506,8 @@ section {
 }
 .slogan-sect .text-wrap .highlight {
   font-family: "Cinzel", serif;
-  text-transform: uppercase;
   font-weight: 500;
   font-style: italic;
-  color: #deea77;
 }
 .slogan-sect .slogan {
   padding: 60px 0;
@@ -520,6 +517,7 @@ section {
   line-height: 1400%;
 }
 .slogan-sect .slogan::before {
+  display: none;
   content: "";
   background: #deea77;
   position: absolute;
@@ -533,12 +531,8 @@ section {
 .slogan-sect .slogan .text {
   font-size: 220px;
   font-weight: bold;
-  color: #000;
+  color: #fff;
   letter-spacing: -3px;
-}
-.slogan-sect .slogan .text_1,
-.slogan-sect .slogan .text_2 {
-  color: #deea77;
 }
 
 .laureate-sect {

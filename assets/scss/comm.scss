@@ -183,7 +183,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     padding-bottom: 120px;
     .text {
       font-family: $crimson-font;
@@ -209,10 +209,10 @@ section {
     .highlight {
       // font-family: $italianno-font;
       font-family: $cinzel-font;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       font-weight: 500;
       font-style: italic;
-      color: $point-color-1;
+      // color: $point-color-1;
       // font-size: 28px;
     }
   }
@@ -223,6 +223,7 @@ section {
     font-family: $crimson-font;
     line-height: 1400%;
     &::before {
+      display: none;
       content: "";
       // background: $w;
       background: $point-color-1;
@@ -238,14 +239,15 @@ section {
       font-size: 220px;
       font-weight: bold;
       // color: $point-color-5;
-      color: $b;
+      color: $w;
+      // color: $b;
       letter-spacing: -3px;
       // height: 200px;
     }
-    .text_1,
-    .text_2 {
-      color: $point-color-1;
-    }
+    // .text_1,
+    // .text_2 {
+    //   color: $point-color-1;
+    // }
   }
 }
 // 수상자 섹션
