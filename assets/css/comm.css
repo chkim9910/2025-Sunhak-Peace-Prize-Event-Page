@@ -1180,7 +1180,7 @@ section {
 }
 .banner .wrap .text-box {
   margin: 100px;
-  padding: 130px 32px 56px;
+  padding: 150px 32px 100px;
   max-width: 1440px;
   height: -moz-fit-content;
   height: fit-content;
@@ -1202,9 +1202,10 @@ section {
   letter-spacing: 5px;
 }
 .banner .wrap .text-box .title {
-  font-size: 56px;
-  line-height: 100%;
-  letter-spacing: 2px;
+  font-size: 46px;
+  line-height: 120%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 .banner .wrap .text-box .download-btn {
   width: -moz-fit-content;

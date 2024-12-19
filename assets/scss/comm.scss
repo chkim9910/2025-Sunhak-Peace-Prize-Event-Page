@@ -853,7 +853,7 @@ section {
     background: url(../img/banner/bg.jpg) no-repeat 0 0 / cover;
     .text-box {
       margin: 100px;
-      padding: 130px 32px 56px;
+      padding: 150px 32px 100px;
       max-width: 1440px;
       height: fit-content;
       display: flex;
@@ -873,9 +873,11 @@ section {
         letter-spacing: 5px;
       }
       .title {
-        font-size: 56px;
-        line-height: 100%;
-        letter-spacing: 2px;
+        // font-family: $italianno-font;
+        font-size: 46px;
+        line-height: 120%;
+        letter-spacing: 3px;
+        text-transform: uppercase;
       }
       .download-btn {
         width: fit-content;
