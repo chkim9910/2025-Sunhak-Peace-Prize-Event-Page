@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Varta:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 @import url("https://fonts.googleapis.com//css2?family=Cinzel:wght@400..900&display=swap");
 @font-face {
   font-family: "Pretendard-Regular";
@@ -317,6 +317,11 @@ section {
   width: 100%;
   height: 100vh;
 }
+@media screen and (min-width: 1441px) {
+  section {
+    max-width: none;
+  }
+}
 
 .container {
   padding-left: 32px;
@@ -419,7 +424,12 @@ section {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-bottom: 9%;
+  padding-bottom: 7%;
+}
+@media screen and (min-width: 1441px) {
+  .hero-sect .container {
+    padding-bottom: 12%;
+  }
 }
 .hero-sect .text-group {
   display: flex;
@@ -429,7 +439,7 @@ section {
   height: -moz-fit-content;
   height: fit-content;
 }
-.hero-sect .sub-title {
+.hero-sect .text-group .sub-title {
   font-family: "Crimson Text", serif;
   letter-spacing: 16px;
   font-size: 24px;
@@ -438,22 +448,22 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
 }
-.hero-sect .title-box {
+.hero-sect .text-group .title-box {
   width: 100%;
   height: 222px;
 }
-.hero-sect .title {
+.hero-sect .text-group .title {
   height: auto;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .hero-sect .img-box {
-  width: 670px;
+  width: 47%;
   transform: translateY(30%);
   z-index: -1;
 }
-.hero-sect .img {
+.hero-sect .img-box .img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
@@ -471,27 +481,35 @@ section {
   display: flex;
   flex-direction: column;
   gap: 60px;
+  text-transform: uppercase;
 }
-.slogan-sect .text {
+.slogan-sect .text-wrap .text {
   font-family: "Crimson Text", serif;
   font-size: 32px;
 }
-.slogan-sect .text-right {
+.slogan-sect .text-wrap .text-right {
   text-align: right;
 }
-.slogan-sect .line {
+.slogan-sect .text-wrap .line {
   width: 100%;
   height: 1px;
   background: #fff;
 }
-.slogan-sect .arrow-box {
+.slogan-sect .text-wrap .arrow-box {
   text-align: right;
   height: 83px;
   width: 100%;
 }
-.slogan-sect .arrow {
+.slogan-sect .text-wrap .arrow {
   width: auto;
   height: 100%;
+}
+.slogan-sect .text-wrap .highlight {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: italic;
+  color: #deea77;
 }
 .slogan-sect .slogan {
   margin-top: 140px;
@@ -657,14 +675,7 @@ section {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: grayscale(100%);
   transition: all 0.5s;
-}
-.laureate1-sect-2 .img-box img:hover,
-.laureate2-sect-2 .img-box img:hover,
-.laureate3-sect-2 .img-box img:hover,
-.laureate4-sect-2 .img-box img:hover {
-  filter: none;
 }
 
 .contents-title {
@@ -704,14 +715,7 @@ section {
 .laureate2-sect-3 .wrap img,
 .laureate3-sect-3 .wrap img,
 .laureate4-sect-3 .wrap img {
-  filter: grayscale(100%);
   transition: all 0.3s;
-}
-.laureate1-sect-3 .wrap img:hover,
-.laureate2-sect-3 .wrap img:hover,
-.laureate3-sect-3 .wrap img:hover,
-.laureate4-sect-3 .wrap img:hover {
-  filter: none;
 }
 
 .laureate1-sect-4,
@@ -1219,6 +1223,7 @@ section {
   justify-content: space-around;
   align-items: flex-end;
   margin: 0 auto;
+  padding: 0 32px;
 }
 .ant-sect .wrap {
   width: 100%;
@@ -1226,7 +1231,7 @@ section {
 .ant-sect .wrap .text-wrap {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 .ant-sect .wrap .text-wrap span {
   font-family: "Cinzel", serif;
@@ -1249,7 +1254,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 120px;
-  padding: 250px 0 200px;
+  padding: 250px 32px 200px;
 }
 .gallery .wrap {
   width: 100%;
@@ -1267,16 +1272,16 @@ section {
   text-transform: uppercase;
 }
 .gallery .wrap .title-box .sub-title {
-  font-family: "Satisfy", serif;
+  font-family: "Italianno", cursive;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 70px;
   color: transparent;
   background: linear-gradient(-3deg, rgba(84, 84, 84, 0.329) 0%, rgba(186, 186, 186, 0.729) 45%, rgba(84, 84, 84, 0.329) 97%);
   background-clip: text;
   -webkit-background-clip: text;
   display: inline-block;
   padding: 0 5px;
-  transform: translateX(-40px);
+  transform: translateX(-30px);
 }
 .gallery .wrap .swiper-slide {
   width: -moz-fit-content !important;

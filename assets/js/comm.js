@@ -21,7 +21,7 @@ $(function () {
       trigger: ".slogan-sect .text-wrap",
       scrub: 1,
       start: "top center+=300",
-      end: "+=1200",
+      end: "+=900",
       // markers: true,
     },
   });
@@ -30,26 +30,29 @@ $(function () {
     .fromTo(
       text1_1,
       {
+        x: -100,
         opacity: 0,
-        duration: 0.02,
+        duration: 0.05,
       },
-      { opacity: 1 }
+      { x: 0, opacity: 1 }
     )
     .fromTo(
       text1_2,
       {
+        x: 100,
         opacity: 0,
-        duration: 0.02,
+        duration: 0.05,
       },
-      { opacity: 1 }
+      { x: 0, opacity: 1 }
     )
     .fromTo(
       text1_3,
       {
+        x: 100,
         opacity: 0,
-        duration: 0.02,
+        duration: 0.05,
       },
-      { opacity: 1 }
+      { x: 0, opacity: 1 }
     );
 
   let scrollTimeline_slogan = gsap.timeline({
@@ -96,6 +99,21 @@ $(function () {
   let section1_3 = document.querySelector(".laureate1-sect-3");
   let section1_4 = document.querySelector(".laureate1-sect-4");
   let section1_5 = document.querySelector(".laureate1-sect-5");
+  let section1_text_box_1 = document.querySelector(
+    ".laureate1-sect-2 .text-box"
+  );
+  let section1_text_box_2 = document.querySelector(
+    ".laureate1-sect-3 .top-contents .text"
+  );
+  let section1_text_box_3 = document.querySelector(
+    ".laureate1-sect-3 .bottom-contents .text"
+  );
+  let section1_text_box_4 = document.querySelector(
+    ".laureate1-sect-4 .text-box"
+  );
+  let section1_text_box_5 = document.querySelector(
+    ".laureate1-sect-5 .text-box"
+  );
   let scrollTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".laureate1-container",
@@ -112,7 +130,6 @@ $(function () {
       opacity: 0,
     })
     .to(section1_1, { opacity: 1, duration: 0.05 })
-
     .to(sections1, {
       xPercent: -100 * (sections1.length - 1),
     });
@@ -134,6 +151,23 @@ $(function () {
       },
     }
   );
+  // section1_2 text_box_1 x좌표 이동 추가
+  gsap.fromTo(
+    section1_text_box_1,
+    { x: 200 }, // 시작 상태
+    {
+      x: 0, // 끝 상태
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section1_2, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+        start: "top center", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        markers: true, // 디버깅용
+      },
+    }
+  );
   // section1_3 opacity 전환 추가
   gsap.fromTo(
     section1_3,
@@ -148,6 +182,60 @@ $(function () {
         end: "center center+=200", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
         // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section1_3 text_box_2 x좌표 이동 추가
+  gsap.fromTo(
+    section1_text_box_2,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section1_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+        start: "top bottom-=200", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        markers: true, // 디버깅용
+      },
+    }
+  );
+  // section1_3 text_box_3 x좌표 이동 추가
+  gsap.fromTo(
+    section1_text_box_3,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section1_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+        start: "top center+=1700", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        markers: true, // 디버깅용
+      },
+    }
+  );
+  // section1_4 text_box_4 x좌표 이동 추가
+  gsap.fromTo(
+    section1_text_box_4,
+    { x: 100, opacity: 0 }, // 시작 상태
+    {
+      x: -200,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section1_4, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+        start: "top bottom+=1000", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        markers: true, // 디버깅용
       },
     }
   );
@@ -168,6 +256,24 @@ $(function () {
       },
     }
   );
+  // section1_5 text_box_5 y좌표 이동 추가
+  gsap.fromTo(
+    section1_text_box_5,
+    { y: 100, opacity: 0 }, // 시작 상태
+    {
+      y: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section1_5, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+        start: "top bottom", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        markers: true, // 디버깅용
+      },
+    }
+  );
 
   // ***************************laureate 2 - 완지라 마타이***************************
   let sections2 = gsap.utils.toArray("main .laureate2-sect");
@@ -176,6 +282,21 @@ $(function () {
   let section2_3 = document.querySelector(".laureate2-sect-3");
   let section2_4 = document.querySelector(".laureate2-sect-4");
   let section2_5 = document.querySelector(".laureate2-sect-5");
+  let section2_text_box_1 = document.querySelector(
+    ".laureate2-sect-2 .text-box"
+  );
+  let section2_text_box_2 = document.querySelector(
+    ".laureate2-sect-3 .bottom-contents"
+  );
+  let section2_text_box_3 = document.querySelector(
+    ".laureate2-sect-3 .top-contents"
+  );
+  let section2_text_box_4 = document.querySelector(
+    ".laureate2-sect-4 .contents-box"
+  );
+  let section2_text_box_5 = document.querySelector(
+    ".laureate2-sect-5 .text-box"
+  );
   let scrollTimeline2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".laureate2-container",
@@ -183,7 +304,7 @@ $(function () {
       scrub: 1,
       start: "top top",
       end: "+=6000",
-      markers: true,
+      // markers: true,
     },
   });
   // 타임라인
@@ -209,7 +330,24 @@ $(function () {
         start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=100", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section2_2 text_box_1 x좌표 이동 추가
+  gsap.fromTo(
+    section2_text_box_1,
+    { x: 200 }, // 시작 상태
+    {
+      x: 0, // 끝 상태
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section2_2, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline2, // 기존 타임라인과 동기화
+        start: "top center", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
       },
     }
   );
@@ -226,6 +364,60 @@ $(function () {
         start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=200", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section2_3 text_box_2 x좌표 이동 추가
+  gsap.fromTo(
+    section2_text_box_2,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section2_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline2, // 기존 타임라인과 동기화
+        start: "top bottom-=200", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section2_3 text_box_3 x좌표 이동 추가
+  gsap.fromTo(
+    section2_text_box_3,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section2_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline2, // 기존 타임라인과 동기화
+        start: "top center+=1700", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section2_4 text_box_4 x좌표 이동 추가
+  gsap.fromTo(
+    section2_text_box_4,
+    { x: 100, opacity: 0 }, // 시작 상태
+    {
+      x: -200,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section2_4, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline2, // 기존 타임라인과 동기화
+        start: "top bottom+=1000", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
         // markers: true, // 디버깅용
       },
     }
@@ -247,6 +439,24 @@ $(function () {
       },
     }
   );
+  // section2_5 text_box_5 y좌표 이동 추가
+  gsap.fromTo(
+    section2_text_box_5,
+    { y: 100, opacity: 0 }, // 시작 상태
+    {
+      y: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section2_5, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline2, // 기존 타임라인과 동기화
+        start: "top bottom", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
 
   // ***************************laureate 3 - 휴 에반스***************************
   let sections3 = gsap.utils.toArray("main .laureate3-sect");
@@ -255,6 +465,21 @@ $(function () {
   let section3_3 = document.querySelector(".laureate3-sect-3");
   let section3_4 = document.querySelector(".laureate3-sect-4");
   let section3_5 = document.querySelector(".laureate3-sect-5");
+  let section3_text_box_1 = document.querySelector(
+    ".laureate3-sect-2 .text-box"
+  );
+  let section3_text_box_2 = document.querySelector(
+    ".laureate3-sect-3 .right-box .text-box"
+  );
+  let section3_text_box_3 = document.querySelector(
+    ".laureate3-sect-3 .top-contents .text-box"
+  );
+  let section3_text_box_4 = document.querySelector(
+    ".laureate3-sect-4 .text-box"
+  );
+  let section3_text_box_5 = document.querySelector(
+    ".laureate3-sect-5 .text-box"
+  );
   let scrollTimeline3 = gsap.timeline({
     scrollTrigger: {
       trigger: ".laureate3-container",
@@ -262,7 +487,7 @@ $(function () {
       scrub: 1,
       //   start: "top top",
       end: "+=4500",
-      markers: true,
+      // markers: true,
     },
   });
   // 타임라인
@@ -288,7 +513,24 @@ $(function () {
         start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=100", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section3_2 text_box_1 x좌표 이동 추가
+  gsap.fromTo(
+    section3_text_box_1,
+    { x: 200 }, // 시작 상태
+    {
+      x: 0, // 끝 상태
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section3_2, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+        start: "top center", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
       },
     }
   );
@@ -305,6 +547,60 @@ $(function () {
         start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=200", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section3_3 text_box_2 x좌표 이동 추가
+  gsap.fromTo(
+    section3_text_box_2,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section3_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+        start: "top bottom-=200", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section3_3 text_box_3 x좌표 이동 추가
+  gsap.fromTo(
+    section3_text_box_3,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section3_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+        start: "top center+=1700", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section3_4 text_box_4 x좌표 이동 추가
+  gsap.fromTo(
+    section3_text_box_4,
+    { x: 100, opacity: 0 }, // 시작 상태
+    {
+      x: -200,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section3_4, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+        start: "top bottom+=1000", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
         // markers: true, // 디버깅용
       },
     }
@@ -326,6 +622,24 @@ $(function () {
       },
     }
   );
+  // section3_5 text_box_5 y좌표 이동 추가
+  gsap.fromTo(
+    section3_text_box_5,
+    { y: 100, opacity: 0 }, // 시작 상태
+    {
+      y: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section3_5, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+        start: "top bottom", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
 
   // ***************************laureate 4 - 보얀 슬랫***************************
   let sections4 = gsap.utils.toArray("main .laureate4-sect");
@@ -334,6 +648,21 @@ $(function () {
   let section4_3 = document.querySelector(".laureate4-sect-3");
   let section4_4 = document.querySelector(".laureate4-sect-4");
   let section4_5 = document.querySelector(".laureate4-sect-5");
+  let section4_text_box_1 = document.querySelector(
+    ".laureate4-sect-2 .text-box"
+  );
+  let section4_text_box_2 = document.querySelector(
+    ".laureate4-sect-3 .right-box"
+  );
+  let section4_text_box_3 = document.querySelector(
+    ".laureate4-sect-3 .left-box"
+  );
+  let section4_text_box_4 = document.querySelector(
+    ".laureate4-sect-4 .contents-box"
+  );
+  let section4_text_box_5 = document.querySelector(
+    ".laureate4-sect-5 .text-box"
+  );
   let scrollTimeline4 = gsap.timeline({
     scrollTrigger: {
       trigger: ".laureate4-container",
@@ -341,7 +670,7 @@ $(function () {
       scrub: 1,
       //   start: "top top",
       end: "+=4500",
-      markers: true,
+      // markers: true,
     },
   });
   // 타임라인
@@ -367,7 +696,24 @@ $(function () {
         start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=100", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section4_2 text_box_1 x좌표 이동 추가
+  gsap.fromTo(
+    section4_text_box_1,
+    { x: 200 }, // 시작 상태
+    {
+      x: 0, // 끝 상태
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section4_2, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+        start: "top center", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
       },
     }
   );
@@ -384,6 +730,60 @@ $(function () {
         start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=200", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section4_3 text_box_2 x좌표 이동 추가
+  gsap.fromTo(
+    section4_text_box_2,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section4_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+        start: "top bottom+=200", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section4_3 text_box_3 x좌표 이동 추가
+  gsap.fromTo(
+    section4_text_box_3,
+    { x: 200, opacity: 0 }, // 시작 상태
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section4_3, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+        start: "top center+=2000", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section4_4 text_box_4 x좌표 이동 추가
+  gsap.fromTo(
+    section4_text_box_4,
+    { x: 100, opacity: 0 }, // 시작 상태
+    {
+      x: -200,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section4_4, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+        start: "top bottom+=1000", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
         // markers: true, // 디버깅용
       },
     }
@@ -405,6 +805,24 @@ $(function () {
       },
     }
   );
+  // section4_5 text_box_5 y좌표 이동 추가
+  gsap.fromTo(
+    section4_text_box_5,
+    { y: 100, opacity: 0 }, // 시작 상태
+    {
+      y: 0,
+      opacity: 1,
+      duration: 2, // 애니메이션 지속 시간
+      scrollTrigger: {
+        trigger: section4_5, // 섹션 1-2가 트리거
+        containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+        start: "top bottom", // 시작 시점
+        end: "center center+=100", // 종료 시점
+        scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
   // section4_5 opacity 다시 0으로
   gsap.fromTo(
     section4_5,
@@ -419,10 +837,11 @@ $(function () {
         start: "center+=200 center+=800", // 새로운 트리거 위치
         end: "center+=800 bottom-=500", // 종료 지점
         scrub: true, // 스크롤에 따라 부드럽게 전환
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
       },
     }
   );
+
   // ***************************데코섹션***************************
   let deco_text_1 = document.querySelector(".deco-sect .text-box-1");
   let deco_text_2 = document.querySelector(".deco-sect .text-box-2");
@@ -434,7 +853,7 @@ $(function () {
       scrub: 1,
       start: "top bottom",
       end: "+=1000",
-      markers: true,
+      // markers: true,
     },
   });
   // 타임라인
