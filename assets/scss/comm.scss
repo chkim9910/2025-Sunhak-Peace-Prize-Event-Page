@@ -781,7 +781,55 @@ section {
     background: url(../img/laureate4-boyan/6.png) no-repeat 50% 50% / cover;
   }
 }
+//************* 브로슈어 배너 공통 *************
 
+//************* 기자회견 브로슈어 배너 *************
+.banner {
+  max-width: none !important;
+  .wrap {
+    background: url(../img/banner/bg.jpg) no-repeat 0 0 / cover;
+    .text-box {
+      margin: 100px;
+      padding: 150px 32px 50px;
+      max-width: 1440px;
+      // width: 100%;
+      // padding: 32px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      .text-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .sub-title {
+        font-family: "Aboreto", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 5px;
+      }
+      .title {
+        font-size: 56px;
+        line-height: 116%;
+        letter-spacing: 2px;
+      }
+      .download-btn {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .la-download {
+        font-size: 21px;
+      }
+    }
+  }
+}
+//************* 역대 수상자 갤러리 *************
+//************* 선학평화상 소개 브로슈어 배너 *************
 // footer
 #footer {
   margin-bottom: 200px;

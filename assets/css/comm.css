@@ -1116,6 +1116,51 @@ section {
   background: url(../img/laureate4-boyan/6.png) no-repeat 50% 50%/cover;
 }
 
+.banner {
+  max-width: none !important;
+}
+.banner .wrap {
+  background: url(../img/banner/bg.jpg) no-repeat 0 0/cover;
+}
+.banner .wrap .text-box {
+  margin: 100px;
+  padding: 150px 32px 50px;
+  max-width: 1440px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.banner .wrap .text-box .text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.banner .wrap .text-box .sub-title {
+  font-family: "Aboreto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+.banner .wrap .text-box .title {
+  font-size: 56px;
+  line-height: 116%;
+  letter-spacing: 2px;
+}
+.banner .wrap .text-box .download-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.banner .wrap .text-box .la-download {
+  font-size: 21px;
+}
+
 #footer {
   margin-bottom: 200px;
 }
