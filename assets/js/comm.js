@@ -841,14 +841,13 @@ $(function () {
       },
     }
   );
-
-  // ***************************데코섹션***************************
-  let deco_text_1 = document.querySelector(".deco-sect .text-box-1");
-  let deco_text_2 = document.querySelector(".deco-sect .text-box-2");
-  let deco_text_3 = document.querySelector(".deco-sect .text-box-3");
-  let scrollTimeline_deco = gsap.timeline({
+  // ***************************배너***************************
+  let banner1 = document.querySelector(".banner1-sect");
+  let banner2 = document.querySelector(".banner2-sect");
+  // 배너1
+  let scrollTimeline_banner1 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".deco-sect",
+      trigger: ".banner1-sect",
       // pin: true,
       scrub: 1,
       start: "top bottom",
@@ -857,10 +856,84 @@ $(function () {
     },
   });
   // 타임라인
-  scrollTimeline_deco
-    // .fromTo(deco_text_1, { xPercent: -5000 }, { xPercent: 0 })
-    .fromTo(deco_text_2, { xPercent: 200 }, { xPercent: 0 })
-    .fromTo(deco_text_3, { xPercent: -1000 }, { xPercent: 0 });
+  scrollTimeline_banner1.fromTo(
+    banner1,
+    { y: 100, opacity: 0 },
+    { y: 0, opacity: 1 }
+  );
+  // 배너2
+  let scrollTimeline_banner2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".banner2-sect",
+      // pin: true,
+      scrub: 1,
+      start: "top bottom",
+      end: "+=1000",
+      // markers: true,
+    },
+  });
+  // 타임라인
+  scrollTimeline_banner2.fromTo(
+    banner2,
+    { y: 100, opacity: 0 },
+    { y: 0, opacity: 1 }
+  );
+
+  // ***************************안내***************************
+  let announcement = document.querySelector(".ant-sect .wrap");
+  let scrollTimeline_announcment = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".ant-sect",
+      // pin: true,
+      scrub: 1,
+      start: "top bottom-=100",
+      end: "+=1000",
+      // markers: true,
+    },
+  });
+  // 타임라인
+  scrollTimeline_announcment.fromTo(
+    announcement,
+    { y: 200, opacity: 0 },
+    { y: 0, opacity: 1 }
+  );
+  // ***************************갤러리***************************
+  let gallery = document.querySelector(".gallery .wrap");
+  let scrollTimeline_gallery = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".gallery",
+      // pin: true,
+      scrub: 1,
+      start: "top bottom-=100",
+      end: "+=1000",
+      // markers: true,
+    },
+  });
+  // 타임라인
+  scrollTimeline_gallery.fromTo(
+    gallery,
+    { y: 200, opacity: 0 },
+    { y: 0, opacity: 1 }
+  );
+  // ***************************데코섹션***************************
+  // let deco_text_1 = document.querySelector(".deco-sect .text-box-1");
+  // let deco_text_2 = document.querySelector(".deco-sect .text-box-2");
+  // let deco_text_3 = document.querySelector(".deco-sect .text-box-3");
+  // let scrollTimeline_deco = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".deco-sect",
+  //     // pin: true,
+  //     scrub: 1,
+  //     start: "top bottom",
+  //     end: "+=1000",
+  //     // markers: true,
+  //   },
+  // });
+  // // 타임라인
+  // scrollTimeline_deco
+  //   // .fromTo(deco_text_1, { xPercent: -5000 }, { xPercent: 0 })
+  //   .fromTo(deco_text_2, { xPercent: 200 }, { xPercent: 0 })
+  //   .fromTo(deco_text_3, { xPercent: -1000 }, { xPercent: 0 });
 
   // ***************************갤러리 슬라이드***************************
   var swiper = new Swiper(".img-slide", {
