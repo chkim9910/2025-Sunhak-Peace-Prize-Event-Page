@@ -132,7 +132,7 @@ $(function () {
       opacity: 1, // 뷰포트 진입 시
       duration: 2,
       scrollTrigger: {
-        trigger: section2_3, // section1_2를 트리거로 설정
+        trigger: section2_3, // section2_3를 트리거로 설정
         containerAnimation: scrollTimeline2, // 수평 스크롤 타임라인과 동기화
         start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=200", // 약간의 여유를 둔 후 종료
@@ -149,7 +149,7 @@ $(function () {
       opacity: 1, // 뷰포트 진입 시
       duration: 2,
       scrollTrigger: {
-        trigger: section2_5, // section1_2를 트리거로 설정
+        trigger: section2_5, // section2_5를 트리거로 설정
         containerAnimation: scrollTimeline2, // 수평 스크롤 타임라인과 동기화
         start: "start-=1000 center+=500", // 섹션이 뷰포트 중심에 도달할 때 시작
         end: "center center+=200", // 약간의 여유를 둔 후 종료
@@ -161,6 +161,11 @@ $(function () {
 
   // ***************************laureate 3 - 휴 에반스***************************
   let sections3 = gsap.utils.toArray("main .laureate3-sect");
+  let section3_1 = document.querySelector(".laureate3-sect-1");
+  let section3_2 = document.querySelector(".laureate3-sect-2");
+  let section3_3 = document.querySelector(".laureate3-sect-3");
+  let section3_4 = document.querySelector(".laureate3-sect-4");
+  let section3_5 = document.querySelector(".laureate3-sect-5");
   let scrollTimeline3 = gsap.timeline({
     scrollTrigger: {
       trigger: ".laureate3-container",
@@ -181,8 +186,65 @@ $(function () {
       xPercent: -100 * (sections3.length - 1),
     });
 
+  // section3_2 opacity 전환 추가
+  gsap.fromTo(
+    section3_2,
+    { opacity: 0 }, // 초기 상태
+    {
+      opacity: 1, // 뷰포트 진입 시
+      duration: 2,
+      scrollTrigger: {
+        trigger: section3_2, // section3_2를 트리거로 설정
+        containerAnimation: scrollTimeline3, // 수평 스크롤 타임라인과 동기화
+        start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "center center+=100", // 약간의 여유를 둔 후 종료
+        scrub: true, // 스크롤에 따라 부드럽게 전환
+        markers: true, // 디버깅용
+      },
+    }
+  );
+  // section3_3 opacity 전환 추가
+  gsap.fromTo(
+    section3_3,
+    { opacity: 0 }, // 초기 상태
+    {
+      opacity: 1, // 뷰포트 진입 시
+      duration: 2,
+      scrollTrigger: {
+        trigger: section3_3, // section3_3를 트리거로 설정
+        containerAnimation: scrollTimeline3, // 수평 스크롤 타임라인과 동기화
+        start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "center center+=200", // 약간의 여유를 둔 후 종료
+        scrub: true, // 스크롤에 따라 부드럽게 전환
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section3_5 opacity 전환 추가
+  gsap.fromTo(
+    section3_5,
+    { opacity: 0 }, // 초기 상태
+    {
+      opacity: 1, // 뷰포트 진입 시
+      duration: 2,
+      scrollTrigger: {
+        trigger: section3_5, // section3_5를 트리거로 설정
+        containerAnimation: scrollTimeline3, // 수평 스크롤 타임라인과 동기화
+        start: "start-=1000 center+=500", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "center center+=200", // 약간의 여유를 둔 후 종료
+        scrub: true, // 스크롤에 따라 부드럽게 전환
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+
   // ***************************laureate 4 - 보얀 슬랫***************************
   let sections4 = gsap.utils.toArray("main .laureate4-sect");
+  let section4_1 = document.querySelector(".laureate4-sect-1");
+  let section4_2 = document.querySelector(".laureate4-sect-2");
+  let section4_3 = document.querySelector(".laureate4-sect-3");
+  let section4_4 = document.querySelector(".laureate4-sect-4");
+  let section4_5 = document.querySelector(".laureate4-sect-5");
   let scrollTimeline4 = gsap.timeline({
     scrollTrigger: {
       trigger: ".laureate4-container",
@@ -203,15 +265,55 @@ $(function () {
       xPercent: -100 * (sections4.length - 1),
     });
 
-  //   let scrollTween1 = gsap.to(sections1, {
-  //     xPercent: -100 * (sections1.length - 1),
-  //     ease: "none", // <-- IMPORTANT!
-  //     scrollTrigger: {
-  //       trigger: ".laureate1-container",
-  //       pin: true,
-  //       scrub: 0.1,
-  //       start: "top top",
-  //       //   snap: directionalSnap(1 / (sections.length - 1)),
-  //       end: "+=3000",
-  //     },
+  // section4_2 opacity 전환 추가
+  gsap.fromTo(
+    section4_2,
+    { opacity: 0 }, // 초기 상태
+    {
+      opacity: 1, // 뷰포트 진입 시
+      duration: 2,
+      scrollTrigger: {
+        trigger: section4_2, // section4_2를 트리거로 설정
+        containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+        start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "center center+=100", // 약간의 여유를 둔 후 종료
+        scrub: true, // 스크롤에 따라 부드럽게 전환
+        markers: true, // 디버깅용
+      },
+    }
+  );
+  // section4_3 opacity 전환 추가
+  gsap.fromTo(
+    section2_3,
+    { opacity: 0 }, // 초기 상태
+    {
+      opacity: 1, // 뷰포트 진입 시
+      duration: 2,
+      scrollTrigger: {
+        trigger: section4_3, // section4_3를 트리거로 설정
+        containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+        start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "center center+=200", // 약간의 여유를 둔 후 종료
+        scrub: true, // 스크롤에 따라 부드럽게 전환
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section4_5 opacity 전환 추가
+  gsap.fromTo(
+    section4_5,
+    { opacity: 0 }, // 초기 상태
+    {
+      opacity: 1, // 뷰포트 진입 시
+      duration: 2,
+      scrollTrigger: {
+        trigger: section4_5, // section4_5를 트리거로 설정
+        containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+        start: "start-=1000 center+=500", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "center center+=200", // 약간의 여유를 둔 후 종료
+        scrub: true, // 스크롤에 따라 부드럽게 전환
+        // markers: true, // 디버깅용
+      },
+    }
+  );
 });
