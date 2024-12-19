@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Varta:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com//css2?family=Cinzel:wght@400..900&display=swap");
+
 // 변수 설정
 $txtDefult: #202020;
 $primary: #36c5f4;
@@ -57,7 +61,7 @@ $color-gradient-silver: linear-gradient(
   rgba(84, 84, 84, 0.329) 97%
 );
 $color-gradient-silver-2: linear-gradient(
-  to bottom,
+  -3deg,
   rgba(84, 84, 84, 0.329) 0%,
   rgba(186, 186, 186, 0.729) 45%,
   rgba(84, 84, 84, 0.329) 97%
@@ -77,6 +81,8 @@ $font-size: 16px;
 $font-family: "Noto Sans KR", sans-serif;
 $crimson-font: "Crimson Text", serif;
 $pretendard-font: "Pretendard-Regular", sans-serif;
+$cinzel-font: "Cinzel", serif;
+$satisfy-font: "Satisfy", serif;
 
 // 반응형 미디어 쿼리
 $breakpoint-sm: 576px;

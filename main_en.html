@@ -9,10 +9,14 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+KR:wght@200..900&family=Quicksand:wght@300..700&family=Varta:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Satisfy&family=Varta:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
@@ -23,6 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
@@ -698,9 +703,278 @@
             </div>
           </div>
         </section>
+        <!-- 시상식 안내 섹션 -->
+        <section class="ant-sect">
+          <h2 class="hidden">announcement section</h2>
+          <div class="top">
+            <span>( Announcement )</span>
+          </div>
+          <div class="wrap">
+            <ul class="text-wrap">
+              <li>
+                <span>THE 6th Sunhak Peace Prize Award</span>
+                <img src="./assets/img/announcement/forest.gif" alt="image" />
+              </li>
+              <li>
+                <span>will take place</span>
+                <img src="./assets/img/announcement/ceremony.gif" alt="image" />
+                <span>on April 11, 2025,</span>
+              </li>
+              <li>
+                <img src="./assets/img/announcement/seoul.gif" alt="image" />
+                <span>in Seoul, Korea</span>
+                <div class="arrow-box">
+                  <img
+                    class="arrow"
+                    src="./assets/img/slogan/arrow.png"
+                    alt="arrow"
+                  />
+                </div>
+                <span></span>
+              </li>
+            </ul>
+          </div>
+        </section>
         <!-- 역대 수상자 갤러리 -->
         <section class="gallery">
           <h2 class="hidden">laureates gallery</h2>
+          <div class="top">
+            <span>( Gallery )</span>
+          </div>
+          <div class="wrap">
+            <div class="title-box">
+              <span class="title"
+                >sunhak peace prize <br />
+                Laureates</span
+              >
+              <span class="sub-title">from 2015 to 2022</span>
+            </div>
+            <div class="swiper img-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/anoteTong.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=96"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2015 LAUREATE</span>
+                    <p class="name">Anote Tong</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/gupta.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=98"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2015 LAUREATE</span>
+                    <p class="name">Modadugu Vijay Gupta</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/Gino.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=107"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2017 LAUREATE</span>
+                    <p class="name">Gino Strada</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img
+                      src="./assets/img/gallery/sakenaYacoobi.jpg"
+                      alt="image"
+                    />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=100"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2017 LAUREATE</span>
+                    <p class="name">Sakena Yacoobi</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/Adesina.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=101"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2019 LAUREATE</span>
+                    <p class="name">Akinwumi Ayodeji Adesina</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img
+                      src="./assets/img/gallery/WarisDirie.jpg"
+                      alt="image"
+                    />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=106"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2019 LAUREATE</span>
+                    <p class="name">Waris Dirie</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/Younan.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=105"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2020 LAUREATE</span>
+                    <p class="name">Munib A. Younan</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/MackySall.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=104"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2020 LAUREATE</span>
+                    <p class="name">Macky Sall</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img
+                      src="./assets/img/gallery/Ban Ki Moon.jpg"
+                      alt="image"
+                    />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=103"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2020 FOUNDERS’ AWARD LAUREATE</span>
+                    <p class="name">Ban Ki-moon</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/Gavi.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=570"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2022 LAUREATE</span>
+                    <p class="name">Gavi, The Vaccine Alliance</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img
+                      src="./assets/img/gallery/SarahGilbert.jpg"
+                      alt="image"
+                    />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=571"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2022 LAUREATE</span>
+                    <p class="name">Dame Sarah Catherine Gilbert</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box">
+                    <img src="./assets/img/gallery/HunSen.jpg" alt="image" />
+                    <div class="overlay"></div>
+                    <div class="btn-gallery">
+                      <a
+                        target="_blank"
+                        href="http://sunhakpeaceprize.org/en/laureates/laureates_view.php?idx=569"
+                        >More About</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-box">
+                    <span class="sub-text">2022 FOUNDERS’ AWARD LAUREATE</span>
+                    <p class="name">Hun Sen</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="btn-prev-box">
+                <div class="swiper-button-prev"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
         </section>
         <!-- 선학평화상 소개 브로슈어 배너 -->
         <section class="banner banner2-sect">

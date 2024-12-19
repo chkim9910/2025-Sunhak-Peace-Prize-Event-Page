@@ -33,9 +33,9 @@ section {
 }
 .btn {
   border-radius: 100px;
-  // border-radius: 8px;
   color: $w;
   font-family: $pretendard-font;
+  font-size: 16px;
   background: rgba(255, 255, 255, 0);
   &:hover {
     background: rgba(255, 255, 255, 0.15);
@@ -45,10 +45,10 @@ section {
   }
 }
 .btn-nofilled {
-  padding: 16px 24px;
+  padding: 12px 24px;
 }
 .btn-outline {
-  padding: 16px 18px 16px 24px;
+  padding: 12px 24px 12px 30px;
   border: solid $w 1px;
 }
 
@@ -782,18 +782,15 @@ section {
   }
 }
 //************* 브로슈어 배너 공통 *************
-
-//************* 기자회견 브로슈어 배너 *************
 .banner {
   max-width: none !important;
+  height: fit-content;
   .wrap {
     background: url(../img/banner/bg.jpg) no-repeat 0 0 / cover;
     .text-box {
       margin: 100px;
-      padding: 150px 32px 50px;
+      padding: 130px 32px 56px;
       max-width: 1440px;
-      // width: 100%;
-      // padding: 32px;
       height: fit-content;
       display: flex;
       flex-direction: column;
@@ -828,8 +825,164 @@ section {
     }
   }
 }
+//************* 시상식 안내 *************
+.ant-sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 0 auto;
+  .wrap {
+    width: 100%;
+
+    .text-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      span {
+        font-family: $cinzel-font;
+        text-transform: uppercase;
+        font-size: 56px;
+      }
+      li {
+        display: flex;
+        gap: 16px;
+      }
+      img {
+        height: 76px;
+        flex: 1;
+        object-fit: cover;
+      }
+    }
+  }
+}
 //************* 역대 수상자 갤러리 *************
-//************* 선학평화상 소개 브로슈어 배너 *************
+.gallery {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding: 250px 0 200px;
+
+  .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+    .title-box {
+      font-size: 74px;
+      line-height: 110%;
+      .title {
+        text-transform: uppercase;
+      }
+      .sub-title {
+        font-family: $satisfy-font;
+        font-weight: 300;
+        font-size: 50px;
+        color: transparent;
+        background: $color-gradient-silver-2;
+        background-clip: text;
+        -webkit-background-clip: text;
+        display: inline-block;
+        padding: 0 5px;
+        transform: translateX(-40px);
+      }
+    }
+    .swiper-slide {
+      width: fit-content !important;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transform: translateX(-100px);
+    }
+    .btn-prev-box {
+      position: absolute;
+      width: 300px;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+      background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+    }
+    .swiper-button-prev,
+    .swiper-button-nect {
+      color: $w;
+      left: 0px;
+      font-size: 32px;
+    }
+    .img-slide {
+      .img-box {
+        width: 405px;
+        height: 405px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          transition: all 0.3s;
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 405px;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        .btn-gallery {
+          position: absolute;
+          left: 50%;
+          top: 45%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          opacity: 0;
+          transition: opacity 0.35s ease;
+          a {
+            font-family: $pretendard-font;
+            width: 200px;
+            padding: 12px 48px;
+            text-align: center;
+            color: white;
+            border: solid 2px white;
+            // border-radius: 1000px;
+            z-index: 1;
+            transition: background 0.35s ease;
+          }
+          &:hover {
+            a {
+              background: rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+        &:hover {
+          .overlay {
+            display: block;
+            background: rgba(0, 0, 0, 0.45);
+          }
+          .btn-gallery {
+            opacity: 1;
+          }
+        }
+      }
+      .text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        color: $w;
+      }
+      .sub-text {
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+      .name {
+        font-size: 24px;
+      }
+    }
+  }
+}
 // footer
 #footer {
   margin-bottom: 200px;

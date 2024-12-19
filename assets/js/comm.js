@@ -316,4 +316,24 @@ $(function () {
       },
     }
   );
+
+  // ***************************갤러리 슬라이드***************************
+  var swiper = new Swiper(".img-slide", {
+    spaceBetween: 16,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });
