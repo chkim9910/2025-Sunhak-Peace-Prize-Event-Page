@@ -26,8 +26,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
@@ -62,12 +62,15 @@
       <main>
         <!-- 히어로 섹션 -->
         <section class="hero-sect">
+          <div class="bg">
+            <div class="img"></div>
+          </div>
           <h2 class="hidden">hero section</h2>
           <div class="container">
             <div class="img-box">
               <img class="img" src="./assets/img/hero/hero-section-img.gif" />
             </div>
-            <div class="text-group">
+            <div class="text-group" data-aos="fade-in" data-aos-duration="1500">
               <span class="sub-title">THE 6TH PRIZE AWARD</span>
               <div class="title-box">
                 <img
@@ -84,7 +87,7 @@
           <div class="container">
             <div class="text-wrap">
               <div class="line line-1"></div>
-              <p class="text">
+              <p class="text text-1">
                 Actions for peace lay the foundation for sustainable peace.
               </p>
               <div class="line line-2"></div>
@@ -95,19 +98,19 @@
                   alt="arrow"
                 />
               </div>
-              <p class="text text-right">
+              <p class="text text-right text-2">
                 Meet four innovators of peace who have driven tangible change
               </p>
               <div class="line line-3"></div>
-              <p class="text text-right">
+              <p class="text text-right text-3">
                 through action, solidarity, sustainability, and inspiration.
               </p>
               <div class="line line-4"></div>
             </div>
             <div class="slogan">
-              <span class="text">INNOVATION</span>
-              <span class="text">FOR</span>
-              <span class="text">PEACE</span>
+              <span class="text text_1">INNOVATION</span>
+              <span class="text text_2">FOR</span>
+              <span class="text text_3">PEACE</span>
             </div>
           </div>
         </section>
@@ -689,7 +692,12 @@
           </section>
         </div>
         <!-- 기자회견 브로슈어 배너 -->
-        <section class="banner banner1-sect">
+        <section
+          class="banner banner1-sect"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-delay="500"
+        >
           <h2 class="hidden">press release brochure banner</h2>
           <div class="wrap">
             <div class="text-box">
@@ -706,6 +714,9 @@
         <!-- 시상식 안내 섹션 -->
         <section class="ant-sect">
           <h2 class="hidden">announcement section</h2>
+          <!-- <div class="bg">
+            <div class="img"></div>
+          </div> -->
           <div class="top">
             <span>( Announcement )</span>
           </div>
@@ -738,6 +749,7 @@
         <!-- 역대 수상자 갤러리 -->
         <section class="gallery">
           <h2 class="hidden">laureates gallery</h2>
+
           <div class="top">
             <span>( Gallery )</span>
           </div>
@@ -977,7 +989,11 @@
           </div>
         </section>
         <!-- 선학평화상 소개 브로슈어 배너 -->
-        <section class="banner banner2-sect">
+        <section
+          class="banner banner2-sect"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2 class="hidden">
             sunhak peace prize introduction brochure banner
           </h2>

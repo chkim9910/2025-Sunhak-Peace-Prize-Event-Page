@@ -1,5 +1,94 @@
 $(function () {
+  AOS.init();
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+  // ***************************슬로건 섹션***************************
+  let sectionSlogan = document.querySelector(".slogan-sect");
+  let line1_1 = document.querySelector(".line-1");
+  let line1_2 = document.querySelector(".line-2");
+  let line1_3 = document.querySelector(".line-3");
+  let line1_4 = document.querySelector(".line-4");
+  let text1_1 = document.querySelector(".text-1");
+  let text1_2 = document.querySelector(".text-2");
+  let text1_3 = document.querySelector(".text-3");
+  let slogan_container = document.querySelector(".slogan");
+  let slogan_1 = document.querySelector(".slogan .text_1");
+  let slogan_2 = document.querySelector(".slogan .text_2");
+  let slogan_3 = document.querySelector(".slogan .text_3");
+
+  let scrollTimeline_slogan_desc = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".slogan-sect .text-wrap",
+      scrub: 1,
+      start: "top center+=300",
+      end: "+=1200",
+      // markers: true,
+    },
+  });
+  // 타임라인
+  scrollTimeline_slogan_desc
+    .fromTo(
+      text1_1,
+      {
+        opacity: 0,
+        duration: 0.02,
+      },
+      { opacity: 1 }
+    )
+    .fromTo(
+      text1_2,
+      {
+        opacity: 0,
+        duration: 0.02,
+      },
+      { opacity: 1 }
+    )
+    .fromTo(
+      text1_3,
+      {
+        opacity: 0,
+        duration: 0.02,
+      },
+      { opacity: 1 }
+    );
+
+  let scrollTimeline_slogan = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".slogan-sect .slogan",
+      pin: true,
+      scrub: 1,
+      start: "top top+=100",
+      end: "+=1000",
+      // markers: true,
+    },
+  });
+  // 타임라인
+  scrollTimeline_slogan
+    .fromTo(
+      slogan_1,
+      {
+        opacity: 0,
+        duration: 0.03,
+      },
+      { opacity: 1 }
+    )
+    .fromTo(
+      slogan_2,
+      {
+        opacity: 0,
+        duration: 0.03,
+      },
+      { opacity: 1 }
+    )
+    .fromTo(
+      slogan_3,
+      {
+        opacity: 0,
+        duration: 0.03,
+      },
+      { opacity: 1 }
+    );
+
   // ***************************laureate 1 - 패트릭 아우어***************************
   let sections1 = gsap.utils.toArray("main .laureate1-sect");
   let section1_1 = document.querySelector(".laureate1-sect-1");
@@ -316,6 +405,22 @@ $(function () {
       },
     }
   );
+  // gsap.fromTo(
+  //   section4_5,
+  //   { opacity: 1 }, // 초기 상태{
+  //   {
+  //     opacity: 0, // 뷰포트 진입 시
+  //     duration: 2,
+  //     scrollTrigger: {
+  //       trigger: section4_5, // section4_5를 트리거로 설정
+  //       containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+  //       start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+  //       end: "top center", // 약간의 여유를 둔 후 종료
+  //       scrub: true, // 스크롤에 따라 부드럽게 전환
+  //       // markers: true, // 디버깅용
+  //     },
+  //   }
+  // );
 
   // ***************************갤러리 슬라이드***************************
   var swiper = new Swiper(".img-slide", {
@@ -337,3 +442,5 @@ $(function () {
     },
   });
 });
+
+// ***************************배너***************************
