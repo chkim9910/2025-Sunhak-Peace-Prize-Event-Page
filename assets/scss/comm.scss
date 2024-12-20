@@ -1008,13 +1008,20 @@ section {
       }
     }
   }
+  @media screen and (min-width: 1441px) {
+    .wrap {
+      max-width: 1440px;
+    }
+  }
 }
+
 //************* 역대 수상자 갤러리 *************
 .gallery {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  align-items: flex-end;
+  gap: 200px;
   padding: 250px 32px 200px;
 
   .wrap {
@@ -1135,7 +1142,13 @@ section {
       }
     }
   }
+  @media screen and (min-width: 1441px) {
+    .wrap {
+      max-width: 1440px;
+    }
+  }
 }
+
 // footer
 #footer {
   margin-bottom: 200px;

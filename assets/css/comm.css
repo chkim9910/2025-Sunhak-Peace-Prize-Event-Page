@@ -1315,12 +1315,18 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 1441px) {
+  .ant-sect .wrap {
+    max-width: 1440px;
+  }
+}
 
 .gallery {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  align-items: flex-end;
+  gap: 200px;
   padding: 250px 32px 200px;
 }
 .gallery .wrap {
@@ -1435,6 +1441,11 @@ section {
 }
 .gallery .wrap .img-slide .name {
   font-size: 24px;
+}
+@media screen and (min-width: 1441px) {
+  .gallery .wrap {
+    max-width: 1440px;
+  }
 }
 
 #footer {
