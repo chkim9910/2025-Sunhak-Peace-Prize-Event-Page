@@ -61,7 +61,7 @@ $(function () {
       pin: true,
       scrub: 1,
       start: "top top",
-      end: "+=1000",
+      end: "+=1200",
       // markers: true,
     },
   });
@@ -162,7 +162,7 @@ $(function () {
   // section1_2 text_box_1 x좌표 이동 추가
   gsap.fromTo(
     section1_text_box_1,
-    { x: 200 }, // 시작 상태
+    { x: 300 }, // 시작 상태
     {
       x: 0, // 끝 상태
       duration: 2, // 애니메이션 지속 시간
