@@ -1449,5 +1449,36 @@ section {
 }
 
 #footer {
-  margin-bottom: 200px;
+  margin: 200px 0 40px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .left-box {
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  gap: 32px;
+}
+#footer .left-box .right-text-wrap {
+  display: flex;
+  gap: 16px;
+}
+#footer .right-box {
+  display: flex;
+  gap: 10px;
+  font-size: 28px;
+}
+#footer .right-box a {
+  color: rgba(255, 255, 255, 0.6);
+}
+#footer .right-box a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+#footer .right-box .naver {
+  display: inline-block;
+  padding: 1px 0;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 24px;
 }

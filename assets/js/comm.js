@@ -172,7 +172,7 @@ $(function () {
         start: "top center", // 시작 시점
         end: "center center+=100", // 종료 시점
         scrub: true, // 스크롤에 따라 애니메이션
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
       },
     }
   );
@@ -207,7 +207,7 @@ $(function () {
         start: "top bottom-=200", // 시작 시점
         end: "center center+=100", // 종료 시점
         scrub: true, // 스크롤에 따라 애니메이션
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
       },
     }
   );
@@ -225,7 +225,7 @@ $(function () {
         start: "top center+=1700", // 시작 시점
         end: "center center+=100", // 종료 시점
         scrub: true, // 스크롤에 따라 애니메이션
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
       },
     }
   );
@@ -243,7 +243,7 @@ $(function () {
         start: "top bottom+=1000", // 시작 시점
         end: "center center+=100", // 종료 시점
         scrub: true, // 스크롤에 따라 애니메이션
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
       },
     }
   );
@@ -278,7 +278,7 @@ $(function () {
         start: "top bottom", // 시작 시점
         end: "center center+=100", // 종료 시점
         scrub: true, // 스크롤에 따라 애니메이션
-        markers: true, // 디버깅용
+        // markers: true, // 디버깅용
       },
     }
   );

@@ -1151,6 +1151,35 @@ section {
 
 // footer
 #footer {
-  margin-bottom: 200px;
-  // border-top: 10px solid $b;
+  margin: 200px 0 40px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left-box {
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    gap: 32px;
+    .right-text-wrap {
+      display: flex;
+      gap: 16px;
+    }
+  }
+  .right-box {
+    display: flex;
+    gap: 10px;
+    font-size: 28px;
+    a {
+      color: rgba(255, 255, 255, 0.6);
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    .naver {
+      display: inline-block;
+      padding: 1px 0;
+      font-family: $pretendard-font;
+      font-size: 24px;
+    }
+  }
 }
