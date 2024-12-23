@@ -328,6 +328,11 @@ section {
   padding-right: 32px;
   height: 793px;
 }
+@media screen and (min-width: 1441px) {
+  .container {
+    padding: 0 56px;
+  }
+}
 
 .btn {
   width: auto;
@@ -598,8 +603,8 @@ section {
 .laureate2-container,
 .laureate3-container,
 .laureate4-container {
-  width: 500%;
-  max-width: 500%;
+  width: 600%;
+  max-width: 600%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;

@@ -106,6 +106,7 @@ $(function () {
   let section1_2 = document.querySelector(".laureate1-sect-2");
   let section1_3 = document.querySelector(".laureate1-sect-3");
   let section1_4 = document.querySelector(".laureate1-sect-4");
+  let section1_video = document.querySelector(".laureate1-sect-video");
   let section1_5 = document.querySelector(".laureate1-sect-5");
   let section1_text_box_1 = document.querySelector(
     ".laureate1-sect-2 .text-box"
@@ -128,7 +129,7 @@ $(function () {
       pin: true,
       scrub: 1,
       start: "top top",
-      end: "+=6000",
+      end: "+=8000",
       // markers: true,
     },
   });
@@ -179,15 +180,16 @@ $(function () {
   // section1_3 opacity 전환 추가
   gsap.fromTo(
     section1_3,
-    { opacity: 0 }, // 초기 상태
+    { opacity: 0, scale: 0.5 }, // 초기 상태
     {
       opacity: 1, // 뷰포트 진입 시
       duration: 2,
+      scale: 1,
       scrollTrigger: {
         trigger: section1_3, // section1_2를 트리거로 설정
         containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
-        start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
-        end: "center center+=200", // 약간의 여유를 둔 후 종료
+        start: "start-=800 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "start-=500 center+=200", // 약간의 여유를 둔 후 종료
         scrub: true, // 스크롤에 따라 부드럽게 전환
         // markers: true, // 디버깅용
       },
@@ -204,7 +206,7 @@ $(function () {
       scrollTrigger: {
         trigger: section1_3, // 섹션 1-2가 트리거
         containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
-        start: "top bottom-=200", // 시작 시점
+        start: "top-=500 bottom-=200", // 시작 시점
         end: "center center+=100", // 종료 시점
         scrub: true, // 스크롤에 따라 애니메이션
         // markers: true, // 디버깅용
@@ -243,6 +245,25 @@ $(function () {
         start: "top bottom+=1000", // 시작 시점
         end: "center center+=100", // 종료 시점
         scrub: true, // 스크롤에 따라 애니메이션
+        // markers: true, // 디버깅용
+      },
+    }
+  );
+  // section1_video opacity 전환 추가
+  gsap.fromTo(
+    section1_video,
+    { opacity: 1, scale: 0.4, y: 500 }, // 초기 상태
+    {
+      opacity: 1,
+      scale: 1,
+      y: 0, // 뷰포트 진입 시
+      duration: 1,
+      scrollTrigger: {
+        trigger: section1_video, // section1_2를 트리거로 설정
+        containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+        start: "start-=4000 center-=1000 ", // 섹션이 뷰포트 중심에 도달할 때 시작
+        end: "start-=2000 center-=100", // 약간의 여유를 둔 후 종료
+        scrub: true, // 스크롤에 따라 부드럽게 전환
         // markers: true, // 디버깅용
       },
     }
