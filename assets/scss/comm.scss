@@ -323,12 +323,22 @@ section {
   max-width: none !important;
   width: 100vw;
 }
-.laureate1-container,
+.laureate1-container {
+  width: 600%;
+  max-width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  .container {
+    height: 100vh;
+  }
+}
+
 .laureate2-container,
 .laureate3-container,
 .laureate4-container {
-  width: 600%;
-  max-width: 600%;
+  width: 500%;
+  max-width: 500%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
