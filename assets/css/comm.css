@@ -296,6 +296,10 @@ legend {
   height: 300px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #000;
   color: #fff;
