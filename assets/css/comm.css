@@ -342,6 +342,11 @@ section {
     padding: 0 24px;
   }
 }
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+}
 
 .btn {
   width: auto;
@@ -418,6 +423,23 @@ section {
   transform: translate(0);
 }
 
+@media screen and (max-width: 480px) {
+  .go-to-hp {
+    display: none;
+  }
+}
+
+.go-to-hp-mobile {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .go-to-hp-mobile {
+    display: flex;
+    padding: 13px 20px 12px 24px;
+    gap: 4px;
+  }
+}
+
 #header {
   position: absolute;
   z-index: 1000;
@@ -429,12 +451,28 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 786px) {
+  #header {
+    padding: 40px 24px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #header {
+    padding: 40px 20px 20px;
+  }
+}
 #header .left-side {
   display: flex;
   gap: 30px;
   align-items: center;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media screen and (max-width: 480px) {
+  #header .left-side {
+    gap: 12px;
+    height: 36px;
+  }
 }
 #header .logo-img-1 {
   width: 129px;
@@ -447,6 +485,15 @@ section {
 #header #anniversary-logo {
   display: flex;
 }
+@media screen and (max-width: 480px) {
+  #header #logo,
+  #header .logo,
+  #header #anniversary-logo {
+    height: 36px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 #header .right-side {
   display: flex;
   height: -moz-fit-content;
@@ -457,6 +504,11 @@ section {
   gap: 12px;
   height: -moz-fit-content;
   height: fit-content;
+}
+@media screen and (max-width: 480px) {
+  #header .cta-btn-group {
+    gap: 4px;
+  }
 }
 
 .hero-sect {

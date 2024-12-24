@@ -48,6 +48,9 @@ section {
   @media screen and (max-width: 768px) {
     padding: 0 24px;
   }
+  @media screen and (max-width: 480px) {
+    padding: 0 20px;
+  }
 }
 .btn {
   width: $width;
@@ -131,6 +134,19 @@ section {
     }
   }
 }
+.go-to-hp {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+.go-to-hp-mobile {
+  display: none;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    padding: 13px 20px 12px 24px;
+    gap: 4px;
+  }
+}
 
 // header
 #header {
@@ -142,11 +158,21 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 786px) {
+    padding: 40px 24px 20px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 40px 20px 20px;
+  }
   .left-side {
     display: flex;
     gap: 30px;
     align-items: center;
     width: fit-content;
+    @media screen and (max-width: 480px) {
+      gap: 12px;
+      height: 36px;
+    }
   }
   .logo-img-1 {
     width: 129px;
@@ -158,6 +184,10 @@ section {
   .logo,
   #anniversary-logo {
     display: flex;
+    @media screen and (max-width: 480px) {
+      height: 36px;
+      object-fit: contain;
+    }
   }
   .right-side {
     display: flex;
@@ -167,6 +197,9 @@ section {
     display: flex;
     gap: 12px;
     height: fit-content;
+    @media screen and (max-width: 480px) {
+      gap: 4px;
+    }
   }
 }
 
