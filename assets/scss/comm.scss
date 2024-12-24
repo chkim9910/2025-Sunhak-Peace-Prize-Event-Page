@@ -27,6 +27,9 @@ section {
   @media screen and (min-width: 1441px) {
     max-width: none;
   }
+  @media screen and (max-width: 1024px) {
+    height: 768px !important;
+  }
 }
 .container {
   padding-left: 32px;
@@ -303,18 +306,19 @@ section {
       opacity: var(--before-opacity, 0);
     }
     .text {
-      font-size: 220px;
+      font-size: 1000%;
+      // font-size: 220px;
+      height: 150px;
       font-weight: bold;
-      // color: $point-color-5;
       color: $w;
-      // color: $b;
       letter-spacing: -3px;
-      // height: 200px;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 1024px) {
+        // font-size: 157px;
+        height: 150px;
+      }
     }
-    // .text_1,
-    // .text_2 {
-    //   color: $point-color-1;
-    // }
   }
 }
 // 수상자 섹션
@@ -334,6 +338,9 @@ section {
   flex-wrap: nowrap;
   .container {
     height: 100vh;
+    @media screen and (max-width: 1024px) {
+      height: 768px;
+    }
   }
 }
 // 섹션 1
@@ -344,6 +351,7 @@ section {
   max-width: none !important;
   // 비디오
   .video-box {
+    height: 100%;
     &::before {
       content: "";
       position: absolute;
@@ -355,6 +363,7 @@ section {
   }
   .video {
     width: 100%;
+    height: 100%;
   }
   .container {
     position: absolute;
@@ -380,10 +389,17 @@ section {
     font-family: $crimson-font;
     font-size: 22px;
     letter-spacing: 7px;
+    @media screen and (max-width: 1024px) {
+      font-size: 18px;
+      letter-spacing: 4px;
+    }
   }
   .name {
     font-family: $crimson-font;
     font-size: 74px;
+    @media screen and (max-width: 1024px) {
+      font-size: 56px;
+    }
   }
   .side-text-box {
     font-family: $crimson-font;
@@ -396,6 +412,9 @@ section {
     left: 50%;
     z-index: 10;
     transform: translateX(-50%);
+    @media screen and (max-width: 1024px) {
+      font-size: 16px;
+    }
   }
 }
 // 섹션 2
@@ -426,17 +445,30 @@ section {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      // filter: grayscale(100%);
       transition: all 0.5s;
-      // &:hover {
-      //   filter: none;
-      // }
+      @media screen and (max-width: 1024px) {
+        // height: 60%;
+        object-position: 60%;
+      }
+    }
+  }
+}
+.laureate2-sect-2 {
+  .img-box {
+    img {
+      @media screen and (max-width: 1024px) {
+        object-position: 30% !important;
+      }
     }
   }
 }
 // 텍스트 - 섹션 2, 3, 4
 .contents-title {
+  // white-space: nowrap;
   font-size: 30px;
+  @media screen and (max-width: 1024px) {
+    font-size: 22px;
+  }
 }
 .text-box {
   width: 70%;
@@ -448,6 +480,9 @@ section {
 .top span {
   font-size: 24px;
   font-style: italic;
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
 }
 // 섹션 3
 .laureate1-sect-3,
@@ -459,13 +494,11 @@ section {
   .text {
     width: 1000px;
     height: fit-content;
+    @media screen and (max-width: 1024px) {
+    }
   }
   .wrap img {
-    // filter: grayscale(100%);
     transition: all 0.3s;
-    // &:hover {
-    //   filter: none;
-    // }
   }
 }
 // 섹션 4
@@ -482,6 +515,9 @@ section {
 .laureate4-sect-5 {
   .container {
     display: flex;
+    @media screen and (max-width: 1024px) {
+      gap: 24px;
+    }
   }
   .img-box {
     flex: 1;
@@ -499,6 +535,9 @@ section {
   }
   .contents {
     font-size: 24px;
+    @media screen and (max-width: 1024px) {
+      font-size: 22px;
+    }
   }
   .line {
     width: 1px;
@@ -519,13 +558,19 @@ section {
     height: 100%;
     max-height: 678px;
     width: 100%;
+    @media screen and (max-width: 1024px) {
+      height: auto;
+    }
   }
   .big-screen {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    // gap: 50px;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      gap: 24px;
+    }
     .text {
       width: 800px;
     }
@@ -540,6 +585,9 @@ section {
     justify-content: space-between;
     align-items: center;
     flex: 1;
+    @media screen and (max-width: 1024px) {
+      gap: 24px;
+    }
   }
   .img-box {
     flex: 1;
@@ -554,6 +602,10 @@ section {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    @media screen and (max-width: 1024px) {
+      width: 240px;
+      height: 240px;
+    }
   }
   .text {
     .contents-title {
@@ -576,10 +628,16 @@ section {
   }
   .img-box img {
     width: 50%;
+    @media screen and (max-width: 1024px) {
+      width: 80%;
+    }
   }
   .text-box {
     width: 50%;
     transform: translate(-30%, 0%);
+    @media screen and (max-width: 1024px) {
+      width: 70%;
+    }
   }
   .line {
     margin: -3% 70%;
@@ -587,6 +645,9 @@ section {
     height: 100px;
     background-color: $w;
     transform: rotate(45deg);
+    @media screen and (max-width: 1024px) {
+      margin: -3% 90%;
+    }
   }
 }
 .laureate1-sect-5 {
@@ -617,6 +678,9 @@ section {
     gap: 16px;
     width: 100%;
     height: 300px;
+    @media screen and (max-width: 1024px) {
+      height: 240px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -674,6 +738,9 @@ section {
 .laureate2-sect-5 {
   .img-box {
     background: url(../img/laureate2-wanjira/6.jpg) no-repeat 50% 50% / cover;
+    @media screen and (max-width: 1024px) {
+      background-position-x: 33%;
+    }
   }
 }
 //************* 수상자 3 *************
@@ -699,10 +766,11 @@ section {
       flex: 1;
       flex-basis: 0;
       align-items: center;
+      @media screen and (max-width: 1024px) {
+        gap: 24px;
+      }
 
       .img-box {
-        // flex: 1;
-        // flex-basis: 0;
         height: 327px;
         width: 327px;
         img {
@@ -710,6 +778,10 @@ section {
           height: 100%;
           object-fit: cover;
           filter: none;
+        }
+        @media screen and (max-width: 1024px) {
+          height: 240px;
+          width: 240px;
         }
       }
       .text-box {
@@ -733,6 +805,10 @@ section {
           object-fit: cover;
           filter: none;
         }
+        @media screen and (max-width: 1024px) {
+          height: 240px;
+          width: 240px;
+        }
       }
     }
   }
@@ -744,14 +820,16 @@ section {
     flex-basis: 0;
     width: fit-content;
     .img-box {
-      // flex: 1;
-      // flex-basis: 0;
       height: 327px;
       width: 327px;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+      @media screen and (max-width: 1024px) {
+        height: 240px;
+        width: 240px;
       }
     }
     .text-box {
@@ -761,6 +839,9 @@ section {
       justify-content: flex-end;
       padding: 0 0 50px;
       width: 85%;
+      @media screen and (max-width: 1024px) {
+        width: 80%;
+      }
     }
   }
 }
@@ -837,6 +918,9 @@ section {
       gap: 24px;
       width: 100%;
       height: 327px;
+      @media screen and (max-width: 1024px) {
+        height: 240px;
+      }
       .right,
       .left {
         width: 327px;
@@ -854,6 +938,9 @@ section {
           width: 100%;
           object-fit: cover;
           filter: none;
+        }
+        @media screen and (max-width: 1024px) {
+          flex: auto;
         }
       }
     }
@@ -936,8 +1023,9 @@ section {
 //************* 브로슈어 배너 공통 *************
 .banner {
   max-width: none !important;
-  height: fit-content;
+  height: fit-content !important;
   margin: 200px 0 100px;
+
   .wrap {
     background: url(../img/banner/bg.jpg) no-repeat 0 0 / cover;
     .text-box {
@@ -945,13 +1033,22 @@ section {
       padding: 150px 32px 100px;
       max-width: 1440px;
       height: fit-content;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 28px;
+      @media screen and (max-width: 1024px) {
+        padding: 100px 24px 60px;
+        margin: 0;
+        gap: 36px;
+      }
       .text-wrap {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        @media screen and (max-width: 1024px) {
+          gap: 4px;
+        }
       }
       .sub-title {
         font-family: "Aboreto", serif;
@@ -960,6 +1057,10 @@ section {
         font-weight: 300;
         font-size: 15px;
         letter-spacing: 5px;
+        opacity: 0.7;
+        @media screen and (max-width: 1024px) {
+          letter-spacing: 10.5px;
+        }
       }
       .title {
         // font-family: $italianno-font;
@@ -977,6 +1078,16 @@ section {
       .la-download {
         font-size: 21px;
       }
+    }
+  }
+}
+.banner2-sect {
+  @media screen and (max-width: 1024px) {
+    margin: 0;
+  }
+  .sub-title {
+    @media screen and (max-width: 1024px) {
+      letter-spacing: 8.5px !important;
     }
   }
 }
@@ -999,15 +1110,46 @@ section {
         font-family: $cinzel-font;
         text-transform: uppercase;
         font-size: 56px;
+        @media screen and (max-width: 1024px) {
+          font-size: 53px;
+        }
       }
       li {
         display: flex;
         gap: 16px;
+        flex-wrap: wrap;
       }
       img {
         height: 76px;
         flex: 1;
         object-fit: cover;
+      }
+      .block-span {
+        // @media screen and (max-width: 1024px) {
+        //   display: none;
+        // }
+      }
+      .block-gif-1 {
+        // @media screen and (max-width: 1024px) {
+        //   display: none;
+        // }
+      }
+      .block-gif-2 {
+        display: none;
+        // @media screen and (max-width: 1024px) {
+        //   display: flex;
+        // }
+      }
+      .arr-1 {
+        display: none;
+        @media screen and (max-width: 1024px) {
+          display: block;
+        }
+      }
+      .arr-2 {
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
       }
     }
   }
@@ -1020,13 +1162,15 @@ section {
 
 //************* 역대 수상자 갤러리 *************
 .gallery {
-  height: 100%;
+  height: 100% !important;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 200px;
   padding: 250px 32px 200px;
-
+  @media screen and (max-width: 1024px) {
+    padding: 180px 32px 140px;
+  }
   .wrap {
     width: 100%;
     height: 100%;
@@ -1037,6 +1181,9 @@ section {
     .title-box {
       font-size: 74px;
       line-height: 110%;
+      @media screen and (max-width: 1024px) {
+        font-size: 56px;
+      }
       .title {
         text-transform: uppercase;
       }
@@ -1093,6 +1240,9 @@ section {
           height: 405px;
           background: rgba(0, 0, 0, 0);
           transition: background 0.5s ease;
+          @media screen and (max-width: 1024px) {
+            height: 368px;
+          }
         }
         .btn-gallery {
           position: absolute;
@@ -1139,6 +1289,7 @@ section {
       .sub-text {
         font-size: 16px;
         letter-spacing: 1px;
+        opacity: 0.8;
       }
       .name {
         font-size: 24px;
@@ -1159,6 +1310,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+  }
   .left-box {
     color: rgba(255, 255, 255, 0.8);
     display: flex;
@@ -1172,6 +1326,9 @@ section {
     display: flex;
     gap: 10px;
     font-size: 28px;
+    @media screen and (max-width: 1024px) {
+      font-size: 24px;
+    }
     a {
       color: rgba(255, 255, 255, 0.6);
       &:hover {
@@ -1183,6 +1340,9 @@ section {
       padding: 1px 0;
       font-family: $pretendard-font;
       font-size: 24px;
+      @media screen and (max-width: 1024px) {
+        font-size: 20px;
+      }
     }
   }
 }

@@ -4,28 +4,38 @@ $(function () {
 
   // ***************************슬로건 섹션***************************
   let sectionSlogan = document.querySelector(".slogan-sect");
+  let sectionSlogan2 = document.querySelector(".slogan2-sect");
   let line1_1 = document.querySelector(".line-1");
   let line1_2 = document.querySelector(".line-2");
   let line1_3 = document.querySelector(".line-3");
   let line1_4 = document.querySelector(".line-4");
-  let text1_1 = document.querySelector(".text-1");
-  let text1_2 = document.querySelector(".text-2");
-  let text1_3 = document.querySelector(".text-3");
-  let slogan_container = document.querySelector(".slogan");
-  let slogan_1 = document.querySelector(".slogan .text_1");
-  let slogan_2 = document.querySelector(".slogan .text_2");
-  let slogan_3 = document.querySelector(".slogan .text_3");
+  let text1_1 = document.querySelector(".slogan-sect .text-1");
+  let text1_2 = document.querySelector(".slogan-sect .text-2");
+  let text1_3 = document.querySelector(".slogan-sect .text-3");
+  let slogan_container = document.querySelector(".slogan2-sect .slogan");
+  let slogan_1 = document.querySelector(".slogan2-sect .slogan .text_1");
+  let slogan_2 = document.querySelector(".slogan2-sect .slogan .text_2");
+  let slogan_3 = document.querySelector(".slogan2-sect .slogan .text_3");
+  // 각 요소가 존재하는지 확인
+  console.log(
+    sectionSlogan,
+    sectionSlogan2,
+    text1_1,
+    slogan_container,
+    slogan_1
+  );
 
   let scrollTimeline_slogan_desc = gsap.timeline({
     scrollTrigger: {
       trigger: ".slogan-sect .text-wrap",
       scrub: 1,
       start: "top center+=300",
-      end: "+=900",
+      end: "+=1000",
       // markers: true,
     },
   });
-  // 타임라인
+
+  // 타임라인;
   scrollTimeline_slogan_desc
     .fromTo(
       text1_1,
@@ -57,7 +67,7 @@ $(function () {
 
   let scrollTimeline_slogan = gsap.timeline({
     scrollTrigger: {
-      trigger: ".slogan-sect .slogan",
+      trigger: ".slogan2-sect .slogan",
       pin: true,
       scrub: 1,
       start: "top top",
@@ -138,7 +148,7 @@ $(function () {
     .set(section1_1, {
       opacity: 0,
     })
-    .to(section1_1, { opacity: 1, duration: 0.05 })
+    .to(section1_1, { opacity: 1, duration: 0.25, delay: 0.2 })
     .to(sections1, {
       xPercent: -100 * (sections1.length - 1),
     });
@@ -853,23 +863,23 @@ $(function () {
     }
   );
   // section4_5 opacity 다시 0으로
-  gsap.fromTo(
-    section4_5,
-    { opacity: 1 }, // 초기 상태 (이전 상태 유지)
-    {
-      opacity: 0, // 스크롤 후 다시 0으로 전환
-      duration: 1,
-      // ease: "power2.out", // 점진적으로 부드럽게 사라짐
-      scrollTrigger: {
-        trigger: section4_5, // section4_5를 다시 트리거로 설정
-        containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
-        start: "center+=200 center+=800", // 새로운 트리거 위치
-        end: "center+=800 bottom-=500", // 종료 지점
-        scrub: true, // 스크롤에 따라 부드럽게 전환
-        // markers: true, // 디버깅용
-      },
-    }
-  );
+  // gsap.fromTo(
+  //   section4_5,
+  //   { opacity: 1 }, // 초기 상태 (이전 상태 유지)
+  //   {
+  //     opacity: 0, // 스크롤 후 다시 0으로 전환
+  //     duration: 1,
+  //     // ease: "power2.out", // 점진적으로 부드럽게 사라짐
+  //     scrollTrigger: {
+  //       trigger: section4_5, // section4_5를 다시 트리거로 설정
+  //       containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+  //       start: "center+=200 center+=800", // 새로운 트리거 위치
+  //       end: "center+=800 bottom-=500", // 종료 지점
+  //       scrub: true, // 스크롤에 따라 부드럽게 전환
+  //       // markers: true, // 디버깅용
+  //     },
+  //   }
+  // );
   // ***************************배너***************************
   let banner1 = document.querySelector(".banner1-sect");
   let banner2 = document.querySelector(".banner2-sect");
@@ -879,8 +889,8 @@ $(function () {
       trigger: ".banner1-sect",
       // pin: true,
       scrub: 1,
-      start: "top bottom",
-      end: "+=1000",
+      start: "top bottom-=300",
+      end: "+=200",
       // markers: true,
     },
   });
@@ -897,7 +907,7 @@ $(function () {
       // pin: true,
       scrub: 1,
       start: "top bottom",
-      end: "+=1000",
+      end: "bottom bottom",
       // markers: true,
     },
   });
