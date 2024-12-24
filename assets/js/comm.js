@@ -4,11 +4,7 @@ $(function () {
 
   // ***************************슬로건 섹션***************************
   let sectionSlogan = document.querySelector(".slogan-sect");
-  let sectionSlogan2 = document.querySelector(".slogan2-sect");
-  let line1_1 = document.querySelector(".line-1");
-  let line1_2 = document.querySelector(".line-2");
-  let line1_3 = document.querySelector(".line-3");
-  let line1_4 = document.querySelector(".line-4");
+  // let sectionSlogan2 = document.querySelector(".slogan2-sect");
   let text1_1 = document.querySelector(".slogan-sect .text-1");
   let text1_2 = document.querySelector(".slogan-sect .text-2");
   let text1_3 = document.querySelector(".slogan-sect .text-3");
@@ -16,99 +12,242 @@ $(function () {
   let slogan_1 = document.querySelector(".slogan2-sect .slogan .text_1");
   let slogan_2 = document.querySelector(".slogan2-sect .slogan .text_2");
   let slogan_3 = document.querySelector(".slogan2-sect .slogan .text_3");
-  // 각 요소가 존재하는지 확인
-  console.log(
-    sectionSlogan,
-    sectionSlogan2,
-    text1_1,
-    slogan_container,
-    slogan_1
-  );
 
-  let scrollTimeline_slogan_desc = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".slogan-sect .text-wrap",
-      scrub: 1,
-      start: "top center+=300",
-      end: "+=1000",
-      // markers: true,
+  // let scrollTimeline_slogan_desc = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".slogan-sect .text-wrap",
+  //     scrub: 1,
+  //     start: "top center+=300",
+  //     end: "+=900",
+  //     // markers: true,
+  //   },
+  // });
+  // // 타임라인
+  // scrollTimeline_slogan_desc
+  //   .fromTo(
+  //     text1_1,
+  //     {
+  //       x: -100,
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     },
+  //     { x: 0, opacity: 1 }
+  //   )
+  //   .fromTo(
+  //     text1_2,
+  //     {
+  //       x: 100,
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     },
+  //     { x: 0, opacity: 1 }
+  //   )
+  //   .fromTo(
+  //     text1_3,
+  //     {
+  //       x: 100,
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     },
+  //     { x: 0, opacity: 1 }
+  //   );
+
+  // let scrollTimeline_slogan = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".slogan-sect .slogan",
+  //     pin: true,
+  //     scrub: 1,
+  //     start: "top top",
+  //     end: "+=1200",
+  //     markers: true,
+  //   },
+  // });
+  // // 타임라인
+  // scrollTimeline_slogan
+  //   .fromTo(
+  //     slogan_1,
+  //     {
+  //       opacity: 0,
+  //       duration: 0.03,
+  //     },
+  //     { opacity: 1 }
+  //   )
+  //   .fromTo(
+  //     slogan_2,
+  //     {
+  //       opacity: 0,
+  //       duration: 0.03,
+  //     },
+  //     { opacity: 1 }
+  //   )
+  //   .to(slogan_container, {
+  //     "--before-opacity": 1, // CSS 변수로 ::before의 opacity 변경
+  //     duration: 0.5,
+  //   })
+  //   .fromTo(
+  //     slogan_3,
+  //     {
+  //       opacity: 0,
+  //       duration: 0.03,
+  //     },
+  //     { opacity: 1 }
+  //   )
+  //   .to(slogan_container, {
+  //     opacity: 0,
+  //     duration: 0.5,
+  //   });
+
+  // // 미디어 쿼리 매칭
+  ScrollTrigger.matchMedia({
+    // For screens wider than 800px
+    "(min-width: 769px)": function () {
+      let scrollTimeline_slogan_desc = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".slogan-sect .text-wrap",
+          scrub: 1,
+          start: "top center+=300",
+          end: "+=900",
+        },
+      });
+      // Timeline for slogan description
+      scrollTimeline_slogan_desc
+        .fromTo(
+          text1_1,
+          { x: -100, opacity: 0, duration: 0.05 },
+          { x: 0, opacity: 1 }
+        )
+        .fromTo(
+          text1_2,
+          { x: 100, opacity: 0, duration: 0.05 },
+          { x: 0, opacity: 1 }
+        )
+        .fromTo(
+          text1_3,
+          { x: 100, opacity: 0, duration: 0.05 },
+          { x: 0, opacity: 1 }
+        );
+
+      let scrollTimeline_slogan = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".slogan-sect .slogan",
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: "+=1200",
+        },
+      });
+      // Timeline for the slogan
+      scrollTimeline_slogan
+        .fromTo(slogan_1, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .fromTo(slogan_2, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .to(slogan_container, {
+          "--before-opacity": 1,
+          duration: 0.5,
+        })
+        .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .to(slogan_container, {
+          opacity: 0,
+          duration: 0.5,
+        });
+    },
+
+    // For screens between 480px and 799px
+    "(max-width: 768px) and (min-width: 480px)": function () {
+      let scrollTimeline_slogan_desc = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".slogan-sect .text-wrap",
+          scrub: 0.3,
+          start: "top 80%",
+          end: "+=600",
+        },
+      });
+      // Timeline for slogan description on smaller screens
+      scrollTimeline_slogan_desc
+        .fromTo(text1_1, { x: -40, opacity: 0 }, { x: 0, opacity: 1 })
+        .fromTo(text1_2, { x: 40, opacity: 0 }, { x: 0, opacity: 1 })
+        .fromTo(text1_3, { x: 40, opacity: 0 }, { x: 0, opacity: 1 });
+
+      let scrollTimeline_slogan = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".slogan-sect .slogan",
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: "+=800",
+        },
+      });
+      // Timeline for the slogan on smaller screens
+      scrollTimeline_slogan
+        .fromTo(slogan_1, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .fromTo(slogan_2, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .to(slogan_container, {
+          "--before-opacity": 1,
+          duration: 0.5,
+        })
+        .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .to(slogan_container, {
+          opacity: 0,
+          duration: 0.5,
+        });
+    },
+
+    // For screens smaller than 480px
+    "(max-width: 479px)": function () {
+      let scrollTimeline_slogan_desc = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".slogan-sect .text-wrap",
+          scrub: 1,
+          start: "top center+=100",
+          end: "+=400",
+        },
+      });
+      // Timeline for slogan description on small screens
+      scrollTimeline_slogan_desc
+        .fromTo(
+          text1_1,
+          { x: -30, opacity: 0, duration: 0.05 },
+          { x: 0, opacity: 1 }
+        )
+        .fromTo(
+          text1_2,
+          { x: 30, opacity: 0, duration: 0.05 },
+          { x: 0, opacity: 1 }
+        )
+        .fromTo(
+          text1_3,
+          { x: 30, opacity: 0, duration: 0.05 },
+          { x: 0, opacity: 1 }
+        );
+
+      let scrollTimeline_slogan = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".slogan-sect .slogan",
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: "+=600",
+        },
+      });
+      // Timeline for the slogan on very small screens
+      scrollTimeline_slogan
+        .fromTo(slogan_1, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .fromTo(slogan_2, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .to(slogan_container, {
+          "--before-opacity": 1,
+          duration: 0.5,
+        })
+        .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .to(slogan_container, {
+          opacity: 0,
+          duration: 0.5,
+        });
+    },
+
+    // For all screens
+    all: function () {
+      // Any global settings or cleanup can go here
     },
   });
-
-  // 타임라인;
-  scrollTimeline_slogan_desc
-    .fromTo(
-      text1_1,
-      {
-        x: -100,
-        opacity: 0,
-        duration: 0.05,
-      },
-      { x: 0, opacity: 1 }
-    )
-    .fromTo(
-      text1_2,
-      {
-        x: 100,
-        opacity: 0,
-        duration: 0.05,
-      },
-      { x: 0, opacity: 1 }
-    )
-    .fromTo(
-      text1_3,
-      {
-        x: 100,
-        opacity: 0,
-        duration: 0.05,
-      },
-      { x: 0, opacity: 1 }
-    );
-
-  let scrollTimeline_slogan = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".slogan2-sect .slogan",
-      pin: true,
-      scrub: 1,
-      start: "top top",
-      end: "+=1200",
-      // markers: true,
-    },
-  });
-  // 타임라인
-  scrollTimeline_slogan
-    .fromTo(
-      slogan_1,
-      {
-        opacity: 0,
-        duration: 0.03,
-      },
-      { opacity: 1 }
-    )
-    .fromTo(
-      slogan_2,
-      {
-        opacity: 0,
-        duration: 0.03,
-      },
-      { opacity: 1 }
-    )
-    .to(slogan_container, {
-      "--before-opacity": 1, // CSS 변수로 ::before의 opacity 변경
-      duration: 0.5,
-    })
-    .fromTo(
-      slogan_3,
-      {
-        opacity: 0,
-        duration: 0.03,
-      },
-      { opacity: 1 }
-    )
-    .to(slogan_container, {
-      opacity: 0,
-      duration: 0.5,
-    });
 
   // ***************************laureate 1 - 패트릭 아우어***************************
   let sections1 = gsap.utils.toArray("main .laureate1-sect");
@@ -148,7 +287,7 @@ $(function () {
     .set(section1_1, {
       opacity: 0,
     })
-    .to(section1_1, { opacity: 1, duration: 0.25, delay: 0.2 })
+    .to(section1_1, { opacity: 1, duration: 0.05 })
     .to(sections1, {
       xPercent: -100 * (sections1.length - 1),
     });

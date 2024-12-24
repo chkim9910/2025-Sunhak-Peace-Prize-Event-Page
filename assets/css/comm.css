@@ -327,6 +327,11 @@ section {
     height: 768px !important;
   }
 }
+@media screen and (max-width: 768px) {
+  section {
+    height: 1024px !important;
+  }
+}
 
 .container {
   padding-left: 32px;
@@ -525,6 +530,11 @@ section {
   transform: translateY(30%);
   z-index: -1;
 }
+@media screen and (max-width: 768px) {
+  .hero-sect .img-box {
+    width: 80%;
+  }
+}
 .hero-sect .img-box .img {
   width: 100%;
   height: auto;
@@ -533,11 +543,11 @@ section {
 }
 
 .slogan-sect {
-  height: auto;
+  height: 100% !important;
   margin: 200px auto;
 }
 .slogan-sect .container {
-  height: auto;
+  height: 100%;
 }
 .slogan-sect .text-wrap {
   display: flex;
@@ -579,6 +589,11 @@ section {
   justify-content: center;
   font-family: "Crimson Text", serif;
   line-height: 1400%;
+}
+@media screen and (max-width: 1024px) {
+  .slogan-sect .slogan {
+    padding: 0 24px !important;
+  }
 }
 .slogan-sect .slogan::before {
   display: none;

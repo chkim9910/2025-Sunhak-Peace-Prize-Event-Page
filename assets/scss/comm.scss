@@ -30,6 +30,9 @@ section {
   @media screen and (max-width: 1024px) {
     height: 768px !important;
   }
+  @media screen and (max-width: 768px) {
+    height: 1024px !important;
+  }
 }
 .container {
   padding-left: 32px;
@@ -232,6 +235,9 @@ section {
     width: 47%;
     transform: translateY(30%);
     z-index: -1;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
     .img {
       width: 100%;
       height: auto;
@@ -242,10 +248,16 @@ section {
 }
 //슬로건 섹션
 .slogan-sect {
-  height: auto;
+  height: 100% !important;
   margin: 200px auto;
+  // @media screen and (max-width: 768px) {
+  //   height: 1024px !important;
+  // }
   .container {
-    height: auto;
+    height: 100%;
+    // @media screen and (max-width: 768px) {
+    //   height: 1024px !important;
+    // }
   }
   .text-wrap {
     display: flex;
@@ -292,6 +304,9 @@ section {
     justify-content: center;
     font-family: $crimson-font;
     line-height: 1400%;
+    @media screen and (max-width: 1024px) {
+      padding: 0 24px !important;
+    }
     &::before {
       display: none;
       content: "";
@@ -321,6 +336,7 @@ section {
     }
   }
 }
+
 // 수상자 섹션
 // ************* 공통 *************
 .laureate-sect {
@@ -1124,16 +1140,16 @@ section {
         flex: 1;
         object-fit: cover;
       }
-      .block-span {
-        // @media screen and (max-width: 1024px) {
-        //   display: none;
-        // }
-      }
-      .block-gif-1 {
-        // @media screen and (max-width: 1024px) {
-        //   display: none;
-        // }
-      }
+      // .block-span {
+      //   // @media screen and (max-width: 1024px) {
+      //   //   display: none;
+      //   // }
+      // }
+      // .block-gif-1 {
+      //   // @media screen and (max-width: 1024px) {
+      //   //   display: none;
+      //   // }
+      // }
       .block-gif-2 {
         display: none;
         // @media screen and (max-width: 1024px) {
