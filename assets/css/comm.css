@@ -599,17 +599,7 @@ section {
   width: 100vw;
 }
 
-.laureate1-container {
-  width: 600%;
-  max-width: 600%;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.laureate1-container .container {
-  height: 100vh;
-}
-
+.laureate1-container,
 .laureate2-container,
 .laureate3-container,
 .laureate4-container {
@@ -619,6 +609,7 @@ section {
   display: flex;
   flex-wrap: nowrap;
 }
+.laureate1-container .container,
 .laureate2-container .container,
 .laureate3-container .container,
 .laureate4-container .container {

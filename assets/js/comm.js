@@ -106,7 +106,7 @@ $(function () {
   let section1_2 = document.querySelector(".laureate1-sect-2");
   let section1_3 = document.querySelector(".laureate1-sect-3");
   let section1_4 = document.querySelector(".laureate1-sect-4");
-  let section1_video = document.querySelector(".laureate1-sect-video");
+  // let section1_video = document.querySelector(".laureate1-sect-video");
   let section1_5 = document.querySelector(".laureate1-sect-5");
   let section1_text_box_1 = document.querySelector(
     ".laureate1-sect-2 .text-box"
@@ -250,24 +250,24 @@ $(function () {
     }
   );
   // section1_video opacity 전환 추가
-  gsap.fromTo(
-    section1_video,
-    { opacity: 1, scale: 0.4, y: 500 }, // 초기 상태
-    {
-      opacity: 1,
-      scale: 1,
-      y: 0, // 뷰포트 진입 시
-      duration: 1,
-      scrollTrigger: {
-        trigger: section1_video, // section1_2를 트리거로 설정
-        containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
-        start: "start-=4000 center-=1000 ", // 섹션이 뷰포트 중심에 도달할 때 시작
-        end: "start-=2000 center-=100", // 약간의 여유를 둔 후 종료
-        scrub: true, // 스크롤에 따라 부드럽게 전환
-        // markers: true, // 디버깅용
-      },
-    }
-  );
+  // gsap.fromTo(
+  //   section1_video,
+  //   { opacity: 1, scale: 0.4, y: 500 }, // 초기 상태
+  //   {
+  //     opacity: 1,
+  //     scale: 1,
+  //     y: 0, // 뷰포트 진입 시
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: section1_video, // section1_2를 트리거로 설정
+  //       containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+  //       start: "start-=4000 center-=1000 ", // 섹션이 뷰포트 중심에 도달할 때 시작
+  //       end: "start-=2000 center-=100", // 약간의 여유를 둔 후 종료
+  //       scrub: true, // 스크롤에 따라 부드럽게 전환
+  //       // markers: true, // 디버깅용
+  //     },
+  //   }
+  // );
   // section1_5 opacity 전환 추가
   gsap.fromTo(
     section1_5,
