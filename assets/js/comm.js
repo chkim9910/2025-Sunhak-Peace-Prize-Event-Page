@@ -13,90 +13,6 @@ $(function () {
   let slogan_2 = document.querySelector(".slogan2-sect .slogan .text_2");
   let slogan_3 = document.querySelector(".slogan2-sect .slogan .text_3");
 
-  // let scrollTimeline_slogan_desc = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".slogan-sect .text-wrap",
-  //     scrub: 1,
-  //     start: "top center+=300",
-  //     end: "+=900",
-  //     // markers: true,
-  //   },
-  // });
-  // // 타임라인
-  // scrollTimeline_slogan_desc
-  //   .fromTo(
-  //     text1_1,
-  //     {
-  //       x: -100,
-  //       opacity: 0,
-  //       duration: 0.05,
-  //     },
-  //     { x: 0, opacity: 1 }
-  //   )
-  //   .fromTo(
-  //     text1_2,
-  //     {
-  //       x: 100,
-  //       opacity: 0,
-  //       duration: 0.05,
-  //     },
-  //     { x: 0, opacity: 1 }
-  //   )
-  //   .fromTo(
-  //     text1_3,
-  //     {
-  //       x: 100,
-  //       opacity: 0,
-  //       duration: 0.05,
-  //     },
-  //     { x: 0, opacity: 1 }
-  //   );
-
-  // let scrollTimeline_slogan = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".slogan-sect .slogan",
-  //     pin: true,
-  //     scrub: 1,
-  //     start: "top top",
-  //     end: "+=1200",
-  //     markers: true,
-  //   },
-  // });
-  // // 타임라인
-  // scrollTimeline_slogan
-  //   .fromTo(
-  //     slogan_1,
-  //     {
-  //       opacity: 0,
-  //       duration: 0.03,
-  //     },
-  //     { opacity: 1 }
-  //   )
-  //   .fromTo(
-  //     slogan_2,
-  //     {
-  //       opacity: 0,
-  //       duration: 0.03,
-  //     },
-  //     { opacity: 1 }
-  //   )
-  //   .to(slogan_container, {
-  //     "--before-opacity": 1, // CSS 변수로 ::before의 opacity 변경
-  //     duration: 0.5,
-  //   })
-  //   .fromTo(
-  //     slogan_3,
-  //     {
-  //       opacity: 0,
-  //       duration: 0.03,
-  //     },
-  //     { opacity: 1 }
-  //   )
-  //   .to(slogan_container, {
-  //     opacity: 0,
-  //     duration: 0.5,
-  //   });
-
   // // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
     // For screens wider than 800px
@@ -157,8 +73,8 @@ $(function () {
         scrollTrigger: {
           trigger: ".slogan-sect .text-wrap",
           scrub: 0.3,
-          start: "top 80%",
-          end: "+=600",
+          start: "top 40%",
+          end: "+=1000",
         },
       });
       // Timeline for slogan description on smaller screens
@@ -729,42 +645,118 @@ $(function () {
       },
     }
   );
-  // section3_3 text_box_2 x좌표 이동 추가
-  gsap.fromTo(
-    section3_text_box_2,
-    { x: 200, opacity: 0 }, // 시작 상태
-    {
-      x: 0,
-      opacity: 1,
-      duration: 2, // 애니메이션 지속 시간
-      scrollTrigger: {
-        trigger: section3_3, // 섹션 1-2가 트리거
-        containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
-        start: "top bottom-=200", // 시작 시점
-        end: "center center+=100", // 종료 시점
-        scrub: true, // 스크롤에 따라 애니메이션
-        // markers: true, // 디버깅용
-      },
-    }
-  );
-  // section3_3 text_box_3 x좌표 이동 추가
-  gsap.fromTo(
-    section3_text_box_3,
-    { x: 200, opacity: 0 }, // 시작 상태
-    {
-      x: 0,
-      opacity: 1,
-      duration: 2, // 애니메이션 지속 시간
-      scrollTrigger: {
-        trigger: section3_3, // 섹션 1-2가 트리거
-        containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
-        start: "top center+=1700", // 시작 시점
-        end: "center center+=100", // 종료 시점
-        scrub: true, // 스크롤에 따라 애니메이션
-        // markers: true, // 디버깅용
-      },
-    }
-  );
+  // // section3_3 text_box_2 x좌표 이동 추가
+  // gsap.fromTo(
+  //   section3_text_box_2,
+  //   { x: 200, opacity: 0 }, // 시작 상태
+  //   {
+  //     x: 0,
+  //     opacity: 1,
+  //     duration: 2, // 애니메이션 지속 시간
+  //     scrollTrigger: {
+  //       trigger: section3_3, // 섹션 1-2가 트리거
+  //       containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+  //       start: "top bottom-=200", // 시작 시점
+  //       end: "center center+=100", // 종료 시점
+  //       scrub: true, // 스크롤에 따라 애니메이션
+  //       // markers: true, // 디버깅용
+  //     },
+  //   }
+  // );
+  // // section3_3 text_box_3 x좌표 이동 추가
+  // gsap.fromTo(
+  //   section3_text_box_3,
+  //   { x: 200, opacity: 0 }, // 시작 상태
+  //   {
+  //     x: 0,
+  //     opacity: 1,
+  //     duration: 2, // 애니메이션 지속 시간
+  //     scrollTrigger: {
+  //       trigger: section3_3, // 섹션 1-2가 트리거
+  //       containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+  //       start: "top center+=1700", // 시작 시점
+  //       end: "center center+=100", // 종료 시점
+  //       scrub: true, // 스크롤에 따라 애니메이션
+  //       // markers: true, // 디버깅용
+  //     },
+  //   }
+  // );
+  ScrollTrigger.matchMedia({
+    "(min-width: 769px)": function () {
+      // PC 화면용 애니메이션
+      gsap.fromTo(
+        section3_text_box_2,
+        { x: 200, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: section3_3,
+            containerAnimation: scrollTimeline3,
+            start: "top bottom-=200",
+            end: "center center+=100",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        section3_text_box_3,
+        { x: 200, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: section3_3,
+            containerAnimation: scrollTimeline3,
+            start: "top center+=1700",
+            end: "center center+=100",
+            scrub: true,
+          },
+        }
+      );
+    },
+
+    "(max-width: 768px)": function () {
+      // 태블릿 및 모바일 화면용 애니메이션
+      gsap.fromTo(
+        section3_text_box_3,
+        { x: 100, opacity: 0 }, // 이동 거리를 줄임
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.5, // 애니메이션 지속 시간을 줄임
+          scrollTrigger: {
+            trigger: section3_3,
+            containerAnimation: scrollTimeline3,
+            start: "top-=900 top", // 시작 위치 조정
+            end: "center center", // 종료 위치 조정
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        section3_text_box_2,
+        { x: 100, opacity: 0 }, // 이동 거리를 줄임
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.5, // 애니메이션 지속 시간을 줄임
+          scrollTrigger: {
+            trigger: section3_3,
+            containerAnimation: scrollTimeline3,
+            start: "top-=900 top", // 시작 위치 조정
+            end: "top center", // 종료 위치 조정
+            scrub: true,
+          },
+        }
+      );
+    },
+  });
+
   // section3_4 text_box_4 x좌표 이동 추가
   gsap.fromTo(
     section3_text_box_4,

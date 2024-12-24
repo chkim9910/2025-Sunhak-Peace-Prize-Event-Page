@@ -307,7 +307,8 @@ section {
   }
   .slogan {
     padding-top: 6%;
-    height: 100%;
+    height: 100vh !important;
+    max-height: 100vh !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -444,6 +445,7 @@ section {
       height: 44px;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
   }
   .side-text-box {
@@ -463,7 +465,7 @@ section {
     }
     @media screen and (max-width: 768px) {
       font-size: 14px;
-      transform: translate(-50%, 170%);
+      // transform: translate(-50%, 170%);
     }
   }
 }
@@ -563,7 +565,8 @@ section {
   .text {
     width: 1000px;
     height: fit-content;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 768px) {
+      width: 100%;
     }
   }
   .wrap img {
@@ -587,11 +590,32 @@ section {
     @media screen and (max-width: 1024px) {
       gap: 24px;
     }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
   .img-box {
     flex: 1;
     width: 100%;
     height: 100%;
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &::before {
+      content: "";
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
   }
   .text-box {
     display: flex;
@@ -601,6 +625,10 @@ section {
     gap: 45px;
     flex: 1;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      gap: 30px;
+    }
   }
   .contents {
     font-size: 24px;
@@ -630,6 +658,10 @@ section {
     @media screen and (max-width: 1024px) {
       height: auto;
     }
+    @media screen and (max-width: 768px) {
+      max-height: none;
+      gap: 48px;
+    }
   }
   .big-screen {
     display: flex;
@@ -640,12 +672,24 @@ section {
       width: 100%;
       gap: 24px;
     }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
     .text {
       width: 800px;
     }
   }
   .small-screen {
     display: none;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+      .img-box {
+        width: fit-content;
+      }
+    }
   }
 
   .top-contents,
@@ -656,6 +700,14 @@ section {
     flex: 1;
     @media screen and (max-width: 1024px) {
       gap: 24px;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  .top-contents {
+    @media screen and (max-width: 768px) {
+      align-items: flex-start;
     }
   }
   .img-box {
@@ -686,9 +738,17 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   .wrap {
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 768px) {
+      gap: 48px;
+    }
   }
   .content-box {
     display: flex;
@@ -729,17 +789,27 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  @media screen and (max-width: 768px) {
+    gap: 48px;
+  }
   .wrap {
     display: flex;
     flex-direction: column;
     gap: 48px;
     margin: 0;
+    @media screen and (max-width: 768px) {
+      height: 100%;
+      gap: 62px;
+    }
   }
 
   .top-contents {
     flex: 1;
     width: 60%;
+    @media screen and (max-width: 768px) {
+      flex: none;
+      width: 80%;
+    }
   }
   .middle-contents {
     // flex: 1;
@@ -749,6 +819,10 @@ section {
     height: 300px;
     @media screen and (max-width: 1024px) {
       height: 240px;
+    }
+    @media screen and (max-width: 768px) {
+      height: 300px;
+      flex-wrap: wrap;
     }
     img {
       width: 100%;
@@ -776,25 +850,37 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    gap: 48px;
+  }
   .wrap {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    // gap: 48px;
     height: 100%;
     width: 100%;
+    @media screen and (max-width: 768px) {
+      gap: 48px;
+    }
   }
   .img-box {
     height: 75%;
     width: 100%;
     img {
-      // height: 100%;
       width: 100%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
   .contents-box {
     width: 57%;
+    @media screen and (max-width: 768px) {
+      width: 73%;
+    }
   }
   .contents {
     width: 100%;
@@ -805,6 +891,9 @@ section {
     height: 1px;
     background: $w;
     transform: rotate(-45deg);
+    @media screen and (max-width: 768px) {
+      margin: 3% 118%;
+    }
   }
 }
 .laureate2-sect-5 {
@@ -821,9 +910,16 @@ section {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    gap: 48px;
+  }
   .wrap {
     display: flex;
-    // gap: 48px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      height: 100%;
+      gap: 24px;
+    }
   }
   .left-box {
     display: flex;
@@ -891,6 +987,12 @@ section {
     flex: 1;
     flex-basis: 0;
     width: fit-content;
+    @media screen and (max-width: 768px) {
+      flex-direction: row-reverse;
+      align-items: normal;
+      gap: 24px;
+      // gap: 160px;
+    }
     .img-box {
       height: 327px;
       width: 327px;
@@ -903,6 +1005,10 @@ section {
         height: 240px;
         width: 240px;
       }
+      @media screen and (max-width: 1024px) {
+        height: 240px;
+        width: 100%;
+      }
     }
     .text-box {
       height: 50%;
@@ -913,6 +1019,9 @@ section {
       width: 85%;
       @media screen and (max-width: 1024px) {
         width: 80%;
+      }
+      @media screen and (max-width: 768px) {
+        height: 100%;
       }
     }
   }
@@ -1121,6 +1230,9 @@ section {
         @media screen and (max-width: 1024px) {
           gap: 4px;
         }
+        @media screen and (max-width: 1024px) {
+          gap: 12px;
+        }
       }
       .sub-title {
         font-family: "Aboreto", serif;
@@ -1133,6 +1245,10 @@ section {
         @media screen and (max-width: 1024px) {
           letter-spacing: 10.5px;
         }
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          letter-spacing: 7.3px;
+        }
       }
       .title {
         // font-family: $italianno-font;
@@ -1140,6 +1256,10 @@ section {
         line-height: 120%;
         letter-spacing: 3px;
         text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+          font-size: 36px;
+          line-height: 130%;
+        }
       }
       .download-btn {
         width: fit-content;
@@ -1160,6 +1280,9 @@ section {
   .sub-title {
     @media screen and (max-width: 1024px) {
       letter-spacing: 8.5px !important;
+    }
+    @media screen and (max-width: 1024px) {
+      letter-spacing: 2.3px !important;
     }
   }
 }
@@ -1185,6 +1308,9 @@ section {
         @media screen and (max-width: 1024px) {
           font-size: 53px;
         }
+        @media screen and (max-width: 768px) {
+          font-size: 48px;
+        }
       }
       li {
         display: flex;
@@ -1195,6 +1321,9 @@ section {
         height: 76px;
         flex: 1;
         object-fit: cover;
+        @media screen and (max-width: 768px) {
+          height: 62px;
+        }
       }
       // .block-span {
       //   // @media screen and (max-width: 1024px) {
@@ -1256,6 +1385,9 @@ section {
       @media screen and (max-width: 1024px) {
         font-size: 56px;
       }
+      @media screen and (max-width: 768px) {
+        font-size: 48px;
+      }
       .title {
         text-transform: uppercase;
       }
@@ -1270,6 +1402,9 @@ section {
         display: inline-block;
         padding: 0 5px;
         transform: translateX(-30px);
+        @media screen and (max-width: 768px) {
+          font-size: 60px;
+        }
       }
     }
     .swiper-slide {
@@ -1297,11 +1432,14 @@ section {
       .img-box {
         width: 405px;
         height: 405px;
+        @media screen and (max-width: 1024px) {
+          width: 368px;
+          height: 368px;
+        }
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-
           transition: all 0.3s;
         }
         .overlay {
@@ -1386,9 +1524,14 @@ section {
     font-size: 13px;
   }
   .left-box {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     display: flex;
     gap: 32px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 2px;
+      font-size: 12px;
+    }
     .right-text-wrap {
       display: flex;
       gap: 16px;
@@ -1400,6 +1543,9 @@ section {
     font-size: 28px;
     @media screen and (max-width: 1024px) {
       font-size: 24px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
     }
     a {
       color: rgba(255, 255, 255, 0.6);
@@ -1414,6 +1560,9 @@ section {
       font-size: 24px;
       @media screen and (max-width: 1024px) {
         font-size: 20px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
       }
     }
   }
