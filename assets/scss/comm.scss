@@ -30,12 +30,12 @@ section {
   @media screen and (min-width: 1441px) {
     max-width: none;
   }
-  @media screen and (max-width: 1024px) {
-    height: 768px !important;
-  }
-  @media screen and (max-width: 768px) {
-    height: 1024px !important;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   height: 1366px !important;
+  // }
+  // @media screen and (max-width: 820px) {
+  //   height: 1024px !important;
+  // }
 }
 .container {
   padding-left: 32px;
@@ -44,6 +44,9 @@ section {
   // background-color: #121212;
   @media screen and (min-width: 1441px) {
     padding: 0 56px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 24px;
   }
 }
 .btn {
@@ -271,6 +274,9 @@ section {
     .text {
       font-family: $crimson-font;
       font-size: 32px;
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
     }
     .text-right {
       text-align: right;
@@ -307,6 +313,7 @@ section {
     justify-content: center;
     font-family: $crimson-font;
     line-height: 1400%;
+    padding: 0 54px !important;
     @media screen and (max-width: 1024px) {
       padding: 0 24px !important;
     }
@@ -324,17 +331,21 @@ section {
       opacity: var(--before-opacity, 0);
     }
     .text {
-      font-size: 1000%;
+      // font-size: 1000%;
       // font-size: 220px;
-      height: 150px;
+      font-size: 15vw;
+      height: 13vw;
       font-weight: bold;
       color: $w;
       letter-spacing: -3px;
       display: flex;
       align-items: center;
-      @media screen and (max-width: 1024px) {
-        // font-size: 157px;
-        height: 150px;
+      // @media screen and (max-width: 1024px) {
+      //   font-size: 157px;
+      //   height: 150px;
+      // }
+      @media screen and (max-width: 768px) {
+        height: 14vw;
       }
     }
   }
@@ -357,11 +368,15 @@ section {
   flex-wrap: nowrap;
   .container {
     height: 100vh;
-    @media screen and (max-width: 1024px) {
-      height: 768px;
+    // @media screen and (max-width: 1024px) {
+    //   height: 768px;
+    // }
+    @media screen and (max-width: 768px) {
+      padding: 50px 0;
     }
   }
 }
+
 // 섹션 1
 .laureate1-sect-1,
 .laureate2-sect-1,
@@ -408,9 +423,14 @@ section {
     font-family: $crimson-font;
     font-size: 22px;
     letter-spacing: 7px;
+    opacity: 0.8;
     @media screen and (max-width: 1024px) {
       font-size: 18px;
       letter-spacing: 4px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      letter-spacing: 3px;
     }
   }
   .name {
@@ -418,6 +438,12 @@ section {
     font-size: 74px;
     @media screen and (max-width: 1024px) {
       font-size: 56px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 48px;
+      height: 44px;
+      display: flex;
+      align-items: center;
     }
   }
   .side-text-box {
@@ -431,8 +457,13 @@ section {
     left: 50%;
     z-index: 10;
     transform: translateX(-50%);
+    opacity: 0.8;
     @media screen and (max-width: 1024px) {
       font-size: 16px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      transform: translate(-50%, 170%);
     }
   }
 }
@@ -441,10 +472,22 @@ section {
 .laureate2-sect-2,
 .laureate3-sect-2,
 .laureate4-sect-2 {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .container {
     display: flex;
     align-items: flex-end;
     gap: 80px;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: fit-content;
+    }
   }
   .img-box,
   .text-box {
@@ -456,6 +499,9 @@ section {
     gap: 24px;
     height: fit-content;
     margin: 10% 0;
+    @media screen and (max-width: 768px) {
+      margin: 0;
+    }
   }
   .img-box {
     width: 100%;
@@ -468,6 +514,10 @@ section {
       @media screen and (max-width: 1024px) {
         // height: 60%;
         object-position: 60%;
+      }
+      @media screen and (max-width: 768px) {
+        height: auto;
+        width: 100%;
       }
     }
   }
@@ -733,11 +783,14 @@ section {
     justify-content: space-between;
     // gap: 48px;
     height: 100%;
+    width: 100%;
   }
   .img-box {
     height: 75%;
+    width: 100%;
     img {
-      height: 100%;
+      // height: 100%;
+      width: 100%;
     }
   }
   .contents-box {
@@ -1058,7 +1111,7 @@ section {
       gap: 28px;
       @media screen and (max-width: 1024px) {
         padding: 100px 24px 60px;
-        margin: 0;
+        margin: 100px 0;
         gap: 36px;
       }
       .text-wrap {
