@@ -549,6 +549,17 @@ section {
     padding-bottom: 9%;
   }
 }
+@media screen and (max-width: 480px) {
+  .hero-sect .container {
+    gap: 8px;
+    margin-bottom: 130px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .hero-sect .container {
+    margin-bottom: 100px;
+  }
+}
 .hero-sect .text-group {
   display: flex;
   flex-direction: column;
@@ -556,6 +567,11 @@ section {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+}
+@media screen and (max-width: 480px) {
+  .hero-sect .text-group {
+    gap: 10px;
+  }
 }
 .hero-sect .text-group .sub-title {
   font-family: "Crimson Text", serif;
@@ -566,15 +582,43 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
 }
+@media screen and (max-width: 480px) {
+  .hero-sect .text-group .sub-title {
+    font-size: 14px;
+    letter-spacing: 6px;
+  }
+}
 .hero-sect .text-group .title-box {
   width: 100%;
   height: 222px;
 }
-.hero-sect .text-group .title {
+.hero-sect .text-group .title-box .title {
   height: auto;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 480px) {
+  .hero-sect .text-group .title-box .title {
+    display: none;
+  }
+}
+.hero-sect .text-group .title-box .title-mobile {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .hero-sect .text-group .title-box .title-mobile {
+    display: flex;
+    flex-direction: column;
+    font-family: "Cinzel", serif;
+    font-size: 48px;
+  }
+  .hero-sect .text-group .title-box .title-mobile span {
+    display: flex;
+    height: 62px;
+    align-items: center;
+    letter-spacing: 1.5px;
+  }
 }
 .hero-sect .img-box {
   width: 47%;
@@ -584,6 +628,13 @@ section {
 @media screen and (max-width: 768px) {
   .hero-sect .img-box {
     width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-sect .img-box {
+    transform: translateY(0%);
+    z-index: 0;
+    width: 100%;
   }
 }
 .hero-sect .img-box .img {
@@ -796,6 +847,15 @@ section {
   .laureate3-sect-1 .sub-title,
   .laureate4-sect-1 .sub-title {
     font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .laureate1-sect-1 .sub-title,
+  .laureate2-sect-1 .sub-title,
+  .laureate3-sect-1 .sub-title,
+  .laureate4-sect-1 .sub-title {
+    font-size: 14px;
     letter-spacing: 3px;
   }
 }
