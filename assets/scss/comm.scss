@@ -150,7 +150,10 @@ section {
 
 // header
 #header {
-  position: absolute;
+  // position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
   height: fit-content;
@@ -246,7 +249,7 @@ section {
       margin-bottom: 130px;
     }
     @media screen and (max-width: 360px) {
-      margin-bottom: 100px;
+      margin-bottom: 90px;
     }
   }
   .text-group {
@@ -476,6 +479,10 @@ section {
     left: 50%;
     height: fit-content;
     transform: translateX(-50%);
+    @media screen and (max-width: 480px) {
+      bottom: 38%;
+      width: 100%;
+    }
   }
   .contents-title {
     font-size: 30px;
@@ -503,8 +510,8 @@ section {
       letter-spacing: 3px;
     }
     @media screen and (max-width: 480px) {
-      font-size: 14px;
-      letter-spacing: 3px;
+      font-size: 13px;
+      letter-spacing: 1px;
     }
   }
   .name {
@@ -519,6 +526,9 @@ section {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 32px;
     }
   }
   .side-text-box {
@@ -539,6 +549,46 @@ section {
     @media screen and (max-width: 768px) {
       font-size: 14px;
       // transform: translate(-50%, 170%);
+    }
+    @media screen and (max-width: 480px) {
+      top: 0;
+      bottom: 0;
+    }
+    .left,
+    .right {
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    .mobile {
+      display: none;
+      justify-content: space-between;
+      .top,
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px;
+        span {
+          font-style: normal;
+          font-size: 12px;
+          height: 15px;
+          display: flex;
+          align-items: center;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        position: absolute;
+        z-index: 10;
+      }
     }
   }
 }

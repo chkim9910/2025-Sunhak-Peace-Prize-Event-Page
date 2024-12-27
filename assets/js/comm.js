@@ -2,6 +2,8 @@ $(function () {
   AOS.init();
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+  // ***************************헤더***************************
+
   // ***************************슬로건 섹션***************************
   let sectionSlogan = document.querySelector(".slogan-sect");
   // let sectionSlogan2 = document.querySelector(".slogan2-sect");
