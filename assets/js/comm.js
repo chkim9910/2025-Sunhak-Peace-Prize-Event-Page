@@ -62,22 +62,22 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=1200",
+          end: "+=500",
         },
       });
       // Timeline for the slogan
       scrollTimeline_slogan
-        .fromTo(slogan_1, { opacity: 0, duration: 0.03 }, { opacity: 1 })
-        .fromTo(slogan_2, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .fromTo(slogan_1, { opacity: 0, duration: 0.1 }, { opacity: 1 })
+        .fromTo(slogan_2, { opacity: 0, duration: 0.1 }, { opacity: 1 })
         .to(slogan_container, {
           "--before-opacity": 1,
           duration: 0.5,
         })
-        .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
-        .to(slogan_container, {
-          opacity: 0,
-          duration: 0.5,
-        });
+        .fromTo(slogan_3, { opacity: 0, duration: 0.1 }, { opacity: 1 });
+      // .to(slogan_container, {
+      //   opacity: 0,
+      //   duration: 0.01,
+      // });
     },
 
     // For screens between 480px and 799px
@@ -249,7 +249,7 @@ $(function () {
         { x: 300 }, // 시작 상태
         {
           x: 0, // 끝 상태
-          duration: 2, // 애니메이션 지속 시간
+          duration: 1, // 애니메이션 지속 시간
           scrollTrigger: {
             trigger: section1_2, // 섹션 1-2가 트리거
             containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
