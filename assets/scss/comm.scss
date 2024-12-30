@@ -449,7 +449,7 @@ section {
     //   height: 768px;
     // }
     @media screen and (max-width: 768px) {
-      padding: 50px 0;
+      padding: 50px 20px;
     }
   }
 }
@@ -622,10 +622,10 @@ section {
       height: 100%;
     }
   }
-  .img-box,
-  .text-box {
-    flex: 1;
-  }
+  // .img-box,
+  // .text-box {
+  //   flex: 1;
+  // }
   .text-box {
     display: flex;
     flex-direction: column;
@@ -636,7 +636,7 @@ section {
       margin: 0;
     }
     @media screen and (max-width: 480px) {
-      width: 90%;
+      width: 100%;
     }
   }
   .img-box {
@@ -691,6 +691,11 @@ section {
   @media screen and (max-width: 480px) {
     font-size: 14px;
   }
+  .mobile-hidden {
+    @media screen and (max-width: 380px) {
+      display: none;
+    }
+  }
 }
 .top span {
   font-size: 24px;
@@ -709,7 +714,7 @@ section {
 .laureate4-sect-3 {
   padding: 50px 64px;
   @media screen and (max-width: 480px) {
-    padding: 20px;
+    padding: 50px 20px;
   }
 
   .text {
@@ -735,7 +740,29 @@ section {
 .laureate4-sect-4 {
   padding: 50px 64px;
   @media screen and (max-width: 480px) {
-    padding: 20px;
+    padding: 50px 20px;
+  }
+  .wrap {
+    @media screen and (max-width: 480px) {
+      height: 100%;
+    }
+    .img-box {
+      @media screen and (max-width: 480px) {
+        flex: 1;
+      }
+      img {
+        @media screen and (max-width: 480px) {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .text-box {
+      @media screen and (max-width: 480px) {
+        width: 90%;
+      }
+    }
   }
 }
 // 섹션 5
@@ -809,6 +836,14 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 480px) {
+    gap: 56px;
+    justify-content: initial;
+  }
+  @media screen and (max-width: 380px) {
+    gap: 0px;
+    justify-content: initial;
+  }
   .wrap {
     display: flex;
     flex-direction: column;
@@ -824,7 +859,8 @@ section {
       gap: 48px;
     }
     @media screen and (max-width: 480px) {
-      gap: 0px;
+      justify-content: space-evenly;
+      height: 100%;
     }
   }
   .big-screen {
@@ -855,10 +891,24 @@ section {
         @media screen and (max-width: 480px) {
           width: 100%;
         }
+        img {
+          flex: 1;
+          flex-basis: auto;
+          @media screen and (max-width: 480px) {
+            height: 100%;
+            width: 50%;
+          }
+        }
+        .img-1 {
+          @media screen and (max-width: 480px) {
+            // width: 101px;
+          }
+        }
       }
     }
     @media screen and (max-width: 480px) {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -876,6 +926,9 @@ section {
     }
     @media screen and (max-width: 480px) {
       gap: 10px;
+      justify-content: space-evenly;
+      flex: initial;
+      height: 100%;
     }
   }
   .top-contents {
@@ -887,6 +940,10 @@ section {
     flex: 1;
     display: flex;
     gap: 24px;
+    @media screen and (max-width: 480px) {
+      gap: 10px;
+      width: 100%;
+    }
   }
   img {
     width: 327px;
@@ -901,8 +958,10 @@ section {
       height: 240px;
     }
     @media screen and (max-width: 480px) {
-      width: auto;
-      height: 111px;
+      // width: auto;
+      // height: 111px;
+      height: 100%;
+      width: 50%;
     }
   }
   .text {
@@ -926,6 +985,9 @@ section {
     @media screen and (max-width: 768px) {
       gap: 48px;
     }
+    @media screen and (max-width: 480px) {
+      // height: 90%;
+    }
   }
   .content-box {
     display: flex;
@@ -936,6 +998,11 @@ section {
     width: 50%;
     @media screen and (max-width: 1024px) {
       width: 80%;
+    }
+    @media screen and (max-width: 480px) {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
   .text-box {
@@ -983,6 +1050,10 @@ section {
       height: 100%;
       gap: 62px;
     }
+    @media screen and (max-width: 480px) {
+      gap: 32px;
+      justify-content: space-between;
+    }
   }
 
   .top-contents {
@@ -991,6 +1062,9 @@ section {
     @media screen and (max-width: 768px) {
       flex: none;
       width: 80%;
+    }
+    @media screen and (max-width: 480px) {
+      width: 100%;
     }
   }
   .middle-contents {
@@ -1010,12 +1084,32 @@ section {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @media screen and (max-width: 480px) {
+        width: 60%;
+      }
+    }
+    li:nth-child(1) {
+      img {
+        @media screen and (max-width: 480px) {
+          width: 80%;
+        }
+      }
     }
     li:nth-child(2) img {
       filter: none;
     }
     li:nth-child(2) {
       width: 50%;
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+    li:nth-child(3) {
+      img {
+        @media screen and (max-width: 480px) {
+          width: 50%;
+        }
+      }
     }
   }
   .bottom-wrap {
@@ -1063,6 +1157,9 @@ section {
     @media screen and (max-width: 768px) {
       width: 73%;
     }
+    @media screen and (max-width: 480px) {
+      width: 90%;
+    }
   }
   .contents {
     width: 100%;
@@ -1102,6 +1199,9 @@ section {
       height: 100%;
       gap: 24px;
     }
+    @media screen and (max-width: 768px) {
+      gap: 36px;
+    }
   }
   .left-box {
     display: flex;
@@ -1119,7 +1219,9 @@ section {
       @media screen and (max-width: 1024px) {
         gap: 24px;
       }
-
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
       .img-box {
         height: 327px;
         width: 327px;
@@ -1144,6 +1246,9 @@ section {
       gap: 24px;
       flex: 1;
       flex-basis: 0;
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
       li {
         // flex: 1;
         // flex-basis: 0;
@@ -1161,6 +1266,43 @@ section {
         }
       }
     }
+    .mobile {
+      display: none;
+      @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 24px;
+      }
+      .top {
+        @media screen and (max-width: 480px) {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        img {
+          @media screen and (max-width: 480px) {
+            height: 117px;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        ul {
+          display: flex;
+          gap: 10px;
+          li {
+            flex: 1;
+          }
+        }
+      }
+      .bottom {
+        .text-box {
+          @media screen and (max-width: 480px) {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
   .right-box {
     display: flex;
@@ -1175,6 +1317,9 @@ section {
       gap: 24px;
       // gap: 160px;
     }
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
     .img-box {
       height: 327px;
       width: 327px;
@@ -1187,9 +1332,12 @@ section {
         height: 240px;
         width: 240px;
       }
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 768px) {
         height: 240px;
         width: 100%;
+      }
+      @media screen and (max-width: 480px) {
+        height: 110px;
       }
     }
     .text-box {
@@ -1204,6 +1352,10 @@ section {
       }
       @media screen and (max-width: 768px) {
         height: 100%;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -1234,6 +1386,9 @@ section {
     justify-content: flex-end;
     .text-box {
       width: 70%;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
     }
   }
   .contents {
@@ -1262,12 +1417,21 @@ section {
     display: flex;
     flex-direction: column;
     gap: 80px;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      height: 100%;
+      justify-content: space-evenly;
+    }
   }
   .top-box {
     .text-box {
       display: flex;
       justify-content: space-between;
       width: 100%;
+      @media screen and (max-width: 480px) {
+        gap: 32px;
+        flex-direction: column;
+      }
     }
     .left-box,
     .right-box {
@@ -1284,6 +1448,10 @@ section {
       @media screen and (max-width: 1024px) {
         height: 240px;
       }
+      @media screen and (max-width: 480px) {
+        flex-direction: column;
+        height: 100%;
+      }
       .right,
       .left {
         width: 327px;
@@ -1292,6 +1460,9 @@ section {
           height: 100%;
           object-fit: cover;
           filter: none;
+          @media screen and (max-width: 480px) {
+            height: 110px;
+          }
         }
       }
       .middle {
@@ -1301,6 +1472,9 @@ section {
           width: 100%;
           object-fit: cover;
           filter: none;
+          @media screen and (max-width: 480px) {
+            height: 110px;
+          }
         }
         @media screen and (max-width: 1024px) {
           flex: auto;
@@ -1318,26 +1492,25 @@ section {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    // gap: 48px;
-    // height: 100%;
+
     flex: 1;
   }
   .img-box {
     background: url(../img/laureate4-boyan/5.jpg) no-repeat 50% 50% / cover;
-    // height: 80%;
     width: 100%;
     flex: 1;
+    @media screen and (max-width: 480px) {
+      background-position: 100% 50%;
+    }
     img {
       width: 100%;
-      // filter: grayscale(100%);
-      // transition: all 0.3s;
-      // &:hover {
-      //   filter: none;
-      // }
     }
   }
   .contents-box {
     width: 57%;
+    @media screen and (max-width: 480px) {
+      width: 90%;
+    }
   }
   .contents {
     width: 100%;
