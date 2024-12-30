@@ -1,7 +1,39 @@
 $(function () {
   AOS.init();
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  // TweenMax.staggerFrom(
+  //   ".block",
+  //   0.5,
+  //   {
+  //     width: "0%",
+  //     ease: Power1.easeIn,
+  //     delay: 0.5,
+  //   },
+  //   0.04
+  // );
+  TweenMax.to(".block", 1, {
+    opacity: 0,
+    // delay: 2,
+  });
 
+  TweenMax.to(".loader", 1, {
+    opacity: 1,
+    ease: Power1.easeIn,
+    delay: 0.5,
+    // delay: 3.8,
+  });
+  TweenMax.to(".loader", 1, {
+    opacity: 0,
+    ease: Power1.easeIn,
+    delay: 2.8,
+    // delay: 6,
+  });
+  TweenMax.to(".wrap", 1, {
+    opacity: 1,
+    ease: Power1.easeIn,
+    delay: 3.6,
+    // delay: 6.8,
+  });
   // ***************************헤더***************************
   let header = document.querySelector("#header");
   let scrollTimelineHeader = gsap.timeline({
