@@ -692,9 +692,7 @@ section {
   height: 100%;
 }
 .slogan-sect .text-wrap .highlight {
-  font-family: "Cinzel", serif;
   font-weight: 500;
-  font-style: italic;
 }
 .slogan-sect .slogan {
   padding-top: 6%;
@@ -774,6 +772,7 @@ section {
 .laureate3-sect-1,
 .laureate4-sect-1 {
   max-width: none !important;
+  opacity: 0;
 }
 .laureate1-sect-1 .video-box,
 .laureate2-sect-1 .video-box,
@@ -1200,7 +1199,8 @@ section {
 .laureate2-sect-3 .text,
 .laureate3-sect-3 .text,
 .laureate4-sect-3 .text {
-  width: 1000px;
+  width: 100%;
+  flex: 1;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1279,6 +1279,12 @@ section {
   }
 }
 
+.laureate1-sect-5,
+.laureate2-sect-5,
+.laureate3-sect-5,
+.laureate4-sect-5 {
+  opacity: 0;
+}
 .laureate1-sect-5 .container,
 .laureate2-sect-5 .container,
 .laureate3-sect-5 .container,
@@ -1538,8 +1544,8 @@ section {
   }
 }
 .laureate1-sect-3 img {
-  width: 327px;
-  height: 327px;
+  width: 300px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   display: flex;
@@ -1977,7 +1983,7 @@ section {
 }
 .laureate3-sect-3 .right-box .img-box {
   height: 327px;
-  width: 327px;
+  width: 487px;
 }
 .laureate3-sect-3 .right-box .img-box img {
   width: 100%;
@@ -2072,6 +2078,7 @@ section {
 }
 
 .laureate3-sect-5 .img-box {
+  opacity: 0;
   background: url(../img/laureate3-hugh/5.jpg) no-repeat 50% 50%/cover;
 }
 
@@ -2210,6 +2217,9 @@ section {
   transform: rotate(-45deg);
 }
 
+.laureate4-sect-5 {
+  opacity: 0;
+}
 .laureate4-sect-5 .img-box {
   background: url(../img/laureate4-boyan/6.png) no-repeat 50% 50%/cover;
 }
