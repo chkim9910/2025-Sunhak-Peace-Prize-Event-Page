@@ -509,7 +509,7 @@ section {
 }
 #header .cta-btn-group {
   display: flex;
-  gap: 12px;
+  gap: 6px;
   height: -moz-fit-content;
   height: fit-content;
 }
