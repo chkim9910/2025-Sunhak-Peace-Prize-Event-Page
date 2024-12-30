@@ -1431,6 +1431,10 @@ section {
           font-size: 14px;
           letter-spacing: 7.3px;
         }
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+          letter-spacing: 0px !important;
+        }
       }
       .title {
         // font-family: $italianno-font;
@@ -1441,6 +1445,11 @@ section {
         @media screen and (max-width: 768px) {
           font-size: 36px;
           line-height: 130%;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: 27px;
+          letter-spacing: 0px;
+          line-height: 150%;
         }
       }
       .download-btn {
@@ -1454,6 +1463,9 @@ section {
       }
     }
   }
+}
+.banner1-sect {
+  display: none;
 }
 .banner2-sect {
   @media screen and (max-width: 1024px) {
@@ -1475,7 +1487,7 @@ section {
   justify-content: space-around;
   align-items: flex-end;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 100px 32px;
   .wrap {
     width: 100%;
 
@@ -1493,11 +1505,15 @@ section {
         @media screen and (max-width: 768px) {
           font-size: 48px;
         }
+        @media screen and (max-width: 480px) {
+          font-size: 24px;
+        }
       }
       li {
         display: flex;
         gap: 16px;
         flex-wrap: wrap;
+        align-items: center;
       }
       img {
         height: 76px;
@@ -1505,6 +1521,9 @@ section {
         object-fit: cover;
         @media screen and (max-width: 768px) {
           height: 62px;
+        }
+        @media screen and (max-width: 480px) {
+          height: 50px;
         }
       }
       // .block-span {
@@ -1527,6 +1546,9 @@ section {
         display: none;
         @media screen and (max-width: 1024px) {
           display: block;
+        }
+        @media screen and (max-width: 480px) {
+          height: 22px;
         }
       }
       .arr-2 {
@@ -1554,6 +1576,9 @@ section {
   @media screen and (max-width: 1024px) {
     padding: 180px 32px 140px;
   }
+  @media screen and (max-width: 480px) {
+    gap: 100px;
+  }
   .wrap {
     width: 100%;
     height: 100%;
@@ -1569,6 +1594,10 @@ section {
       }
       @media screen and (max-width: 768px) {
         font-size: 48px;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 32px;
+        line-height: 140%;
       }
       .title {
         text-transform: uppercase;
@@ -1587,6 +1616,11 @@ section {
         @media screen and (max-width: 768px) {
           font-size: 60px;
         }
+        @media screen and (max-width: 480px) {
+          font-size: 32px;
+          transform: translateX(0px);
+          // transform: translate(0px -12px);
+        }
       }
     }
     .swiper-slide {
@@ -1603,20 +1637,33 @@ section {
       bottom: 0;
       z-index: 10;
       background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+      @media screen and (max-width: 480px) {
+        background: none;
+      }
     }
     .swiper-button-prev,
     .swiper-button-nect {
       color: $w;
       left: 0px;
       font-size: 32px;
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
     }
     .img-slide {
+      @media screen and (max-width: 480px) {
+        display: flex;
+      }
       .img-box {
         width: 405px;
         height: 405px;
         @media screen and (max-width: 1024px) {
           width: 368px;
           height: 368px;
+        }
+        @media screen and (max-width: 480px) {
+          width: 222px;
+          height: 203px;
         }
         img {
           width: 100%;
@@ -1682,9 +1729,16 @@ section {
         font-size: 16px;
         letter-spacing: 1px;
         opacity: 0.8;
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+          letter-spacing: 0px;
+        }
       }
       .name {
         font-size: 24px;
+        @media screen and (max-width: 480px) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -1705,6 +1759,11 @@ section {
   @media screen and (max-width: 1024px) {
     font-size: 13px;
   }
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
   .left-box {
     color: rgba(255, 255, 255, 0.7);
     display: flex;
@@ -1717,6 +1776,15 @@ section {
     .right-text-wrap {
       display: flex;
       gap: 16px;
+      @media screen and (max-width: 480px) {
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      .middle {
+        @media screen and (max-width: 480px) {
+          padding-left: 8px;
+        }
+      }
     }
   }
   .right-box {
@@ -1728,6 +1796,7 @@ section {
     }
     @media screen and (max-width: 768px) {
       font-size: 20px;
+      gap: 6px;
     }
     a {
       color: rgba(255, 255, 255, 0.6);
