@@ -70,6 +70,9 @@ section {
 }
 .btn-nofilled {
   padding: 12px 24px;
+  @media screen and (max-width: 480px) {
+    padding: 12px 14px;
+  }
 }
 .btn-outline2 {
   padding: 12px 24px 12px 30px;
@@ -143,7 +146,7 @@ section {
   display: none;
   @media screen and (max-width: 480px) {
     display: flex;
-    padding: 13px 20px 12px 24px;
+    padding: 13px 10px 12px 14px;
     gap: 4px;
   }
 }
@@ -165,7 +168,7 @@ section {
     padding: 40px 24px 20px;
   }
   @media screen and (max-width: 480px) {
-    padding: 40px 20px 20px;
+    padding: 30px 20px 20px;
   }
   .left-side {
     display: flex;
@@ -189,6 +192,7 @@ section {
     display: flex;
     @media screen and (max-width: 480px) {
       height: 36px;
+      width: auto;
       object-fit: contain;
     }
   }
@@ -572,14 +576,15 @@ section {
         padding: 80px;
         span {
           font-style: normal;
-          font-size: 12px;
+          font-size: 16px;
           height: 15px;
           display: flex;
           align-items: center;
         }
       }
       @media screen and (max-width: 480px) {
-        display: flex;
+        display: none;
+        // display: flex;
         flex-direction: column;
         top: 0;
         bottom: 0;
@@ -613,6 +618,9 @@ section {
       gap: 16px;
       height: fit-content;
     }
+    @media screen and (max-width: 480px) {
+      height: 100%;
+    }
   }
   .img-box,
   .text-box {
@@ -626,6 +634,9 @@ section {
     margin: 10% 0;
     @media screen and (max-width: 768px) {
       margin: 0;
+    }
+    @media screen and (max-width: 480px) {
+      width: 90%;
     }
   }
   .img-box {
@@ -643,6 +654,10 @@ section {
       @media screen and (max-width: 768px) {
         height: auto;
         width: 100%;
+      }
+      @media screen and (max-width: 480px) {
+        height: 100%;
+        gap: 10%;
       }
     }
   }
@@ -663,6 +678,9 @@ section {
   @media screen and (max-width: 1024px) {
     font-size: 22px;
   }
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
 }
 .text-box {
   width: 70%;
@@ -670,12 +688,18 @@ section {
 .contents {
   font-size: 16px;
   height: fit-content;
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
 }
 .top span {
   font-size: 24px;
   font-style: italic;
   @media screen and (max-width: 1024px) {
     font-size: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
   }
 }
 // 섹션 3
@@ -684,12 +708,20 @@ section {
 .laureate3-sect-3,
 .laureate4-sect-3 {
   padding: 50px 64px;
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
 
   .text {
     width: 1000px;
     height: fit-content;
     @media screen and (max-width: 768px) {
       width: 100%;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 12px;
+      display: flex;
+      flex-direction: column;
     }
   }
   .wrap img {
@@ -702,6 +734,9 @@ section {
 .laureate3-sect-4,
 .laureate4-sect-4 {
   padding: 50px 64px;
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
 }
 // 섹션 5
 .laureate1-sect-5,
@@ -758,6 +793,9 @@ section {
     @media screen and (max-width: 1024px) {
       font-size: 22px;
     }
+    @media screen and (max-width: 480px) {
+      font-size: 16px;
+    }
   }
   .line {
     width: 1px;
@@ -785,6 +823,9 @@ section {
       max-height: none;
       gap: 48px;
     }
+    @media screen and (max-width: 480px) {
+      gap: 0px;
+    }
   }
   .big-screen {
     display: flex;
@@ -811,7 +852,13 @@ section {
       gap: 16px;
       .img-box {
         width: fit-content;
+        @media screen and (max-width: 480px) {
+          width: 100%;
+        }
       }
+    }
+    @media screen and (max-width: 480px) {
+      width: 100%;
     }
   }
 
@@ -826,6 +873,9 @@ section {
     }
     @media screen and (max-width: 768px) {
       flex-direction: column;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 10px;
     }
   }
   .top-contents {
@@ -849,6 +899,10 @@ section {
     @media screen and (max-width: 1024px) {
       width: 240px;
       height: 240px;
+    }
+    @media screen and (max-width: 480px) {
+      width: auto;
+      height: 111px;
     }
   }
   .text {
@@ -889,6 +943,11 @@ section {
     transform: translate(-30%, 0%);
     @media screen and (max-width: 1024px) {
       width: 70%;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
     }
   }
   .line {

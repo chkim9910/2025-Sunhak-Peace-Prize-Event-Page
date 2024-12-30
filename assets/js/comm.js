@@ -3,6 +3,17 @@ $(function () {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   // ***************************헤더***************************
+  let header = document.querySelector("#header");
+  let scrollTimelineHeader = gsap.timeline({
+    scrollTrigger: {
+      trigger: header,
+      scrub: 1,
+      start: "top top",
+      end: "+=80",
+    },
+  });
+  // 타임라인
+  scrollTimelineHeader.to(header, { y: -100, duration: 0.5 });
 
   // ***************************슬로건 섹션***************************
   let sectionSlogan = document.querySelector(".slogan-sect");
