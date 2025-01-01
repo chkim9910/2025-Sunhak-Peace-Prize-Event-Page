@@ -339,6 +339,11 @@ body {
   font-size: 2.2vw;
   z-index: 1001;
 }
+@media screen and (max-width: 480px) {
+  .loader {
+    font-size: 18px;
+  }
+}
 
 .block {
   position: fixed;
@@ -542,7 +547,8 @@ section {
 }
 
 @media screen and (max-width: 480px) {
-  .go-to-hp {
+  .go-to-hp,
+  .btn-home {
     display: none;
   }
 }
@@ -845,6 +851,7 @@ section {
   align-items: center;
   background: url(../img/bg/bg-holo.png) no-repeat 100% 50%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media screen and (max-width: 768px) {

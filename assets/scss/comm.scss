@@ -42,6 +42,9 @@ body {
   text-transform: uppercase;
   font-size: 2.2vw;
   z-index: 1001;
+  @media screen and (max-width: 480px) {
+    font-size: 18px;
+  }
 }
 .block {
   position: fixed;
@@ -247,7 +250,8 @@ section {
     }
   }
 }
-.go-to-hp {
+.go-to-hp,
+.btn-home {
   @media screen and (max-width: 480px) {
     display: none;
   }
@@ -530,6 +534,7 @@ section {
       background: url(../img/bg/bg-holo.png) no-repeat 100% 50%;
       // background: url(../img/bg/bg-holo2.png) no-repeat 0% 100%;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       @media screen and (max-width: 768px) {
         height: 14vw;
@@ -981,11 +986,6 @@ section {
   }
 }
 //************* 수상자 1 *************
-.laureate1-sect-2 {
-  .bg {
-    // background: url(../img/bg/patrick_bg.png) no-repeat 0 0 / cover;
-  }
-}
 .laureate1-sect-3 {
   display: flex;
   flex-direction: column;
