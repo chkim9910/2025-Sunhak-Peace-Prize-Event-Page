@@ -1449,6 +1449,8 @@ section {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 25%;
+       object-position: 25%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1912,6 +1914,11 @@ section {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 480px) {
+  .laureate2-sect-3 .middle-contents {
+    height: 180px;
+  }
+}
 .laureate2-sect-3 .middle-contents img {
   width: 100%;
   height: 100%;
@@ -1942,6 +1949,7 @@ section {
 @media screen and (max-width: 480px) {
   .laureate2-sect-3 .middle-contents li:nth-child(3) img {
     width: 50%;
+    display: none;
   }
 }
 .laureate2-sect-3 .bottom-wrap {
