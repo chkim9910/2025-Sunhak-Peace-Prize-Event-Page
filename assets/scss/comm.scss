@@ -594,8 +594,8 @@ section {
     }
   }
   .video {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    // height: 100%;
   }
   .container {
     position: absolute;
@@ -782,6 +782,22 @@ section {
       }
     }
   }
+  .bg {
+    width: 60%;
+    height: 20%;
+    transform: rotate(-11deg);
+    position: absolute;
+    right: 50%;
+    // bottom: -5%;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 .laureate2-sect-2 {
   .img-box {
@@ -865,14 +881,18 @@ section {
     padding: 50px 20px;
   }
   .wrap {
+    height: 100%;
     @media screen and (max-width: 480px) {
       height: 100%;
     }
     .img-box {
+      height: 75%;
+      width: 100%;
       @media screen and (max-width: 480px) {
         flex: 1;
       }
       img {
+        width: 100%;
         @media screen and (max-width: 480px) {
           height: 100%;
           width: 100%;
@@ -958,14 +978,7 @@ section {
 //************* 수상자 1 *************
 .laureate1-sect-2 {
   .bg {
-    width: 60%;
-    height: 20%;
-    transform: rotate(-13deg);
-    position: absolute;
-    background: url(../img/bg/patrick_bg.png) no-repeat 0 0 / cover;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
+    // background: url(../img/bg/patrick_bg.png) no-repeat 0 0 / cover;
   }
 }
 .laureate1-sect-3 {
@@ -999,11 +1012,15 @@ section {
       height: 100%;
     }
   }
+  .text {
+    flex: none;
+    width: 50%;
+  }
   .big-screen {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     @media screen and (max-width: 1024px) {
       width: 100%;
       gap: 24px;
@@ -1186,6 +1203,12 @@ section {
   }
 }
 //************* 수상자 2 *************
+.laureate2-sect-2 {
+  .bg {
+    width: 47%;
+    height: 20%;
+  }
+}
 .laureate2-sect-3 {
   display: flex;
   flex-direction: column;
@@ -1336,6 +1359,14 @@ section {
   }
 }
 //************* 수상자 3 *************
+.laureate3-sect-2 {
+  .bg {
+    width: 40%;
+    height: 23%;
+    // background: url(../img/laureate3-hugh/hue_sign_1@2x.png) no-repeat 0 0 /
+    //   cover;
+  }
+}
 .laureate3-sect-3 {
   display: flex;
   flex-direction: column;
@@ -1525,11 +1556,14 @@ section {
     gap: 24px;
     // height: 100%;
     flex: 1;
+    height: 100%;
   }
   .img-box {
-    background: url(../img/laureate3-hugh/4.webp) no-repeat 50% 0% / cover;
+    // background: url(../img/laureate3-hugh/4.webp) no-repeat 50% 0% / cover;
+    // width: 100%;
+    // flex: 1;
+    height: 75%;
     width: 100%;
-    flex: 1;
     img {
       width: 100%;
     }
