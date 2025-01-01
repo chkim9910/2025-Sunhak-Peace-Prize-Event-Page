@@ -1764,7 +1764,8 @@ section {
   margin: 200px 0 100px;
 
   .wrap {
-    background: url(../img/banner/bg.jpg) no-repeat 0 0 / cover;
+    background: url(../img/banner/bg-1.jpg) no-repeat 0 0 / cover;
+
     .text-box {
       margin: 100px;
       padding: 150px 32px 100px;
@@ -1881,6 +1882,7 @@ section {
         }
         @media screen and (max-width: 480px) {
           font-size: 24px;
+          gap: 14px;
         }
       }
       li {

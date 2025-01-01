@@ -2482,7 +2482,7 @@ section {
   margin: 200px 0 100px;
 }
 .banner .wrap {
-  background: url(../img/banner/bg.jpg) no-repeat 0 0/cover;
+  background: url(../img/banner/bg-1.jpg) no-repeat 0 0/cover;
 }
 .banner .wrap .text-box {
   margin: 100px;
@@ -2627,6 +2627,7 @@ section {
 @media screen and (max-width: 480px) {
   .ant-sect .wrap .text-wrap span {
     font-size: 24px;
+    gap: 14px;
   }
 }
 .ant-sect .wrap .text-wrap li {
