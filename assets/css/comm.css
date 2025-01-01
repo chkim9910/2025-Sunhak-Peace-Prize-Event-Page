@@ -922,6 +922,16 @@ section {
 .laureate3-sect-1 .video,
 .laureate4-sect-1 .video {
   width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 480px) {
+  .laureate1-sect-1 .video,
+  .laureate2-sect-1 .video,
+  .laureate3-sect-1 .video,
+  .laureate4-sect-1 .video {
+    height: 100vh;
+  }
 }
 .laureate1-sect-1 .container,
 .laureate2-sect-1 .container,
@@ -1615,6 +1625,11 @@ section {
 .laureate1-sect-3 .text {
   flex: none;
   width: 50%;
+}
+@media screen and (max-width: 1024px) {
+  .laureate1-sect-3 .text {
+    width: 100%;
+  }
 }
 .laureate1-sect-3 .big-screen {
   display: flex;

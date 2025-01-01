@@ -596,6 +596,10 @@ section {
   .video {
     width: 100vw;
     // height: 100%;
+    object-fit: cover;
+    @media screen and (max-width: 480px) {
+      height: 100vh;
+    }
   }
   .container {
     position: absolute;
@@ -1015,6 +1019,9 @@ section {
   .text {
     flex: none;
     width: 50%;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
   .big-screen {
     display: flex;
