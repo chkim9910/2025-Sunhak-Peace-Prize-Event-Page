@@ -166,6 +166,13 @@ section {
     padding: 0 20px;
   }
 }
+.kr {
+  font-family: $chosun-font;
+}
+.name-kr {
+  height: 12px;
+  font-size: 2vw;
+}
 .btn {
   width: $width;
   border-radius: 100px;
@@ -393,6 +400,12 @@ section {
         letter-spacing: 6px;
       }
     }
+    .sub-title-kr {
+      font-family: $chosun-font;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 160%;
+      font-size: 20px;
+    }
     .title-box {
       width: 100%;
       height: 222px;
@@ -541,6 +554,10 @@ section {
         height: 14vw;
       }
     }
+    .text_4 {
+      font-size: 4vw;
+      height: 5vw;
+    }
   }
   .slogan-bg {
     background: url(../img/bg/Union.png) no-repeat 0 0 / cover;
@@ -652,8 +669,14 @@ section {
   .name {
     font-family: $crimson-font;
     font-size: 74px;
+    height: 93px;
+    white-space: nowrap;
     @media screen and (max-width: 1024px) {
       font-size: 56px;
+      height: 78px;
+    }
+    @media screen and (max-width: 904px) {
+      font-size: 48px;
     }
     @media screen and (max-width: 768px) {
       font-size: 48px;
@@ -1884,7 +1907,20 @@ section {
   padding: 100px 32px;
   .wrap {
     width: 100%;
-
+    .sub-text-kr {
+      font-size: 30px;
+      display: block;
+      padding-bottom: 8px;
+      @media screen and (max-width: 1024px) {
+        // font-size: 53px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
     .text-wrap {
       display: flex;
       flex-direction: column;
@@ -1981,6 +2017,20 @@ section {
     flex-direction: column;
     justify-content: space-between;
     gap: 80px;
+    .sub-text-kr {
+      font-size: 30px;
+      display: block;
+      padding-bottom: 8px;
+      @media screen and (max-width: 1024px) {
+        // font-size: 53px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
     .title-box {
       font-size: 74px;
       line-height: 110%;

@@ -63,6 +63,7 @@ $(function () {
   let slogan_1 = document.querySelector(".slogan2-sect .slogan .text_1");
   let slogan_2 = document.querySelector(".slogan2-sect .slogan .text_2");
   let slogan_3 = document.querySelector(".slogan2-sect .slogan .text_3");
+  let slogan_4 = document.querySelector(".slogan2-sect .slogan .text_4");
 
   // // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
@@ -100,7 +101,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=500",
+          end: "+=1000",
         },
       });
       // Timeline for the slogan
@@ -111,7 +112,8 @@ $(function () {
           "--before-opacity": 1,
           duration: 0.5,
         })
-        .fromTo(slogan_3, { opacity: 0, duration: 0.1 }, { opacity: 1 });
+        .fromTo(slogan_3, { opacity: 0, duration: 0.1 }, { opacity: 1 })
+        .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 });
       // .to(slogan_container, {
       //   opacity: 0,
       //   duration: 0.01,
@@ -140,7 +142,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=800",
+          end: "+=1300",
         },
       });
       // Timeline for the slogan on smaller screens
@@ -152,6 +154,7 @@ $(function () {
           duration: 0.5,
         })
         .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 })
         .to(slogan_container, {
           opacity: 0,
           duration: 0.5,
@@ -204,6 +207,7 @@ $(function () {
           duration: 0.5,
         })
         .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 })
         .to(slogan_container, {
           opacity: 0,
           duration: 1.5,
