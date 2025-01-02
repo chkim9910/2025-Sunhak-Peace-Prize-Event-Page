@@ -1236,7 +1236,7 @@ section {
     }
     @media screen and (max-width: 480px) {
       gap: 32px;
-      justify-content: space-between;
+      // justify-content: space-between;
     }
   }
 
@@ -1266,6 +1266,7 @@ section {
     }
     @media screen and (max-width: 480px) {
       height: 180px;
+      margin-bottom: 110px;
     }
     img {
       width: 100%;
@@ -1308,6 +1309,10 @@ section {
   .bottom-contents {
     flex: 1;
     width: 60%;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      transform: translate(0px) !important;
+    }
   }
 }
 .laureate2-sect-4 {
@@ -1337,6 +1342,9 @@ section {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+      @media screen and (max-width: 480px) {
+        object-position: 45% !important;
       }
     }
   }
@@ -1388,6 +1396,9 @@ section {
   @media screen and (max-width: 768px) {
     gap: 48px;
   }
+  @media screen and (max-width: 480px) {
+    gap: 0px;
+  }
   .wrap {
     display: flex;
     @media screen and (max-width: 768px) {
@@ -1395,8 +1406,8 @@ section {
       height: 100%;
       gap: 24px;
     }
-    @media screen and (max-width: 768px) {
-      gap: 36px;
+    @media screen and (max-width: 480px) {
+      // gap: 36px;
     }
   }
   .left-box {
@@ -1406,6 +1417,9 @@ section {
     justify-content: space-between;
     flex: 1;
     flex-basis: 0;
+    @media screen and (max-width: 480px) {
+      flex: none;
+    }
     .top-contents {
       display: flex;
       gap: 48px;
@@ -1467,8 +1481,9 @@ section {
       @media screen and (max-width: 480px) {
         display: flex;
         flex-direction: column;
-        height: 100%;
-        gap: 24px;
+        height: fit-content;
+        gap: 0px;
+        // gap: 24px;
       }
       .top {
         @media screen and (max-width: 480px) {
@@ -1609,6 +1624,9 @@ section {
   }
 }
 //************* 수상자 4 *************
+.laureate4-container {
+  display: none;
+}
 .laureate4-sect-3 {
   display: flex;
   flex-direction: column;

@@ -25,7 +25,7 @@ $(function () {
   TweenMax.to(".loader", 1, {
     opacity: 0,
     ease: Power1.easeIn,
-    delay: 2.8,
+    delay: 2.4,
     // delay: 6,
   });
   TweenMax.to(".wrap", 1, {
@@ -192,7 +192,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=600",
+          end: "+=1300",
         },
       });
       // Timeline for the slogan on very small screens
@@ -206,7 +206,7 @@ $(function () {
         .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
         .to(slogan_container, {
           opacity: 0,
-          duration: 0.5,
+          duration: 1.5,
         });
     },
 

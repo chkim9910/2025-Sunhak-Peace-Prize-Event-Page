@@ -1887,7 +1887,6 @@ section {
 @media screen and (max-width: 480px) {
   .laureate2-sect-3 .wrap {
     gap: 32px;
-    justify-content: space-between;
   }
 }
 .laureate2-sect-3 .top-contents {
@@ -1925,6 +1924,7 @@ section {
 @media screen and (max-width: 480px) {
   .laureate2-sect-3 .middle-contents {
     height: 180px;
+    margin-bottom: 110px;
   }
 }
 .laureate2-sect-3 .middle-contents img {
@@ -1969,6 +1969,12 @@ section {
   flex: 1;
   width: 60%;
 }
+@media screen and (max-width: 480px) {
+  .laureate2-sect-3 .bottom-contents {
+    width: 100%;
+    transform: translate(0px) !important;
+  }
+}
 
 .laureate2-sect-4 {
   display: flex;
@@ -2006,6 +2012,12 @@ section {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+@media screen and (max-width: 480px) {
+  .laureate2-sect-4 .img-box img {
+    -o-object-position: 45% !important;
+       object-position: 45% !important;
   }
 }
 .laureate2-sect-4 .contents-box {
@@ -2062,6 +2074,11 @@ section {
     gap: 48px;
   }
 }
+@media screen and (max-width: 480px) {
+  .laureate3-sect-3 {
+    gap: 0px;
+  }
+}
 .laureate3-sect-3 .wrap {
   display: flex;
 }
@@ -2072,11 +2089,6 @@ section {
     gap: 24px;
   }
 }
-@media screen and (max-width: 768px) {
-  .laureate3-sect-3 .wrap {
-    gap: 36px;
-  }
-}
 .laureate3-sect-3 .left-box {
   display: flex;
   flex-direction: column;
@@ -2084,6 +2096,11 @@ section {
   justify-content: space-between;
   flex: 1;
   flex-basis: 0;
+}
+@media screen and (max-width: 480px) {
+  .laureate3-sect-3 .left-box {
+    flex: none;
+  }
 }
 .laureate3-sect-3 .left-box .top-contents {
   display: flex;
@@ -2158,8 +2175,9 @@ section {
   .laureate3-sect-3 .left-box .mobile {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    gap: 24px;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 0px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2309,6 +2327,10 @@ section {
 .laureate3-sect-5 .img-box {
   opacity: 0;
   background: url(../img/laureate3-hugh/5.jpg) no-repeat 50% 50%/cover;
+}
+
+.laureate4-container {
+  display: none;
 }
 
 .laureate4-sect-3 {
