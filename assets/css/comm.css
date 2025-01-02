@@ -474,7 +474,7 @@ section {
 }
 
 .kr {
-  font-family: "Chosunilbo_myungjo", serif;
+  font-family: "Chosunilbo_myungjo", serif !important;
 }
 
 .name-kr {
