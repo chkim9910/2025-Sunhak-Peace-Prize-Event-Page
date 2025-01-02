@@ -34,6 +34,12 @@ $(function () {
     delay: 3.6,
     // delay: 6.8,
   });
+  TweenMax.to(".start", 1, {
+    display: "none",
+    ease: Power1.easeIn,
+    delay: 3.6,
+    // delay: 6.8,
+  });
   // ***************************헤더***************************
   let header = document.querySelector("#header");
   let scrollTimelineHeader = gsap.timeline({
