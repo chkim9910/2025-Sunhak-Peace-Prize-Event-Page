@@ -618,7 +618,7 @@ section {
   }
   .video {
     width: 100vw;
-    // height: 100%;
+    height: 100vh;
     object-fit: cover;
     @media screen and (max-width: 480px) {
       height: 100vh;
@@ -631,6 +631,9 @@ section {
     left: 50%;
     height: fit-content;
     transform: translateX(-50%);
+    @media screen and (max-width: 768px) {
+      bottom: 42%;
+    }
     @media screen and (max-width: 480px) {
       bottom: 38%;
       width: 100%;
@@ -653,6 +656,7 @@ section {
     font-size: 22px;
     letter-spacing: 7px;
     opacity: 0.8;
+    white-space: nowrap;
     @media screen and (max-width: 1024px) {
       font-size: 18px;
       letter-spacing: 4px;
@@ -714,7 +718,7 @@ section {
     }
     .left,
     .right {
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 680px) {
         display: none;
       }
     }
