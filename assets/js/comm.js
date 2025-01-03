@@ -578,27 +578,27 @@ $(function () {
     },
   });
 
-  // ***************************laureate 2 - 완지라 마타이***************************
-  let sections2 = gsap.utils.toArray("main .laureate2-sect");
-  let section2_1 = document.querySelector(".laureate2-sect-1");
-  let section2_2 = document.querySelector(".laureate2-sect-2");
-  let section2_3 = document.querySelector(".laureate2-sect-3");
-  let section2_4 = document.querySelector(".laureate2-sect-4");
-  let section2_5 = document.querySelector(".laureate2-sect-5");
+  // ***************************laureate 3 - 완지라 마타이***************************
+  let sections2 = gsap.utils.toArray("main .laureate3-sect");
+  let section2_1 = document.querySelector(".laureate3-sect-1");
+  let section2_2 = document.querySelector(".laureate3-sect-2");
+  let section2_3 = document.querySelector(".laureate3-sect-3");
+  let section2_4 = document.querySelector(".laureate3-sect-4");
+  let section2_5 = document.querySelector(".laureate3-sect-5");
   let section2_text_box_1 = document.querySelector(
-    ".laureate2-sect-2 .text-box"
+    ".laureate3-sect-2 .text-box"
   );
   let section2_text_box_2 = document.querySelector(
-    ".laureate2-sect-3 .bottom-contents"
+    ".laureate3-sect-3 .bottom-contents"
   );
   let section2_text_box_3 = document.querySelector(
-    ".laureate2-sect-3 .top-contents"
+    ".laureate3-sect-3 .top-contents"
   );
   let section2_text_box_4 = document.querySelector(
-    ".laureate2-sect-4 .contents-box"
+    ".laureate3-sect-4 .contents-box"
   );
   let section2_text_box_5 = document.querySelector(
-    ".laureate2-sect-5 .text-box"
+    ".laureate3-sect-5 .text-box"
   );
 
   // 미디어 쿼리 매칭
@@ -607,7 +607,7 @@ $(function () {
     "(min-width: 481px)": function () {
       let scrollTimeline2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".laureate2-container",
+          trigger: ".laureate3-container",
           pin: true,
           scrub: 1,
           start: "top top",
@@ -772,7 +772,7 @@ $(function () {
     "(max-width: 480px)": function () {
       let scrollTimeline2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".laureate2-container",
+          trigger: ".laureate3-container",
           pin: true,
           scrub: 1,
           start: "top top",
@@ -934,27 +934,27 @@ $(function () {
     },
   });
 
-  // ***************************laureate 3 - 휴 에반스***************************
-  let sections3 = gsap.utils.toArray("main .laureate3-sect");
-  let section3_1 = document.querySelector(".laureate3-sect-1");
-  let section3_2 = document.querySelector(".laureate3-sect-2");
-  let section3_3 = document.querySelector(".laureate3-sect-3");
-  let section3_4 = document.querySelector(".laureate3-sect-4");
-  let section3_5 = document.querySelector(".laureate3-sect-5");
+  // ***************************laureate 2 - 휴 에반스***************************
+  let sections3 = gsap.utils.toArray("main .laureate2-sect");
+  let section3_1 = document.querySelector(".laureate2-sect-1");
+  let section3_2 = document.querySelector(".laureate2-sect-2");
+  let section3_3 = document.querySelector(".laureate2-sect-3");
+  let section3_4 = document.querySelector(".laureate2-sect-4");
+  let section3_5 = document.querySelector(".laureate2-sect-5");
   let section3_text_box_1 = document.querySelector(
-    ".laureate3-sect-2 .text-box"
+    ".laureate2-sect-2 .text-box"
   );
   let section3_text_box_2 = document.querySelector(
-    ".laureate3-sect-3 .right-box .text-box"
+    ".laureate2-sect-3 .right-box .text-box"
   );
   let section3_text_box_3 = document.querySelector(
-    ".laureate3-sect-3 .top-contents .text-box"
+    ".laureate2-sect-3 .top-contents .text-box"
   );
   let section3_text_box_4 = document.querySelector(
-    ".laureate3-sect-4 .text-box"
+    ".laureate2-sect-4 .text-box"
   );
   let section3_text_box_5 = document.querySelector(
-    ".laureate3-sect-5 .text-box"
+    ".laureate2-sect-5 .text-box"
   );
 
   // 미디어 쿼리 매칭
@@ -963,7 +963,7 @@ $(function () {
     "(min-width: 481px)": function () {
       let scrollTimeline3 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".laureate3-container",
+          trigger: ".laureate2-container",
           pin: true,
           scrub: 1,
           //   start: "top top",
@@ -1088,7 +1088,7 @@ $(function () {
       );
       // section3_5 opacity 전환 추가
       gsap.fromTo(
-        ".laureate3-sect-5 .img-box",
+        ".laureate2-sect-5 .img-box",
         { opacity: 0 }, // 초기 상태
         {
           opacity: 1, // 뷰포트 진입 시
@@ -1127,7 +1127,7 @@ $(function () {
     "(max-width: 480px)": function () {
       let scrollTimeline3 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".laureate3-container",
+          trigger: ".laureate2-container",
           pin: true,
           scrub: 1,
           //   start: "top top",
