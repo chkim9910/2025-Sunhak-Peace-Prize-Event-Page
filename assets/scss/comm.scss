@@ -1667,9 +1667,9 @@ section {
   }
 }
 //************* 수상자 4 *************
-.laureate4-container {
-  display: none;
-}
+// .laureate4-container {
+//   display: none;
+// }
 .laureate4-sect-3 {
   display: flex;
   flex-direction: column;
@@ -1758,7 +1758,7 @@ section {
     flex: 1;
   }
   .img-box {
-    background: url(../img/laureate4-boyan/5.jpg) no-repeat 50% 50% / cover;
+    background: url(../img/laureate4-Gusmão/2-2.jpg) no-repeat 50% 50% / cover;
     width: 100%;
     flex: 1;
     @media screen and (max-width: 480px) {
@@ -1788,7 +1788,7 @@ section {
 .laureate4-sect-5 {
   opacity: 0;
   .img-box {
-    background: url(../img/laureate4-boyan/6.png) no-repeat 50% 50% / cover;
+    background: url(../img/laureate4-Gusmão/5-1.jpg) no-repeat 50% 50% / cover;
   }
 }
 //************* 데코 섹션 *************
