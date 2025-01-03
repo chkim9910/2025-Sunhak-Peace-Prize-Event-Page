@@ -481,6 +481,16 @@ section {
   height: 12px;
   font-size: 2vw;
 }
+@media screen and (max-width: 768px) {
+  .name-kr {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .name-kr {
+    font-size: 16px;
+  }
+}
 
 .btn {
   width: auto;
@@ -701,6 +711,11 @@ section {
 @media screen and (max-width: 360px) {
   .hero-sect .container {
     margin-bottom: 90px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-sect .container-kr {
+    margin-bottom: 70px;
   }
 }
 .hero-sect .text-group {
@@ -955,6 +970,7 @@ section {
 .laureate3-sect-1 .video,
 .laureate4-sect-1 .video {
   width: 100vw;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1839,9 +1855,15 @@ section {
     width: 80%;
   }
 }
+@media screen and (max-width: 780px) {
+  .laureate1-sect-4 .img-box img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 @media screen and (max-width: 480px) {
   .laureate1-sect-4 .img-box img {
-    width: auto;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
