@@ -379,7 +379,8 @@ section {
     }
     @media screen and (max-width: 480px) {
       gap: 8px;
-      margin-bottom: 130px;
+      margin-bottom: 7vh;
+      // margin-bottom: 130px;
     }
     @media screen and (max-width: 360px) {
       margin-bottom: 90px;
@@ -407,6 +408,14 @@ section {
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
+      @media screen and (max-width: 1024px) {
+        font-size: 23px;
+        letter-spacing: 7px;
+      }
+      @media screen and (max-width: 786px) {
+        font-size: 16px;
+        letter-spacing: 3px;
+      }
       @media screen and (max-width: 480px) {
         font-size: 14px;
         letter-spacing: 6px;
