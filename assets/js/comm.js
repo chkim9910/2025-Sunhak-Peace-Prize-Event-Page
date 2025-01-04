@@ -11,6 +11,10 @@ $(function () {
   //   },
   //   0.04
   // );
+  TweenMax.to("html", 0.1, {
+    overflow: "hidden",
+    // delay: 2,
+  });
   TweenMax.to(".block", 1, {
     opacity: 0,
     // delay: 2,
@@ -39,6 +43,10 @@ $(function () {
     ease: Power1.easeIn,
     delay: 3.6,
     // delay: 6.8,
+  });
+  TweenMax.to("html", 0.1, {
+    overflow: "auto",
+    delay: 5,
   });
   // ***************************헤더***************************
   let header = document.querySelector("#header");
@@ -101,18 +109,18 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=1000",
+          end: "+=650",
         },
       });
       // Timeline for the slogan
       scrollTimeline_slogan
-        .fromTo(slogan_1, { opacity: 0, duration: 0.1 }, { opacity: 1 })
-        .fromTo(slogan_2, { opacity: 0, duration: 0.1 }, { opacity: 1 })
-        .to(slogan_container, {
-          "--before-opacity": 1,
-          duration: 0.5,
-        })
-        .fromTo(slogan_3, { opacity: 0, duration: 0.1 }, { opacity: 1 })
+        .fromTo(slogan_1, { opacity: 0, duration: 0.3 }, { opacity: 1 })
+        .fromTo(slogan_2, { opacity: 0, duration: 0.3 }, { opacity: 1 })
+        // .to(slogan_container, {
+        //   "--before-opacity": 1,
+        //   duration: 0.5,
+        // })
+        .fromTo(slogan_3, { opacity: 0, duration: 0.3 }, { opacity: 1 })
         .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 });
       // .to(slogan_container, {
       //   opacity: 0,
