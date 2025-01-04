@@ -1296,6 +1296,9 @@ section {
     justify-content: space-between;
     flex: 1;
     flex-basis: 0;
+    @media screen and (max-width: 768px) {
+      gap: 0;
+    }
     @media screen and (max-width: 480px) {
       flex: none;
     }

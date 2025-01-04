@@ -1962,6 +1962,11 @@ section {
   flex: 1;
   flex-basis: 0;
 }
+@media screen and (max-width: 768px) {
+  .laureate2-sect-3 .left-box {
+    gap: 0;
+  }
+}
 @media screen and (max-width: 480px) {
   .laureate2-sect-3 .left-box {
     flex: none;
