@@ -1336,16 +1336,32 @@ $(function () {
         });
 
       // section4_2 opacity 전환 추가
+      // gsap.fromTo(
+      //   section4_2,
+      //   { opacity: 0 }, // 초기 상태
+      //   {
+      //     opacity: 1, // 뷰포트 진입 시
+      //     duration: 2,
+      //     scrollTrigger: {
+      //       trigger: section4_2, // section4_2를 트리거로 설정
+      //       containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+      //       start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+      //       end: "center center+=100", // 약간의 여유를 둔 후 종료
+      //       scrub: true, // 스크롤에 따라 부드럽게 전환
+      //       // markers: true, // 디버깅용
+      //     },
+      //   }
+      // );
       gsap.fromTo(
-        section4_2,
-        { opacity: 0 }, // 초기 상태
+        ".laureate4-sect-2 .img-box",
+        { opacity: 0 },
         {
           opacity: 1, // 뷰포트 진입 시
           duration: 2,
           scrollTrigger: {
             trigger: section4_2, // section4_2를 트리거로 설정
             containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
-            start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+            start: "top bottom-=400", // 섹션이 뷰포트 중심에 도달할 때 시작
             end: "center center+=100", // 약간의 여유를 둔 후 종료
             scrub: true, // 스크롤에 따라 부드럽게 전환
             // markers: true, // 디버깅용
