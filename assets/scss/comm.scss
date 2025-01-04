@@ -372,7 +372,8 @@ section {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    padding-bottom: 7%;
+    padding-bottom: 10vh;
+    // padding-bottom: 7%;
     @media screen and (min-width: 1441px) {
       padding-bottom: 9%;
     }
@@ -1058,9 +1059,11 @@ section {
   }
   .text {
     flex: none;
-    width: 50%;
+    width: 40%;
+    position: absolute;
+    right: 10%;
     @media screen and (max-width: 1024px) {
-      width: 100%;
+      // width: 100%;
     }
   }
   .big-screen {
@@ -1076,7 +1079,8 @@ section {
       display: none;
     }
     .text {
-      width: 800px;
+      width: 40%;
+      left: 33%;
     }
   }
   .small-screen {
@@ -1275,6 +1279,7 @@ section {
   }
   .wrap {
     display: flex;
+    height: 100%;
     @media screen and (max-width: 768px) {
       flex-direction: column;
       height: 100%;
@@ -1307,6 +1312,7 @@ section {
         display: none;
       }
       .img-box {
+        display: none;
         height: 327px;
         width: 327px;
         img {
@@ -1328,7 +1334,7 @@ section {
     .bottom-contents {
       display: flex;
       gap: 24px;
-      flex: 1;
+      // flex: 1;
       flex-basis: 0;
       @media screen and (max-width: 480px) {
         display: none;
@@ -1338,6 +1344,12 @@ section {
         // flex-basis: 0;
         height: 327px;
         width: 327px;
+        &:nth-child(1) {
+          width: 100%;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
         img {
           width: 100%;
           height: 100%;
@@ -1392,7 +1404,8 @@ section {
   .right-box {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    // align-items: flex-end;
+    justify-content: space-between;
     flex: 1;
     flex-basis: 0;
     width: fit-content;
@@ -1407,7 +1420,8 @@ section {
     }
     .img-box {
       height: 327px;
-      width: 487px;
+      width: 100%;
+      // width: 487px;
       // width: 327px;
       img {
         width: 100%;
@@ -1416,7 +1430,8 @@ section {
       }
       @media screen and (max-width: 1024px) {
         height: 240px;
-        width: 240px;
+        width: 100%;
+        // width: 240px;
       }
       @media screen and (max-width: 768px) {
         height: 240px;
@@ -1432,9 +1447,11 @@ section {
       flex-direction: column;
       justify-content: flex-end;
       padding: 0 0 50px;
-      width: 85%;
+      width: 100%;
+      // width: 85%;
       @media screen and (max-width: 1024px) {
-        width: 80%;
+        width: 100%;
+        // width: 80%;
       }
       @media screen and (max-width: 768px) {
         height: 100%;
@@ -1474,9 +1491,10 @@ section {
     display: flex;
     justify-content: flex-end;
     .text-box {
-      width: 70%;
+      width: 60%;
       @media screen and (max-width: 1024px) {
-        width: 100%;
+        width: 75%;
+        // width: 100%;
       }
     }
   }
@@ -1515,11 +1533,13 @@ section {
   .wrap {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    justify-content: space-evenly;
+    // gap: 48px;
     margin: 0;
+    height: 100%;
     @media screen and (max-width: 768px) {
       height: 100%;
-      gap: 62px;
+      // gap: 62px;
     }
     @media screen and (max-width: 480px) {
       gap: 32px;
@@ -1528,7 +1548,7 @@ section {
   }
 
   .top-contents {
-    flex: 1;
+    // flex: 1;
     width: 60%;
     @media screen and (max-width: 768px) {
       flex: none;
@@ -1574,7 +1594,8 @@ section {
       filter: none;
     }
     li:nth-child(2) {
-      width: 50%;
+      width: 70%;
+      // width: 50%;
       @media screen and (max-width: 480px) {
         width: 100%;
       }
@@ -1613,7 +1634,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: flex-end;
+    // justify-content: space-between;
     height: 100%;
     width: 100%;
     @media screen and (max-width: 768px) {
@@ -1621,8 +1643,13 @@ section {
     }
   }
   .img-box {
-    height: 75%;
+    // height: 75%;
+    // width: 100%;
+    height: 100%;
     width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
     img {
       width: 100%;
       @media screen and (max-width: 768px) {

@@ -695,7 +695,7 @@ section {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-bottom: 7%;
+  padding-bottom: 10vh;
 }
 @media screen and (min-width: 1441px) {
   .hero-sect .container {
@@ -1695,12 +1695,9 @@ section {
 }
 .laureate1-sect-3 .text {
   flex: none;
-  width: 50%;
-}
-@media screen and (max-width: 1024px) {
-  .laureate1-sect-3 .text {
-    width: 100%;
-  }
+  width: 40%;
+  position: absolute;
+  right: 10%;
 }
 .laureate1-sect-3 .big-screen {
   display: flex;
@@ -1720,7 +1717,8 @@ section {
   }
 }
 .laureate1-sect-3 .big-screen .text {
-  width: 800px;
+  width: 40%;
+  left: 33%;
 }
 .laureate1-sect-3 .small-screen {
   display: none;
@@ -1947,6 +1945,7 @@ section {
 }
 .laureate2-sect-3 .wrap {
   display: flex;
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   .laureate2-sect-3 .wrap {
@@ -1986,6 +1985,7 @@ section {
   }
 }
 .laureate2-sect-3 .left-box .top-contents .img-box {
+  display: none;
   height: 327px;
   width: 327px;
 }
@@ -2009,7 +2009,6 @@ section {
 .laureate2-sect-3 .left-box .bottom-contents {
   display: flex;
   gap: 24px;
-  flex: 1;
   flex-basis: 0;
 }
 @media screen and (max-width: 480px) {
@@ -2020,6 +2019,12 @@ section {
 .laureate2-sect-3 .left-box .bottom-contents li {
   height: 327px;
   width: 327px;
+}
+.laureate2-sect-3 .left-box .bottom-contents li:nth-child(1) {
+  width: 100%;
+}
+.laureate2-sect-3 .left-box .bottom-contents li:nth-child(2) {
+  display: none;
 }
 .laureate2-sect-3 .left-box .bottom-contents li img {
   width: 100%;
@@ -2076,7 +2081,7 @@ section {
 .laureate2-sect-3 .right-box {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: space-between;
   flex: 1;
   flex-basis: 0;
   width: -moz-fit-content;
@@ -2096,7 +2101,7 @@ section {
 }
 .laureate2-sect-3 .right-box .img-box {
   height: 327px;
-  width: 487px;
+  width: 100%;
 }
 .laureate2-sect-3 .right-box .img-box img {
   width: 100%;
@@ -2107,7 +2112,7 @@ section {
 @media screen and (max-width: 1024px) {
   .laureate2-sect-3 .right-box .img-box {
     height: 240px;
-    width: 240px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2127,11 +2132,11 @@ section {
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 0 50px;
-  width: 85%;
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
   .laureate2-sect-3 .right-box .text-box {
-    width: 80%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2172,11 +2177,11 @@ section {
   justify-content: flex-end;
 }
 .laureate2-sect-4 .contents-box .text-box {
-  width: 70%;
+  width: 60%;
 }
 @media screen and (max-width: 1024px) {
   .laureate2-sect-4 .contents-box .text-box {
-    width: 100%;
+    width: 75%;
   }
 }
 .laureate2-sect-4 .contents {
@@ -2213,13 +2218,13 @@ section {
 .laureate3-sect-3 .wrap {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  justify-content: space-evenly;
   margin: 0;
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   .laureate3-sect-3 .wrap {
     height: 100%;
-    gap: 62px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2228,7 +2233,6 @@ section {
   }
 }
 .laureate3-sect-3 .top-contents {
-  flex: 1;
   width: 60%;
 }
 @media screen and (max-width: 768px) {
@@ -2285,7 +2289,7 @@ section {
   filter: none;
 }
 .laureate3-sect-3 .middle-contents li:nth-child(2) {
-  width: 50%;
+  width: 70%;
 }
 @media screen and (max-width: 480px) {
   .laureate3-sect-3 .middle-contents li:nth-child(2) {
@@ -2328,7 +2332,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 100%;
   width: 100%;
 }
@@ -2338,8 +2342,11 @@ section {
   }
 }
 .laureate3-sect-4 .img-box {
-  height: 75%;
+  height: 100%;
   width: 100%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
 }
 .laureate3-sect-4 .img-box img {
   width: 100%;
