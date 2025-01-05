@@ -2420,6 +2420,10 @@ section {
   }
 }
 
+.laureate4-sect-2 .bg {
+  right: 39%;
+}
+
 .laureate4-sect-3 {
   display: flex;
   flex-direction: column;

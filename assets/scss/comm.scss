@@ -1706,9 +1706,11 @@ section {
   }
 }
 //************* 수상자 4 *************
-// .laureate4-container {
-//   display: none;
-// }
+.laureate4-sect-2 {
+  .bg {
+    right: 39%;
+  }
+}
 .laureate4-sect-3 {
   display: flex;
   flex-direction: column;
