@@ -566,11 +566,10 @@ section {
       letter-spacing: -3px;
       display: flex;
       align-items: center;
-      background: url(../img/bg/bg-holo.png) no-repeat 100% 50%;
-      // background: url(../img/bg/bg-holo2.png) no-repeat 0% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: url(../img/bg/bg-holo.png) no-repeat 100% 50%;
+      // -webkit-background-clip: text;
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
       @media screen and (max-width: 768px) {
         height: 14vw;
       }
