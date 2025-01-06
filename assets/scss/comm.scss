@@ -1739,6 +1739,10 @@ section {
     .right-box {
       flex: 1;
       flex-basis: 0;
+      padding-left: 5%;
+      @media screen and (max-width: 1024px) {
+        padding-left: 0%;
+      }
     }
   }
   .bottom-box {

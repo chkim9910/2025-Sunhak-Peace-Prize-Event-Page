@@ -2454,6 +2454,13 @@ section {
 .laureate4-sect-3 .top-box .right-box {
   flex: 1;
   flex-basis: 0;
+  padding-left: 5%;
+}
+@media screen and (max-width: 1024px) {
+  .laureate4-sect-3 .top-box .left-box,
+  .laureate4-sect-3 .top-box .right-box {
+    padding-left: 0%;
+  }
 }
 .laureate4-sect-3 .bottom-box ul {
   display: flex;
