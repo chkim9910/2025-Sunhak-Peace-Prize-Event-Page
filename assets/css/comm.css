@@ -1885,7 +1885,7 @@ section {
   }
 }
 .laureate1-sect-4 .text-box {
-  width: 50%;
+  width: 40%;
   transform: translate(-30%, 0%);
 }
 @media screen and (max-width: 1024px) {
@@ -2173,8 +2173,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
   flex: 1;
   height: 100%;
 }
@@ -2190,7 +2188,7 @@ section {
   justify-content: flex-end;
 }
 .laureate2-sect-4 .contents-box .text-box {
-  width: 60%;
+  width: 70%;
 }
 @media screen and (max-width: 1024px) {
   .laureate2-sect-4 .contents-box .text-box {
@@ -2544,7 +2542,7 @@ section {
   width: 100%;
 }
 .laureate4-sect-4 .contents-box {
-  width: 57%;
+  width: 45%;
 }
 @media screen and (max-width: 480px) {
   .laureate4-sect-4 .contents-box {

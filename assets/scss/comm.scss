@@ -1227,7 +1227,8 @@ section {
     }
   }
   .text-box {
-    width: 50%;
+    width: 40%;
+    // width: 50%;
     transform: translate(-30%, 0%);
     @media screen and (max-width: 1024px) {
       width: 70%;
@@ -1482,8 +1483,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
-    gap: 24px;
+    // justify-content: space-between;
+    // gap: 24px;
     // height: 100%;
     flex: 1;
     height: 100%;
@@ -1492,17 +1493,20 @@ section {
     // background: url(../img/laureate3-hugh/4.webp) no-repeat 50% 0% / cover;
     // width: 100%;
     // flex: 1;
+    // height: 75% !important;
     height: 75%;
     width: 100%;
     img {
       width: 100%;
+      // height: 100%;
     }
   }
   .contents-box {
     display: flex;
     justify-content: flex-end;
     .text-box {
-      width: 60%;
+      width: 70%;
+      // width: 60%;
       @media screen and (max-width: 1024px) {
         width: 75%;
         // width: 100%;
@@ -1813,7 +1817,8 @@ section {
     }
   }
   .contents-box {
-    width: 57%;
+    width: 45%;
+    // width: 57%;
     @media screen and (max-width: 480px) {
       width: 90%;
     }
