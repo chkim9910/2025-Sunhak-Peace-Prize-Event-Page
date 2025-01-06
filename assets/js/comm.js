@@ -203,7 +203,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=1300",
+          end: "+=800",
         },
       });
       // Timeline for the slogan on very small screens
