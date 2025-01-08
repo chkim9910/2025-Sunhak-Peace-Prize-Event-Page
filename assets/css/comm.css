@@ -346,6 +346,16 @@ body {
   font-size: 2.2vw;
   z-index: 1001;
 }
+@media screen and (max-width: 1024px) {
+  .loader {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 786px) {
+  .loader {
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 480px) {
   .loader {
     font-size: 18px;
@@ -1163,7 +1173,7 @@ section {
     bottom: 0;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 768px) {
   .laureate1-sect-1 .side-text-box .left,
   .laureate1-sect-1 .side-text-box .right,
   .laureate2-sect-1 .side-text-box .left,
@@ -1253,8 +1263,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 100%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1282,6 +1291,8 @@ section {
   .laureate3-sect-2 .text-box,
   .laureate4-sect-2 .text-box {
     margin: 0;
+    width: 100%;
+    padding-left: 10px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1323,7 +1334,7 @@ section {
   .laureate2-sect-2 .img-box img,
   .laureate3-sect-2 .img-box img,
   .laureate4-sect-2 .img-box img {
-    height: auto;
+    height: 100%;
     width: 100%;
   }
 }
@@ -1692,7 +1703,8 @@ section {
 @media screen and (max-width: 768px) {
   .laureate1-sect-3 .wrap {
     max-height: none;
-    gap: 48px;
+    height: 100%;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1707,6 +1719,27 @@ section {
   position: absolute;
   right: 10%;
 }
+@media screen and (max-width: 1024px) {
+  .laureate1-sect-3 .text {
+    width: 100%;
+    position: relative;
+    right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .laureate1-sect-3 .text {
+    width: 100%;
+    position: relative;
+    right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .laureate1-sect-3 .text {
+    width: 100%;
+    position: relative;
+    right: 0;
+  }
+}
 .laureate1-sect-3 .big-screen {
   display: flex;
   align-items: center;
@@ -1717,10 +1750,6 @@ section {
   .laureate1-sect-3 .big-screen {
     width: 100%;
     gap: 24px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .laureate1-sect-3 .big-screen {
     display: none;
   }
 }
@@ -1731,39 +1760,40 @@ section {
 .laureate1-sect-3 .small-screen {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .laureate1-sect-3 .small-screen {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 16px;
   }
+}
+@media screen and (max-width: 1024px) and (max-width: 480px) {
+  .laureate1-sect-3 .small-screen {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
   .laureate1-sect-3 .small-screen .img-box {
     width: -moz-fit-content;
     width: fit-content;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 480px) {
+@media screen and (max-width: 1024px) and (max-width: 480px) {
   .laureate1-sect-3 .small-screen .img-box {
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .laureate1-sect-3 .small-screen .img-box img {
     flex: 1;
     flex-basis: auto;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 480px) {
+@media screen and (max-width: 1024px) and (max-width: 480px) {
   .laureate1-sect-3 .small-screen .img-box img {
-    height: 100%;
     width: 50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .laureate1-sect-3 .small-screen {
-    width: 100%;
-    height: 100%;
   }
 }
 .laureate1-sect-3 .top-contents,
@@ -1783,6 +1813,7 @@ section {
   .laureate1-sect-3 .top-contents,
   .laureate1-sect-3 .bottom-contents {
     flex-direction: column;
+    gap: 0px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1799,10 +1830,30 @@ section {
     align-items: flex-start;
   }
 }
+@media screen and (max-width: 480px) {
+  .laureate1-sect-3 .top-contents {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .laureate1-sect-3 .top-contents .text {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .laureate1-sect-3 .top-contents .text {
+    width: 100%;
+  }
+}
 .laureate1-sect-3 .img-box {
   flex: 1;
   display: flex;
   gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .laureate1-sect-3 .img-box {
+    gap: 0px;
+  }
 }
 @media screen and (max-width: 480px) {
   .laureate1-sect-3 .img-box {
@@ -1825,8 +1876,9 @@ section {
     height: 240px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .laureate1-sect-3 img {
+    padding-right: 10px;
     height: 100%;
     width: 50%;
   }
@@ -1865,16 +1917,23 @@ section {
 .laureate1-sect-4 .img-box img {
   width: 50%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .laureate1-sect-4 .img-box img {
     width: 80%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 30%;
+       object-position: 30%;
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   .laureate1-sect-4 .img-box img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 30%;
+       object-position: 30%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1888,9 +1947,24 @@ section {
   width: 40%;
   transform: translate(-30%, 0%);
 }
+@media screen and (max-width: 1440px) {
+  .laureate1-sect-4 .text-box {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .laureate1-sect-4 .text-box {
-    width: 70%;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .laureate1-sect-4 .text-box {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .laureate1-sect-4 .text-box {
+    width: 100%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2124,14 +2198,18 @@ section {
 }
 @media screen and (max-width: 1024px) {
   .laureate2-sect-3 .right-box .img-box {
-    height: 240px;
+    height: 100%;
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (max-width: 768px) {
   .laureate2-sect-3 .right-box .img-box {
-    height: 240px;
+    height: 100%;
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2182,17 +2260,25 @@ section {
 }
 .laureate2-sect-4 .img-box img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .laureate2-sect-4 .contents-box {
   display: flex;
   justify-content: flex-end;
 }
 .laureate2-sect-4 .contents-box .text-box {
-  width: 70%;
+  width: 55%;
 }
 @media screen and (max-width: 1024px) {
   .laureate2-sect-4 .contents-box .text-box {
     width: 75%;
+  }
+}
+@media screen and (max-width: 786px) {
+  .laureate2-sect-4 .contents-box .text-box {
+    width: 100%;
   }
 }
 .laureate2-sect-4 .contents {
@@ -2209,6 +2295,11 @@ section {
 .laureate2-sect-5 .img-box {
   opacity: 0;
   background: url(../img/laureate3-hugh/5.jpg) no-repeat 50% 50%/cover;
+}
+@media screen and (max-width: 786px) {
+  .laureate2-sect-5 .img-box {
+    opacity: 1;
+  }
 }
 
 .laureate3-sect-2 .bg {
@@ -2244,7 +2335,12 @@ section {
   }
 }
 .laureate3-sect-3 .top-contents {
-  width: 60%;
+  width: 45%;
+}
+@media screen and (max-width: 1440px) {
+  .laureate3-sect-3 .top-contents {
+    width: 55%;
+  }
 }
 @media screen and (max-width: 768px) {
   .laureate3-sect-3 .top-contents {
@@ -2320,7 +2416,12 @@ section {
 }
 .laureate3-sect-3 .bottom-contents {
   flex: 1;
-  width: 60%;
+  width: 45%;
+}
+@media screen and (max-width: 1440px) {
+  .laureate3-sect-3 .bottom-contents {
+    width: 55%;
+  }
 }
 @media screen and (max-width: 480px) {
   .laureate3-sect-3 .bottom-contents {
@@ -2368,16 +2469,18 @@ section {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 55%;
+       object-position: 55%;
   }
 }
 @media screen and (max-width: 480px) {
   .laureate3-sect-4 .img-box img {
-    -o-object-position: 45% !important;
-       object-position: 45% !important;
+    -o-object-position: 55% !important;
+       object-position: 55% !important;
   }
 }
 .laureate3-sect-4 .contents-box {
-  width: 57%;
+  width: 55%;
 }
 @media screen and (max-width: 768px) {
   .laureate3-sect-4 .contents-box {
@@ -2429,6 +2532,13 @@ section {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 768px) {
+  .laureate4-sect-3 .wrap {
+    gap: 24px;
+    height: 100%;
+  }
 }
 @media screen and (max-width: 480px) {
   .laureate4-sect-3 .wrap {
@@ -2442,7 +2552,7 @@ section {
   justify-content: space-between;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .laureate4-sect-3 .top-box .text-box {
     gap: 32px;
     flex-direction: column;
@@ -2471,8 +2581,9 @@ section {
     height: 240px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .laureate4-sect-3 .bottom-box ul {
+    gap: 0px;
     flex-direction: column;
     height: 100%;
   }
@@ -2489,10 +2600,20 @@ section {
      object-fit: cover;
   filter: none;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .laureate4-sect-3 .bottom-box ul .right img,
   .laureate4-sect-3 .bottom-box ul .left img {
     height: 110px;
+  }
+}
+.laureate4-sect-3 .bottom-box ul .right,
+.laureate4-sect-3 .bottom-box ul .left {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .laureate4-sect-3 .bottom-box ul .right,
+  .laureate4-sect-3 .bottom-box ul .left {
+    display: none;
   }
 }
 .laureate4-sect-3 .bottom-box ul .middle {
@@ -2504,11 +2625,6 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   filter: none;
-}
-@media screen and (max-width: 480px) {
-  .laureate4-sect-3 .bottom-box ul .middle img {
-    height: 110px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .laureate4-sect-3 .bottom-box ul .middle {
@@ -2535,14 +2651,19 @@ section {
 }
 @media screen and (max-width: 480px) {
   .laureate4-sect-4 .img-box {
-    background-position: 100% 50%;
+    background-position: 50% 50%;
   }
 }
 .laureate4-sect-4 .img-box img {
   width: 100%;
 }
 .laureate4-sect-4 .contents-box {
-  width: 45%;
+  width: 55%;
+}
+@media screen and (max-width: 1024px) {
+  .laureate4-sect-4 .contents-box {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 480px) {
   .laureate4-sect-4 .contents-box {

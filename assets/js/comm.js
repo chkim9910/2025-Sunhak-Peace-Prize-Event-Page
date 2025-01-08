@@ -254,8 +254,8 @@ $(function () {
 
   // // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
-    // For screens wider than 800px
-    "(min-width: 481px)": function () {
+    // For screens wider than 769px
+    "(min-width: 769px)": function () {
       let scrollTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: ".laureate1-container",
@@ -418,7 +418,170 @@ $(function () {
         }
       );
     },
+    // For screens between 481px and 768px
+    "(max-width: 768px) and (min-width: 481px)": function () {
+      let scrollTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".laureate1-container",
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: "+=8000",
+          // markers: true,
+        },
+      });
+      // 타임라인
+      scrollTimeline
+        .set(section1_1, {
+          opacity: 0,
+        })
+        .to(section1_1, { opacity: 1, duration: 0.05 })
+        .to(sections1, {
+          xPercent: -100 * (sections1.length - 1),
+        });
 
+      // section1_2 opacity 전환 추가
+      gsap.fromTo(
+        section1_2,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section1_2, // section1_2를 트리거로 설정
+            containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+            start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=100", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section1_2 text_box_1 x좌표 이동 추가
+      gsap.fromTo(
+        section1_text_box_1,
+        { x: 300 }, // 시작 상태
+        {
+          x: 0, // 끝 상태
+          duration: 1, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section1_2, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+            start: "top center", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section1_3 opacity 전환 추가
+      gsap.fromTo(
+        section1_3,
+        { opacity: 0, scale: 0.5 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scale: 1,
+          scrollTrigger: {
+            trigger: section1_3, // section1_2를 트리거로 설정
+            containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+            start: "start-=800 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "start-=500 center+=200", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section1_3 text_box_2 x좌표 이동 추가
+      gsap.fromTo(
+        section1_text_box_2,
+        { x: 200, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section1_3, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+            start: "top bottom+=2000", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section1_3 text_box_3 x좌표 이동 추가
+      gsap.fromTo(
+        section1_text_box_3,
+        { x: 200, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section1_3, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+            start: "top bottom+=2000", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section1_4 text_box_4 x좌표 이동 추가
+      gsap.fromTo(
+        section1_text_box_4,
+        { x: 200, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section1_4, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+            start: "top bottom+=1000", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section1_5 opacity 전환 추가
+      gsap.fromTo(
+        section1_5,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section1_5, // section1_2를 트리거로 설정
+            containerAnimation: scrollTimeline, // 수평 스크롤 타임라인과 동기화
+            start: "start-=2500 center+=500", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=200", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section1_5 text_box_5 y좌표 이동 추가
+      gsap.fromTo(
+        section1_text_box_5,
+        { y: 100, x: 0, opacity: 0 }, // 시작 상태
+        {
+          y: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section1_5, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
+            start: "top bottom", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+    },
     // For screens smaller than 480px
     "(max-width: 480px)": function () {
       let scrollTimeline = gsap.timeline({
@@ -427,7 +590,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=8000",
+          end: "+=7000",
           // markers: true,
         },
       });
@@ -611,8 +774,8 @@ $(function () {
 
   // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
-    // For screens wider than 800px
-    "(min-width: 481px)": function () {
+    // For screens wider than 769px
+    "(min-width: 769px)": function () {
       let scrollTimeline3 = gsap.timeline({
         scrollTrigger: {
           trigger: ".laureate2-container",
@@ -774,7 +937,169 @@ $(function () {
         }
       );
     },
+    // For screens between 481px and 768px
+    "(max-width: 768px) and (min-width: 481px)": function () {
+      let scrollTimeline3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".laureate2-container",
+          pin: true,
+          scrub: 1,
+          //   start: "top top",
+          end: "+=4500",
+          // markers: true,
+        },
+      });
+      // 타임라인
+      scrollTimeline3
+        .set(sections3, {
+          opacity: 0,
+        })
+        .to(sections3, { opacity: 1, duration: 0.05 })
+        .to(sections3, {
+          xPercent: -100 * (sections3.length - 1),
+        });
 
+      // section3_2 opacity 전환 추가
+      gsap.fromTo(
+        section3_2,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section3_2, // section3_2를 트리거로 설정
+            containerAnimation: scrollTimeline3, // 수평 스크롤 타임라인과 동기화
+            start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=100", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section3_2 text_box_1 x좌표 이동 추가
+      gsap.fromTo(
+        section3_text_box_1,
+        { x: 200 }, // 시작 상태
+        {
+          x: 0, // 끝 상태
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section3_2, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+            start: "top center", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section3_3 opacity 전환 추가
+      gsap.fromTo(
+        section3_3,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section3_3, // section3_3를 트리거로 설정
+            containerAnimation: scrollTimeline3, // 수평 스크롤 타임라인과 동기화
+            start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=200", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section3_3 text_box_2 x좌표 이동 추가
+      gsap.fromTo(
+        section3_text_box_2,
+        { x: 100, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section3_3, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+            start: "top bottom+=200", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section3_3 text_box_3 x좌표 이동 추가
+      gsap.fromTo(
+        section3_text_box_3,
+        { x: 200, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section3_3, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+            start: "top bottom+=200", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section3_4 text_box_4 x좌표 이동 추가
+      gsap.fromTo(
+        section3_text_box_4,
+        { x: 100, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.3, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section3_4, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+            start: "top bottom+=1000", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section3_5 opacity 전환 추가
+      gsap.fromTo(
+        section3_5,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section3_5, // section3_5를 트리거로 설정
+            containerAnimation: scrollTimeline3, // 수평 스크롤 타임라인과 동기화
+            start: "start-=1000 center+=500", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=200", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section3_5 text_box_5 y좌표 이동 추가
+      gsap.fromTo(
+        section3_text_box_5,
+        { y: 100, x: 0, opacity: 0 }, // 시작 상태
+        {
+          y: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section3_5, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
+            start: "top bottom", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+    },
     // For screens smaller than 480px
     "(max-width: 480px)": function () {
       let scrollTimeline3 = gsap.timeline({
@@ -1321,8 +1646,8 @@ $(function () {
 
   // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
-    // For screens wider than 800px
-    "(min-width: 481px)": function () {
+    // For screens wider than 769px
+    "(min-width: 769px)": function () {
       let scrollTimeline4 = gsap.timeline({
         scrollTrigger: {
           trigger: ".laureate4-container",
@@ -1449,9 +1774,9 @@ $(function () {
       // section4_4 text_box_4 x좌표 이동 추가
       gsap.fromTo(
         section4_text_box_4,
-        { x: 100, opacity: 0 }, // 시작 상태
+        { x: 200, opacity: 0 }, // 시작 상태
         {
-          x: -200,
+          x: 0,
           opacity: 1,
           duration: 2, // 애니메이션 지속 시간
           scrollTrigger: {
@@ -1500,7 +1825,169 @@ $(function () {
         }
       );
     },
+    // For screens between 481px and 768px
+    "(max-width: 768px) and (min-width: 481px)": function () {
+      let scrollTimeline4 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".laureate4-container",
+          pin: true,
+          scrub: 1,
+          //   start: "top top",
+          end: "+=4500",
+          // markers: true,
+        },
+      });
+      // 타임라인
+      scrollTimeline4
+        .set(sections4, {
+          opacity: 0,
+        })
+        .to(sections4, { opacity: 1, duration: 0.05 })
+        .to(sections4, {
+          xPercent: -100 * (sections4.length - 1),
+        });
 
+      // section4_2 opacity 전환 추가
+      gsap.fromTo(
+        section4_2,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section4_2, // section4_2를 트리거로 설정
+            containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+            start: "top center", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=100", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section4_2 text_box_1 x좌표 이동 추가
+      gsap.fromTo(
+        section4_text_box_1,
+        { x: 200 }, // 시작 상태
+        {
+          x: 0, // 끝 상태
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section4_2, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+            start: "top center", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section4_3 opacity 전환 추가
+      gsap.fromTo(
+        section2_3,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section4_3, // section4_3를 트리거로 설정
+            containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+            start: "start-=1000 center+=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=200", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section4_3 text_box_2 x좌표 이동 추가
+      gsap.fromTo(
+        section4_text_box_2,
+        { x: 200, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section4_3, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+            start: "top center+=1000", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section4_3 text_box_3 x좌표 이동 추가
+      gsap.fromTo(
+        section4_text_box_3,
+        { x: 100, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section4_3, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+            start: "top center+=1000", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section4_4 text_box_4 x좌표 이동 추가
+      gsap.fromTo(
+        section4_text_box_4,
+        { x: 300, opacity: 0 }, // 시작 상태
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section4_4, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+            start: "top bottom+=1000", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section4_5 opacity 전환 추가
+      gsap.fromTo(
+        section4_5,
+        { opacity: 0 }, // 초기 상태
+        {
+          opacity: 1, // 뷰포트 진입 시
+          duration: 2,
+          scrollTrigger: {
+            trigger: section4_5, // section4_5를 트리거로 설정
+            containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
+            start: "start-=1000 center+=500", // 섹션이 뷰포트 중심에 도달할 때 시작
+            end: "center center+=200", // 약간의 여유를 둔 후 종료
+            scrub: true, // 스크롤에 따라 부드럽게 전환
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+      // section4_5 text_box_5 y좌표 이동 추가
+      gsap.fromTo(
+        section4_text_box_5,
+        { y: 100, x: 0, opacity: 0 }, // 시작 상태
+        {
+          y: 0,
+          opacity: 1,
+          duration: 2, // 애니메이션 지속 시간
+          scrollTrigger: {
+            trigger: section4_5, // 섹션 1-2가 트리거
+            containerAnimation: scrollTimeline4, // 기존 타임라인과 동기화
+            start: "top bottom", // 시작 시점
+            end: "center center+=100", // 종료 시점
+            scrub: true, // 스크롤에 따라 애니메이션
+            // markers: true, // 디버깅용
+          },
+        }
+      );
+    },
     // For screens smaller than 480px
     "(max-width: 480px)": function () {
       let scrollTimeline4 = gsap.timeline({
