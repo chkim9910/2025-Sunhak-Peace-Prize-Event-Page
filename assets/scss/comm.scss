@@ -157,6 +157,12 @@ section {
   //   height: 1024px !important;
   // }
 }
+p,
+span,
+strong {
+  word-break: keep-all;
+  word-wrap: normal;
+}
 .container {
   padding-left: 32px;
   padding-right: 32px;
@@ -273,6 +279,11 @@ section {
 .go-to-hp,
 .btn-home {
   @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+.go-to-hp {
+  @media screen and (max-width: 590px) {
     display: none;
   }
 }
@@ -1080,9 +1091,13 @@ section {
   }
   .text {
     flex: none;
-    width: 40%;
+    width: 60%;
+    //
     position: absolute;
-    right: 10%;
+    right: 0%;
+    @media screen and (max-width: 1600px) {
+      width: 40%;
+    }
     @media screen and (max-width: 1024px) {
       // width: 100%;
       width: 100%;
@@ -1115,8 +1130,12 @@ section {
     //   display: none;
     // }
     .text {
-      width: 40%;
-      left: 33%;
+      width: 60%;
+      left: 30%;
+      // left: 33%;
+      @media screen and (max-width: 1600px) {
+        width: 40%;
+      }
     }
   }
   .small-screen {
@@ -1153,7 +1172,6 @@ section {
       }
     }
   }
-
   .top-contents,
   .bottom-contents {
     display: flex;
@@ -1166,7 +1184,7 @@ section {
     }
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      gap: 0px;
+      gap: 16px;
     }
     @media screen and (max-width: 480px) {
       gap: 10px;
@@ -1190,6 +1208,9 @@ section {
         width: 100%;
       }
     }
+  }
+  .bottom-contents {
+    justify-content: flex-end;
   }
   .img-box {
     flex: 1;
@@ -1226,6 +1247,12 @@ section {
   .text {
     .contents-title {
       width: fit-content;
+    }
+  }
+  .contents {
+    width: 70%;
+    @media screen and (max-width: 1600px) {
+      width: 100%;
     }
   }
 }
@@ -1351,6 +1378,7 @@ section {
   .wrap {
     display: flex;
     height: 100%;
+    gap: 24px;
     @media screen and (max-width: 768px) {
       flex-direction: column;
       height: 100%;
@@ -1540,6 +1568,12 @@ section {
       }
     }
   }
+  .contents {
+    width: 90%;
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+    }
+  }
 }
 .laureate2-sect-4 {
   display: flex;
@@ -1566,14 +1600,16 @@ section {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
     }
   }
   .contents-box {
     display: flex;
     justify-content: flex-end;
     .text-box {
-      width: 55%;
-      // width: 70%;
+      // width: 55%;
+      // width: 100%;
+      width: 70%;
       // width: 60%;
       @media screen and (max-width: 1024px) {
         width: 75%;
@@ -1586,7 +1622,11 @@ section {
     }
   }
   .contents {
-    width: 100%;
+    width: 80%;
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+      // width: 100%;
+    }
   }
   .line {
     margin: 3% 90%;
@@ -1618,7 +1658,8 @@ section {
   flex-direction: column;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    gap: 48px;
+    gap: 0px;
+    // gap: 48px;
   }
   .wrap {
     display: flex;
@@ -1646,7 +1687,7 @@ section {
     }
     @media screen and (max-width: 768px) {
       flex: none;
-      width: 80%;
+      width: 100%;
     }
     @media screen and (max-width: 480px) {
       width: 100%;
@@ -1679,6 +1720,9 @@ section {
     }
     li:nth-child(1) {
       img {
+        @media screen and (max-width: 786px) {
+          display: none;
+        }
         @media screen and (max-width: 480px) {
           width: 80%;
         }
@@ -1690,13 +1734,16 @@ section {
     li:nth-child(2) {
       width: 70%;
       // width: 50%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
       @media screen and (max-width: 480px) {
         width: 100%;
       }
     }
     li:nth-child(3) {
       img {
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 786px) {
           width: 50%;
           display: none;
         }
@@ -1713,7 +1760,10 @@ section {
     width: 45%;
     // width: 60%;
     @media screen and (max-width: 1440px) {
-      width: 55%;
+      width: 65%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
     }
     @media screen and (max-width: 480px) {
       width: 100%;
@@ -1750,6 +1800,7 @@ section {
     z-index: -1;
     img {
       width: 100%;
+      object-position: top;
       @media screen and (max-width: 768px) {
         width: 100%;
         height: 100%;
@@ -1765,14 +1816,18 @@ section {
     width: 55%;
     // width: 57%;
     @media screen and (max-width: 768px) {
-      width: 73%;
+      width: 90%;
+      // width: 73%;
     }
     @media screen and (max-width: 480px) {
       width: 90%;
     }
   }
   .contents {
-    width: 100%;
+    width: 90%;
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+    }
   }
   .line {
     margin: 3% 90%;
@@ -1824,7 +1879,8 @@ section {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      @media screen and (max-width: 768px) {
+      gap: 24px;
+      @media screen and (max-width: 1024px) {
         gap: 32px;
         flex-direction: column;
       }
@@ -1833,9 +1889,15 @@ section {
     .right-box {
       flex: 1;
       flex-basis: 0;
-      padding-left: 5%;
+      // padding-left: 5%;
       @media screen and (max-width: 1024px) {
         padding-left: 0%;
+      }
+      .contents {
+        width: 100%;
+        @media screen and (max-width: 1440px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -1915,7 +1977,8 @@ section {
     }
   }
   .contents-box {
-    width: 55%;
+    width: 60%;
+    // width: 55%;
     // width: 45%;
     // width: 57%;
     @media screen and (max-width: 1024px) {
@@ -1926,7 +1989,11 @@ section {
     }
   }
   .contents {
-    width: 100%;
+    // width: 70%;
+    width: 90%;
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+    }
   }
   .line {
     margin: 3% 90%;
@@ -2178,6 +2245,9 @@ section {
   @media screen and (max-width: 1024px) {
     padding: 180px 32px 140px;
   }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 60px;
+  }
   @media screen and (max-width: 480px) {
     gap: 100px;
   }
@@ -2375,6 +2445,9 @@ section {
   @media screen and (max-width: 1024px) {
     font-size: 13px;
   }
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+  }
   @media screen and (max-width: 480px) {
     flex-direction: column;
     align-items: flex-start;
@@ -2392,9 +2465,9 @@ section {
     .right-text-wrap {
       display: flex;
       gap: 16px;
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 768px) {
         flex-wrap: wrap;
-        gap: 0;
+        gap: 8px;
       }
       .middle {
         @media screen and (max-width: 480px) {
