@@ -268,6 +268,7 @@ $(function () {
   let section1_text_box_5 = document.querySelector(
     ".laureate1-sect-5 .text-box"
   );
+  let video01 = document.querySelector(".laureate1-sect-1 video");
 
   // // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
@@ -280,6 +281,13 @@ $(function () {
           scrub: 1,
           start: "top top",
           end: "+=6000",
+          onEnter: () => {
+            video01.play();
+          },
+          onLeaveBack: () => {
+            video01.currentTime = 0;
+            video01.pause();
+          },
           // markers: true,
         },
       });
@@ -443,7 +451,14 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=7000",
+          end: "+=6000",
+          onEnter: () => {
+            video01.play();
+          },
+          onLeaveBack: () => {
+            video01.currentTime = 0;
+            video01.pause();
+          },
           // markers: true,
         },
       });
@@ -608,6 +623,13 @@ $(function () {
           scrub: 1,
           start: "top top",
           end: "+=2000",
+          onEnter: () => {
+            video01.play();
+          },
+          onLeaveBack: () => {
+            video01.currentTime = 0;
+            video01.pause();
+          },
           // markers: true,
         },
       });
@@ -788,6 +810,7 @@ $(function () {
   let section3_text_box_5 = document.querySelector(
     ".laureate2-sect-5 .text-box"
   );
+  let video03 = document.querySelector(".laureate2-sect-1 video");
 
   // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
@@ -800,6 +823,13 @@ $(function () {
           scrub: 1,
           //   start: "top top",
           end: "+=6000",
+          onEnter: () => {
+            video03.play();
+          },
+          onLeaveBack: () => {
+            video03.currentTime = 0;
+            video03.pause();
+          },
           // markers: true,
         },
       });
@@ -964,6 +994,13 @@ $(function () {
           scrub: 1,
           //   start: "top top",
           end: "+=4500",
+          onEnter: () => {
+            video03.play();
+          },
+          onLeaveBack: () => {
+            video03.currentTime = 0;
+            video03.pause();
+          },
           // markers: true,
         },
       });
@@ -1127,6 +1164,13 @@ $(function () {
           scrub: 1,
           //   start: "top top",
           end: "+=2000",
+          onEnter: () => {
+            video03.play();
+          },
+          onLeaveBack: () => {
+            video03.currentTime = 0;
+            video03.pause();
+          },
           // markers: true,
         },
       });
@@ -1305,6 +1349,7 @@ $(function () {
   let section2_text_box_5 = document.querySelector(
     ".laureate3-sect-5 .text-box"
   );
+  let video02 = document.querySelector(".laureate3-sect-1 video");
 
   // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
@@ -1317,6 +1362,13 @@ $(function () {
           scrub: 1,
           start: "top top",
           end: "+=6000",
+          onEnter: () => {
+            video02.play();
+          },
+          onLeaveBack: () => {
+            video02.currentTime = 0;
+            video02.pause();
+          },
           // markers: true,
         },
       });
@@ -1480,7 +1532,14 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=6000",
+          end: "+=4500",
+          onEnter: () => {
+            video02.play();
+          },
+          onLeaveBack: () => {
+            video02.currentTime = 0;
+            video02.pause();
+          },
           // markers: true,
         },
       });
@@ -1645,6 +1704,13 @@ $(function () {
           scrub: 1,
           start: "top top",
           end: "+=2000",
+          onEnter: () => {
+            video02.play();
+          },
+          onLeaveBack: () => {
+            video02.currentTime = 0;
+            video02.pause();
+          },
           // markers: true,
         },
       });
@@ -1824,6 +1890,7 @@ $(function () {
   let section4_text_box_5 = document.querySelector(
     ".laureate4-sect-5 .text-box"
   );
+  let video04 = document.querySelector(".laureate4-sect-1 video");
 
   // 미디어 쿼리 매칭
   ScrollTrigger.matchMedia({
@@ -1836,6 +1903,13 @@ $(function () {
           scrub: 1,
           //   start: "top top",
           end: "+=6000",
+          onEnter: () => {
+            video04.play();
+          },
+          onLeaveBack: () => {
+            video04.currentTime = 0;
+            video04.pause();
+          },
           // markers: true,
         },
       });
@@ -2015,6 +2089,13 @@ $(function () {
           scrub: 1,
           //   start: "top top",
           end: "+=4500",
+          onEnter: () => {
+            video04.play();
+          },
+          onLeaveBack: () => {
+            video04.currentTime = 0;
+            video04.pause();
+          },
           // markers: true,
         },
       });
@@ -2178,6 +2259,13 @@ $(function () {
           scrub: 1,
           //   start: "top top",
           end: "+=2000",
+          onEnter: () => {
+            video04.play();
+          },
+          onLeaveBack: () => {
+            video04.currentTime = 0;
+            video04.pause();
+          },
           // markers: true,
         },
       });
