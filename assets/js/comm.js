@@ -216,10 +216,10 @@ $(function () {
       let scrollTimeline_slogan = gsap.timeline({
         scrollTrigger: {
           trigger: ".slogan-sect .slogan",
-          pin: true,
+          // pin: true,
           scrub: 1,
-          // start: "top center+=100",
-          start: "top top",
+          start: "top center+=400",
+          // start: "top top",
           end: "+=800",
         },
       });
@@ -607,7 +607,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=7000",
+          end: "+=2000",
           // markers: true,
         },
       });
@@ -1126,7 +1126,7 @@ $(function () {
           pin: true,
           scrub: 1,
           //   start: "top top",
-          end: "+=4500",
+          end: "+=2000",
           // markers: true,
         },
       });
@@ -1644,7 +1644,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=6000",
+          end: "+=2000",
           // markers: true,
         },
       });
@@ -2177,7 +2177,7 @@ $(function () {
           pin: true,
           scrub: 1,
           //   start: "top top",
-          end: "+=4500",
+          end: "+=2000",
           // markers: true,
         },
       });

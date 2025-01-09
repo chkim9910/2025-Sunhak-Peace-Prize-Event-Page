@@ -947,6 +947,11 @@ strong {
     height: 14vw;
   }
 }
+@media screen and (max-width: 480px) {
+  .slogan-sect .slogan .text {
+    letter-spacing: 0px;
+  }
+}
 .slogan-sect .slogan .text_4 {
   font-size: 4vw;
   height: 5vw;
@@ -2409,7 +2414,7 @@ strong {
 }
 @media screen and (max-width: 480px) {
   .laureate3-sect-3 .wrap {
-    gap: 32px;
+    height: 80%;
   }
 }
 .laureate3-sect-3 .top-contents {
@@ -2450,8 +2455,7 @@ strong {
 }
 @media screen and (max-width: 480px) {
   .laureate3-sect-3 .middle-contents {
-    height: 180px;
-    margin-bottom: 110px;
+    height: auto;
   }
 }
 .laureate3-sect-3 .middle-contents img {
@@ -2459,11 +2463,6 @@ strong {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media screen and (max-width: 480px) {
-  .laureate3-sect-3 .middle-contents img {
-    width: 60%;
-  }
 }
 @media screen and (max-width: 786px) {
   .laureate3-sect-3 .middle-contents li:nth-child(1) img {
@@ -2967,13 +2966,19 @@ strong {
 }
 @media screen and (max-width: 480px) {
   .ant-sect .wrap .sub-text-kr {
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 180%;
   }
 }
 .ant-sect .wrap .text-wrap {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+@media screen and (max-width: 480px) {
+  .ant-sect .wrap .text-wrap {
+    gap: 6px;
+  }
 }
 .ant-sect .wrap .text-wrap span {
   font-family: "Cinzel", serif;
@@ -2992,8 +2997,8 @@ strong {
 }
 @media screen and (max-width: 480px) {
   .ant-sect .wrap .text-wrap span {
-    font-size: 24px;
-    gap: 14px;
+    font-size: 36px;
+    gap: 6px;
   }
 }
 .ant-sect .wrap .text-wrap li {
@@ -3001,6 +3006,11 @@ strong {
   gap: 16px;
   flex-wrap: wrap;
   align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .ant-sect .wrap .text-wrap li {
+    gap: 6px;
+  }
 }
 .ant-sect .wrap .text-wrap img {
   height: 76px;
