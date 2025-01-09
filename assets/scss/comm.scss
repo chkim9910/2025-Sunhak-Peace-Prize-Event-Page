@@ -2169,6 +2169,9 @@ strong {
   align-items: flex-end;
   margin: 0 auto;
   padding: 100px 32px;
+  @media screen and (max-width: 480px) {
+    padding-top: 200px;
+  }
   .wrap {
     width: 100%;
     .sub-text-kr {
