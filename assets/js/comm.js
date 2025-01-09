@@ -1393,7 +1393,7 @@ $(function () {
             trigger: section2_3, // 섹션 1-2가 트리거
             containerAnimation: scrollTimeline2, // 기존 타임라인과 동기화
             start: "top bottom-=200", // 시작 시점
-            end: "center center+=1500", // 종료 시점
+            end: "center center+=1000", // 종료 시점
             scrub: true, // 스크롤에 따라 애니메이션
             // markers: true, // 디버깅용
           },
@@ -1411,7 +1411,7 @@ $(function () {
             trigger: section2_3, // 섹션 1-2가 트리거
             containerAnimation: scrollTimeline2, // 기존 타임라인과 동기화
             start: "top center+=1700", // 시작 시점
-            end: "center center+=100", // 종료 시점
+            end: "center center+=1200", // 종료 시점
             scrub: true, // 스크롤에 따라 애니메이션
             // markers: true, // 디버깅용
           },

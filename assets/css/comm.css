@@ -2279,15 +2279,23 @@ strong {
   justify-content: flex-end;
   padding: 0 0 50px;
   width: 100%;
+  padding-left: 80px;
+}
+@media screen and (max-width: 1440px) {
+  .laureate2-sect-3 .right-box .text-box {
+    padding-left: 40px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .laureate2-sect-3 .right-box .text-box {
     width: 100%;
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 768px) {
   .laureate2-sect-3 .right-box .text-box {
     height: 100%;
+    padding-left: 0px;
   }
 }
 @media screen and (max-width: 480px) {
