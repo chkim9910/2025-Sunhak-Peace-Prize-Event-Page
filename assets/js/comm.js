@@ -216,10 +216,10 @@ $(function () {
       let scrollTimeline_slogan = gsap.timeline({
         scrollTrigger: {
           trigger: ".slogan-sect .slogan",
-          // pin: true,
+          pin: true,
           scrub: 1,
-          start: "top center+=100",
-          // start: "top top",
+          // start: "top center+=100",
+          start: "top top",
           end: "+=800",
         },
       });
