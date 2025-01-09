@@ -885,6 +885,9 @@ strong {
 .slogan-sect .text-wrap .highlight {
   font-weight: 500;
 }
+.slogan-sect .slogan2-sect {
+  padding-top: 120px;
+}
 @media screen and (max-width: 768px) {
   .slogan-sect .slogan2-sect {
     padding-top: 120px;

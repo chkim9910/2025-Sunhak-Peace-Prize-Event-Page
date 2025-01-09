@@ -110,7 +110,7 @@ $(function () {
           scrub: 1,
           start: "top center+=100",
           // start: "top top",
-          end: "+=820",
+          end: "+=800",
           // end: "+=500",
         },
       });
@@ -165,7 +165,7 @@ $(function () {
           scrub: 1,
           start: "top center+=80",
           // start: "top top",
-          end: "+=700",
+          end: "+=1000",
           // end: "+=1300",
         },
       });
@@ -178,7 +178,7 @@ $(function () {
           duration: 0.2,
         })
         .fromTo(slogan_3, { opacity: 0, duration: 0.02 }, { opacity: 1 })
-        .fromTo(slogan_4, { opacity: 0, duration: 0.02 }, { opacity: 1 });
+        .fromTo(slogan_4, { opacity: 0, duration: 0.01 }, { opacity: 1 });
       // .to(slogan_container, {
       //   opacity: 0,
       //   duration: 0.5,
