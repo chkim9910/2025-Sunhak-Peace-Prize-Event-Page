@@ -815,7 +815,8 @@ $(function () {
 
       // section3_2 opacity 전환 추가
       gsap.fromTo(
-        section3_2,
+        ".laureate2-sect-2 .img-box, .laureate2-sect-2 .bg",
+        // section3_2,
         { opacity: 0 }, // 초기 상태
         {
           opacity: 1, // 뷰포트 진입 시
@@ -1866,7 +1867,7 @@ $(function () {
       //   }
       // );
       gsap.fromTo(
-        ".laureate4-sect-2 .img-box",
+        ".laureate4-sect-2 .img-box, .laureate4-sect-2 .bg",
         { opacity: 0 },
         {
           opacity: 1, // 뷰포트 진입 시
@@ -1874,7 +1875,7 @@ $(function () {
           scrollTrigger: {
             trigger: section4_2, // section4_2를 트리거로 설정
             containerAnimation: scrollTimeline4, // 수평 스크롤 타임라인과 동기화
-            start: "top bottom-=400", // 섹션이 뷰포트 중심에 도달할 때 시작
+            start: "top bottom-=1000", // 섹션이 뷰포트 중심에 도달할 때 시작
             end: "center center+=100", // 약간의 여유를 둔 후 종료
             scrub: true, // 스크롤에 따라 부드럽게 전환
             // markers: true, // 디버깅용
