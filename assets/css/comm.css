@@ -1755,11 +1755,37 @@ strong {
   flex: none;
   width: 60%;
   position: absolute;
-  right: 0%;
+  right: -5%;
+}
+@media screen and (max-width: 1990px) {
+  .laureate1-sect-3 .text {
+    right: -9%;
+  }
+}
+@media screen and (max-width: 1900px) {
+  .laureate1-sect-3 .text {
+    right: -7%;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .laureate1-sect-3 .text {
+    right: -10%;
+  }
 }
 @media screen and (max-width: 1600px) {
   .laureate1-sect-3 .text {
     width: 40%;
+    right: 7.5%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .laureate1-sect-3 .text {
+    right: 6%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .laureate1-sect-3 .text {
+    right: 3%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2034,7 +2060,7 @@ strong {
   }
 }
 .laureate1-sect-4 .line {
-  margin: -3% 70%;
+  margin: -3% 100%;
   width: 1px;
   height: 100px;
   background-color: #fff;
