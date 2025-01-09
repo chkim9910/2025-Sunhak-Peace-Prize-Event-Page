@@ -885,6 +885,16 @@ strong {
 .slogan-sect .text-wrap .highlight {
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .slogan-sect .slogan2-sect {
+    padding-top: 120px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slogan-sect .slogan2-sect {
+    padding-top: 100px;
+  }
+}
 .slogan-sect .slogan {
   padding-top: 6%;
   height: 100vh !important;
@@ -899,6 +909,12 @@ strong {
 @media screen and (max-width: 1024px) {
   .slogan-sect .slogan {
     padding: 0 24px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slogan-sect .slogan {
+    height: auto !important;
+    max-height: auto !important;
   }
 }
 .slogan-sect .slogan::before {

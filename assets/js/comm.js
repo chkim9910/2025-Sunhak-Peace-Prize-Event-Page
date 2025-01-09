@@ -106,22 +106,24 @@ $(function () {
       let scrollTimeline_slogan = gsap.timeline({
         scrollTrigger: {
           trigger: ".slogan-sect .slogan",
-          pin: true,
+          // pin: true,
           scrub: 1,
-          start: "top top",
-          end: "+=650",
+          start: "top center+=100",
+          // start: "top top",
+          end: "+=820",
+          // end: "+=500",
         },
       });
       // Timeline for the slogan
       scrollTimeline_slogan
-        .fromTo(slogan_1, { opacity: 0, duration: 0.3 }, { opacity: 1 })
-        .fromTo(slogan_2, { opacity: 0, duration: 0.3 }, { opacity: 1 })
+        .fromTo(slogan_1, { opacity: 0, duration: 0.2 }, { opacity: 1 })
+        .fromTo(slogan_2, { opacity: 0, duration: 0.2 }, { opacity: 1 })
         // .to(slogan_container, {
         //   "--before-opacity": 1,
         //   duration: 0.5,
         // })
-        .fromTo(slogan_3, { opacity: 0, duration: 0.3 }, { opacity: 1 })
-        .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 });
+        .fromTo(slogan_3, { opacity: 0, duration: 0.2 }, { opacity: 1 })
+        .fromTo(slogan_4, { opacity: 0, duration: 0.2 }, { opacity: 1 });
       // .to(slogan_container, {
       //   opacity: 0,
       //   duration: 0.01,
@@ -134,39 +136,53 @@ $(function () {
         scrollTrigger: {
           trigger: ".slogan-sect .text-wrap",
           scrub: 0.3,
-          start: "top 40%",
-          end: "+=1000",
+          start: "top center+=100",
+          end: "+=800",
         },
       });
       // Timeline for slogan description on smaller screens
       scrollTimeline_slogan_desc
-        .fromTo(text1_1, { x: -40, opacity: 0 }, { x: 0, opacity: 1 })
-        .fromTo(text1_2, { x: 40, opacity: 0 }, { x: 0, opacity: 1 })
-        .fromTo(text1_3, { x: 40, opacity: 0 }, { x: 0, opacity: 1 });
+        .fromTo(
+          text1_1,
+          { x: -40, opacity: 0, duration: 0.02 },
+          { x: 0, opacity: 1 }
+        )
+        .fromTo(
+          text1_2,
+          { x: 40, opacity: 0, duration: 0.02 },
+          { x: 0, opacity: 1 }
+        )
+        .fromTo(
+          text1_3,
+          { x: 40, opacity: 0, duration: 0.02 },
+          { x: 0, opacity: 1 }
+        );
 
       let scrollTimeline_slogan = gsap.timeline({
         scrollTrigger: {
           trigger: ".slogan-sect .slogan",
-          pin: true,
+          // pin: true,
           scrub: 1,
-          start: "top top",
-          end: "+=1300",
+          start: "top center+=80",
+          // start: "top top",
+          end: "+=700",
+          // end: "+=1300",
         },
       });
       // Timeline for the slogan on smaller screens
       scrollTimeline_slogan
-        .fromTo(slogan_1, { opacity: 0, duration: 0.03 }, { opacity: 1 })
-        .fromTo(slogan_2, { opacity: 0, duration: 0.03 }, { opacity: 1 })
+        .fromTo(slogan_1, { opacity: 0, duration: 0.02 }, { opacity: 1 })
+        .fromTo(slogan_2, { opacity: 0, duration: 0.02 }, { opacity: 1 })
         .to(slogan_container, {
           "--before-opacity": 1,
-          duration: 0.5,
+          duration: 0.2,
         })
-        .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
-        .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 })
-        .to(slogan_container, {
-          opacity: 0,
-          duration: 0.5,
-        });
+        .fromTo(slogan_3, { opacity: 0, duration: 0.02 }, { opacity: 1 })
+        .fromTo(slogan_4, { opacity: 0, duration: 0.02 }, { opacity: 1 });
+      // .to(slogan_container, {
+      //   opacity: 0,
+      //   duration: 0.5,
+      // });
     },
 
     // For screens smaller than 480px
@@ -200,9 +216,10 @@ $(function () {
       let scrollTimeline_slogan = gsap.timeline({
         scrollTrigger: {
           trigger: ".slogan-sect .slogan",
-          pin: true,
+          // pin: true,
           scrub: 1,
-          start: "top top",
+          start: "top center+=100",
+          // start: "top top",
           end: "+=800",
         },
       });
@@ -210,16 +227,16 @@ $(function () {
       scrollTimeline_slogan
         .fromTo(slogan_1, { opacity: 0, duration: 0.03 }, { opacity: 1 })
         .fromTo(slogan_2, { opacity: 0, duration: 0.03 }, { opacity: 1 })
-        .to(slogan_container, {
-          "--before-opacity": 1,
-          duration: 0.5,
-        })
+        // .to(slogan_container, {
+        //   "--before-opacity": 1,
+        //   duration: 0.5,
+        // })
         .fromTo(slogan_3, { opacity: 0, duration: 0.03 }, { opacity: 1 })
-        .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 })
-        .to(slogan_container, {
-          opacity: 0,
-          duration: 1.5,
-        });
+        .fromTo(slogan_4, { opacity: 0, duration: 0.3 }, { opacity: 1 });
+      // .to(slogan_container, {
+      //   opacity: 0,
+      //   duration: 1.5,
+      // });
     },
 
     // For all screens
@@ -271,7 +288,7 @@ $(function () {
         .set(section1_1, {
           opacity: 0,
         })
-        .to(section1_1, { opacity: 1, duration: 0.05 })
+        .to(section1_1, { opacity: 1, duration: 0.01 })
         .to(sections1, {
           xPercent: -100 * (sections1.length - 1),
         });
@@ -426,7 +443,7 @@ $(function () {
           pin: true,
           scrub: 1,
           start: "top top",
-          end: "+=8000",
+          end: "+=7000",
           // markers: true,
         },
       });
