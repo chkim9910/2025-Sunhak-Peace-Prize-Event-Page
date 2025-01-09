@@ -690,6 +690,7 @@ strong {
 .hero-sect {
   display: flex;
   align-items: flex-end;
+  height: 100svh;
 }
 .hero-sect .bg {
   position: absolute;
