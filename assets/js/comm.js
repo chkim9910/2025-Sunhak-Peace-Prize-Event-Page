@@ -2460,6 +2460,16 @@ $(function () {
     { y: 0, opacity: 1 }
   );
 
+  // 다운로드
+  function downloadFile(url, fileName) {
+    const link = document.createElement(".kr-brochure");
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   // ***************************안내***************************
   let announcement = document.querySelector(".ant-sect .wrap");
   let scrollTimeline_announcment = gsap.timeline({
