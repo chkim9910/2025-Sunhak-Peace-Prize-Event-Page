@@ -356,11 +356,11 @@ $(function () {
       // section1_3 text_box_2 x좌표 이동 추가
       gsap.fromTo(
         section1_text_box_2,
-        { x: 100, opacity: 0 }, // 시작 상태
+        { x: 200, opacity: 0 }, // 시작 상태
         {
           x: 0,
           opacity: 1,
-          duration: 0.3, // 애니메이션 지속 시간
+          duration: 0.8, // 애니메이션 지속 시간
           scrollTrigger: {
             trigger: section1_3, // 섹션 1-2가 트리거
             containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
@@ -374,11 +374,11 @@ $(function () {
       // section1_3 text_box_3 x좌표 이동 추가
       gsap.fromTo(
         section1_text_box_3,
-        { x: 100, opacity: 0 }, // 시작 상태
+        { x: 200, opacity: 0 }, // 시작 상태
         {
           x: 0,
           opacity: 1,
-          duration: 0.1, // 애니메이션 지속 시간
+          duration: 0.8, // 애니메이션 지속 시간
           scrollTrigger: {
             trigger: section1_3, // 섹션 1-2가 트리거
             containerAnimation: scrollTimeline, // 기존 타임라인과 동기화
@@ -898,11 +898,11 @@ $(function () {
       // section3_3 text_box_2 x좌표 이동 추가
       gsap.fromTo(
         section3_text_box_2,
-        { x: 200, opacity: 0 }, // 시작 상태
+        { x: 300, opacity: 0 }, // 시작 상태
         {
           x: 0,
           opacity: 1,
-          duration: 2, // 애니메이션 지속 시간
+          duration: 1, // 애니메이션 지속 시간
           scrollTrigger: {
             trigger: section3_3, // 섹션 1-2가 트리거
             containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
@@ -916,11 +916,11 @@ $(function () {
       // section3_3 text_box_3 x좌표 이동 추가
       gsap.fromTo(
         section3_text_box_3,
-        { x: 200, opacity: 0 }, // 시작 상태
+        { x: 300, opacity: 0 }, // 시작 상태
         {
           x: 0,
           opacity: 1,
-          duration: 2, // 애니메이션 지속 시간
+          duration: 1, // 애니메이션 지속 시간
           scrollTrigger: {
             trigger: section3_3, // 섹션 1-2가 트리거
             containerAnimation: scrollTimeline3, // 기존 타임라인과 동기화
