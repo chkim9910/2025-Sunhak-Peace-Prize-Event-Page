@@ -47,7 +47,23 @@ $(function () {
   TweenMax.to("html", 0.1, {
     overflow: "auto",
     delay: 5,
+    onComplete: function () {
+      // Show the popup after HTML overflow is enabled
+      showPopup(); // 팝업을 표시하는 함수 호출
+    },
   });
+
+  // Function to show the popup
+  function showPopup() {
+    const popup = document.getElementById("popup");
+    const overlay = document.getElementById("popup-overlay");
+    popup.style.opacity = 1;
+    overlay.style.opacity = 1;
+    // 부드러운 애니메이션 효과 추가 (CSS transition을 사용할 경우, CSS에서 설정 필요)
+    popup.style.transition = "opacity 0.5s ease";
+    overlay.style.transition = "opacity 0.5s ease";
+  }
+
   // ***************************헤더***************************
   let header = document.querySelector("#header");
   let scrollTimelineHeader = gsap.timeline({
@@ -2496,25 +2512,6 @@ $(function () {
     { y: 200, opacity: 0 },
     { y: 0, opacity: 1 }
   );
-  // ***************************데코섹션***************************
-  // let deco_text_1 = document.querySelector(".deco-sect .text-box-1");
-  // let deco_text_2 = document.querySelector(".deco-sect .text-box-2");
-  // let deco_text_3 = document.querySelector(".deco-sect .text-box-3");
-  // let scrollTimeline_deco = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".deco-sect",
-  //     // pin: true,
-  //     scrub: 1,
-  //     start: "top bottom",
-  //     end: "+=1000",
-  //     // markers: true,
-  //   },
-  // });
-  // // 타임라인
-  // scrollTimeline_deco
-  //   // .fromTo(deco_text_1, { xPercent: -5000 }, { xPercent: 0 })
-  //   .fromTo(deco_text_2, { xPercent: 200 }, { xPercent: 0 })
-  //   .fromTo(deco_text_3, { xPercent: -1000 }, { xPercent: 0 });
 
   // ***************************갤러리 슬라이드***************************
   var swiper = new Swiper(".img-slide", {
@@ -2535,6 +2532,35 @@ $(function () {
       prevEl: ".swiper-button-prev",
     },
   });
-});
 
-// ***************************배너***************************
+  // // ***************************팝업 창***************************
+  // // Function to check if today is the target date
+  // function isTargetDate() {
+  //   const targetDate = new Date(2025, 0, 10); // 2025년 1월 15일 (월은 0부터 시작)
+  //   const today = new Date();
+  //   return (
+  //     today.getFullYear() === targetDate.getFullYear() &&
+  //     today.getMonth() === targetDate.getMonth() &&
+  //     today.getDate() === targetDate.getDate()
+  //   );
+  // }
+
+  // // Function to show the popup
+  // function showPopup() {
+  //   const popup = document.getElementById("popup");
+  //   const overlay = document.getElementById("popup-overlay");
+  //   popup.style.display = "block";
+  //   overlay.style.display = "block";
+  // }
+  // // Function to close the popup
+  // function closePopup() {
+  //   const popup = document.getElementById("popup");
+  //   const overlay = document.getElementById("popup-overlay");
+  //   popup.classList.remove("show");
+  //   overlay.classList.remove("show");
+  // }
+  // // Display the popup if today is the target date
+  // if (isTargetDate()) {
+  //   showPopup();
+  // }
+});
