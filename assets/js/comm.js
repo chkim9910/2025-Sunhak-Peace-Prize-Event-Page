@@ -2462,7 +2462,7 @@ $(function () {
 
   // 다운로드
   function downloadFile(url, fileName) {
-    const link = document.createElement(".kr-brochure");
+    const link = document.createElement("a");
     link.href = url;
     link.download = fileName;
     document.body.appendChild(link);
