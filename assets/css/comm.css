@@ -713,7 +713,7 @@ strong {
 }
 @media screen and (max-width: 768px) {
   .hero-sect .bg .img {
-    background: url(../img/bg/before-laureates-gallery-section-mobile.jpg) no-repeat 50 100/cover;
+    background: url(../img/bg/before-laureates-gallery-section-mobile.jpg) no-repeat 0 100%/cover;
   }
 }
 @keyframes background-move {
@@ -928,7 +928,6 @@ strong {
 @media screen and (max-width: 768px) {
   .slogan-sect .slogan {
     height: auto !important;
-    max-height: auto !important;
   }
 }
 .slogan-sect .slogan::before {

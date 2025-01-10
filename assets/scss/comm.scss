@@ -380,7 +380,7 @@ strong {
       animation: background-move 10s ease-in-out infinite alternate;
       @media screen and (max-width: 768px) {
         background: url(../img/bg/before-laureates-gallery-section-mobile.jpg)
-          no-repeat 50 100 / cover;
+          no-repeat 0 100% / cover;
       }
     }
     @keyframes background-move {
@@ -579,7 +579,7 @@ strong {
     }
     @media screen and (max-width: 768px) {
       height: auto !important;
-      max-height: auto !important;
+      // max-height: auto !important;
     }
 
     &::before {
