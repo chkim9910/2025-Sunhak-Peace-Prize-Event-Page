@@ -486,6 +486,9 @@ strong {
     }
   }
   .container-kr {
+    .img-box {
+      transform: translateY(45%);
+    }
     @media screen and (max-width: 480px) {
       margin-bottom: 70px;
       padding-bottom: 3vh;

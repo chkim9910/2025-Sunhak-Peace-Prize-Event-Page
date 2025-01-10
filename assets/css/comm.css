@@ -822,6 +822,9 @@ strong {
     margin-bottom: 90px;
   }
 }
+.hero-sect .container-kr .img-box {
+  transform: translateY(45%);
+}
 @media screen and (max-width: 480px) {
   .hero-sect .container-kr {
     margin-bottom: 70px;
