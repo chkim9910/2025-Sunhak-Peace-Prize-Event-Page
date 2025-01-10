@@ -404,7 +404,8 @@ strong {
     }
     @media screen and (max-width: 480px) {
       gap: 8px;
-      margin-bottom: 7vh;
+      margin-bottom: 10vh;
+      padding-bottom: 7vh;
       // margin-bottom: 130px;
     }
     @media screen and (max-width: 360px) {
@@ -414,6 +415,7 @@ strong {
   .container-kr {
     @media screen and (max-width: 480px) {
       margin-bottom: 70px;
+      padding-bottom: 3vh;
     }
   }
   .text-group {

@@ -298,8 +298,12 @@ legend {
   height: 100px;
 }
 
-.contents {
-  height: 300px;
+@media screen and (max-width: 480px) {
+  .hero-sect .container {
+    gap: 8px;
+    margin-bottom: 3vh;
+    padding-bottom: 5vh;
+  }
 }
 
 html {
@@ -739,7 +743,8 @@ strong {
 @media screen and (max-width: 480px) {
   .hero-sect .container {
     gap: 8px;
-    margin-bottom: 7vh;
+    margin-bottom: 10vh;
+    padding-bottom: 7vh;
   }
 }
 @media screen and (max-width: 360px) {
@@ -750,6 +755,7 @@ strong {
 @media screen and (max-width: 480px) {
   .hero-sect .container-kr {
     margin-bottom: 70px;
+    padding-bottom: 3vh;
   }
 }
 .hero-sect .text-group {
