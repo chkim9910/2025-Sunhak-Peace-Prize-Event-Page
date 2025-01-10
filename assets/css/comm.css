@@ -653,7 +653,12 @@ strong {
   width: 129px;
 }
 #header .logo-img-2 {
-  width: 60px;
+  width: 70px;
+}
+@media screen and (max-width: 786px) {
+  #header .logo-img-2 {
+    width: 60px;
+  }
 }
 #header #logo,
 #header .logo,
@@ -708,7 +713,7 @@ strong {
 }
 @media screen and (max-width: 768px) {
   .hero-sect .bg .img {
-    background: url(../img/bg/before-laureates-gallery-section-mobile.jpg) no-repeat 0 0/cover;
+    background: url(../img/bg/before-laureates-gallery-section-mobile.jpg) no-repeat 50 100/cover;
   }
 }
 @keyframes background-move {

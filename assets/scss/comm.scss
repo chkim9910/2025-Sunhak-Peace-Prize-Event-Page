@@ -329,7 +329,10 @@ strong {
     width: 129px;
   }
   .logo-img-2 {
-    width: 60px;
+    width: 70px;
+    @media screen and (max-width: 786px) {
+      width: 60px;
+    }
   }
   #logo,
   .logo,
@@ -377,7 +380,7 @@ strong {
       animation: background-move 10s ease-in-out infinite alternate;
       @media screen and (max-width: 768px) {
         background: url(../img/bg/before-laureates-gallery-section-mobile.jpg)
-          no-repeat 0 0 / cover;
+          no-repeat 50 100 / cover;
       }
     }
     @keyframes background-move {
