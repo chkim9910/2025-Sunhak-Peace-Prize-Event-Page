@@ -1,3 +1,34 @@
+// ***************************팝업창 날짜 설정, 동작 함수***************************
+// Function to check if today is the target date
+function isTargetDate() {
+  const targetDate = new Date(2025, 0, 11); // 2025년 1월 15일 (월은 0부터 시작)
+  const today = new Date();
+  return (
+    today.getFullYear() === targetDate.getFullYear() &&
+    today.getMonth() === targetDate.getMonth() &&
+    today.getDate() === targetDate.getDate()
+  );
+}
+// Function to show the popup
+function showPopup() {
+  const popup = document.getElementById("popup");
+  const overlay = document.getElementById("popup-overlay");
+
+  // 애니메이션 효과 추가
+  popup.style.opacity = 1;
+  overlay.style.opacity = 1;
+  popup.style.transition = "opacity 0.5s ease";
+  overlay.style.transition = "opacity 0.5s ease";
+}
+
+// Function to close the popup
+function closePopup() {
+  const popup = document.getElementById("popup");
+  const overlay = document.getElementById("popup-overlay");
+  popup.style.display = "none";
+  overlay.style.display = "none";
+}
+
 $(function () {
   AOS.init();
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -11,6 +42,7 @@ $(function () {
   //   },
   //   0.04
   // );
+
   TweenMax.to("html", 0.1, {
     overflow: "hidden",
     // delay: 2,
@@ -48,21 +80,12 @@ $(function () {
     overflow: "auto",
     delay: 5,
     onComplete: function () {
-      // Show the popup after HTML overflow is enabled
-      showPopup(); // 팝업을 표시하는 함수 호출
+      // HTML 활성화 이후 팝업 표시
+      if (isTargetDate()) {
+        showPopup(); // 팝업 표시
+      }
     },
   });
-
-  // Function to show the popup
-  function showPopup() {
-    const popup = document.getElementById("popup");
-    const overlay = document.getElementById("popup-overlay");
-    popup.style.opacity = 1;
-    overlay.style.opacity = 1;
-    // 부드러운 애니메이션 효과 추가 (CSS transition을 사용할 경우, CSS에서 설정 필요)
-    popup.style.transition = "opacity 0.5s ease";
-    overlay.style.transition = "opacity 0.5s ease";
-  }
 
   // ***************************헤더***************************
   let header = document.querySelector("#header");
