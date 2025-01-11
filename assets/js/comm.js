@@ -1,7 +1,7 @@
 // ***************************팝업창 날짜 설정, 동작 함수***************************
 // Function to check if today is the target date
 function isTargetDate() {
-  const targetDate = new Date(2025, 0, 11); // 2025년 1월 15일 (월은 0부터 시작)
+  const targetDate = new Date(2025, 0, 15); // 2025년 1월 15일 (월은 0부터 시작)
   const today = new Date();
   return (
     today.getFullYear() === targetDate.getFullYear() &&
