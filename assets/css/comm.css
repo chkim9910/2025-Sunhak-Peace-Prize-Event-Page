@@ -395,6 +395,7 @@ body {
 }
 .popup-box .popup,
 .popup-box .popup-overlay {
+  display: none;
   opacity: 0;
 }
 .popup-box .popup-overlay {
@@ -413,7 +414,7 @@ body {
   align-items: center;
 }
 .popup-box .popup {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 30px;

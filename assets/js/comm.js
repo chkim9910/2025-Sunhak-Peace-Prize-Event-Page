@@ -15,6 +15,8 @@ function showPopup() {
   const overlay = document.getElementById("popup-overlay");
 
   // 애니메이션 효과 추가
+  popup.style.display = "flex";
+  overlay.style.display = "block";
   popup.style.opacity = 1;
   overlay.style.opacity = 1;
   popup.style.transition = "opacity 0.5s ease";
